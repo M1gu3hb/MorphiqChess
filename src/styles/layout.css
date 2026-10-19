@@ -241,6 +241,60 @@
   }
 }
 
+/*
+ * Teléfono o tableta en horizontal (sin sitio para la columna de escritorio): el tablero queda a la
+ * izquierda, a la vista aunque el panel se desplace, y el panel a la derecha. Así el tablero siempre
+ * cabe completo en la altura de la pantalla.
+ */
+@media (min-width: 600px) and (max-width: 979px) and (orientation: landscape) {
+  .topbar {
+    height: 48px;
+  }
+
+  .brand img {
+    height: 32px;
+  }
+
+  .game-main {
+    --board-size: min(calc(100dvh - 48px - 20px), calc(100vw - 2 * var(--gutter) - var(--space-4) - 300px));
+    grid-template-columns: var(--board-size) minmax(0, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: var(--space-4);
+    row-gap: var(--space-2);
+    align-items: start;
+    padding: 10px var(--gutter);
+  }
+
+  /* El tablero y las flechas pasan a ser elementos directos de la rejilla. */
+  .board-wrap {
+    display: contents;
+  }
+
+  .game-main .board {
+    grid-column: 1;
+    grid-row: 1 / span 5;
+    order: 0;
+    position: sticky;
+    top: 10px;
+  }
+
+  .status,
+  .history-bar,
+  .captured,
+  .moves-card,
+  .actions {
+    grid-column: 2;
+  }
+
+  .history-bar {
+    order: 2;
+  }
+
+  .history-bar .icon-btn--lg {
+    height: 44px;
+  }
+}
+
 @media (max-width: 520px) {
   .btn__label {
     display: none;
