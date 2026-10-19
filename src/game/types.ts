@@ -16,7 +16,8 @@ export interface Ply {
 
 /** Qué pasó entre el estado anterior y el actual: lo usa el director de animaciones. */
 export type Transition =
-  | { readonly type: 'none' }
+  /** Sin movimiento de piezas. `ended` = la partida acaba de terminar por rendición o tablas. */
+  | { readonly type: 'none'; readonly ended?: true }
   | { readonly type: 'reset' }
   | { readonly type: 'forward'; readonly ply: Ply; readonly index: number; readonly source: 'play' | 'nav' }
   | { readonly type: 'backward'; readonly ply: Ply; readonly index: number; readonly source: 'undo' | 'nav' }

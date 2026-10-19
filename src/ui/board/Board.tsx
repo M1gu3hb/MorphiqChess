@@ -18,9 +18,19 @@ import {
   squareName,
   typeOfCode,
   type Move,
+  type Outcome,
   type PromotionPiece,
 } from '../../engine';
-import { canPlay, idsAt, inCheckAt, legalMovesOf, lastMoveAt, positionAt, type GameSnapshot } from '../../game';
+import {
+  canPlay,
+  idsAt,
+  inCheckAt,
+  isAtEnd,
+  legalMovesOf,
+  lastMoveAt,
+  positionAt,
+  type GameSnapshot,
+} from '../../game';
 import { describePiece, es } from '../../i18n/es';
 import { PIECE_SRC } from '../pieceArt';
 import { BoardFrame } from './BoardFrame';
@@ -66,6 +76,16 @@ interface DragState {
 
 const flag = (value: boolean): '' | undefined => (value ? '' : undefined);
 const NO_MOVES: readonly Move[] = [];
+
+type BannerKind = keyof typeof es.banners;
+
+/** Aviso del final de la partida; el jaque mate lo anuncia la propia jugada. */
+function endBannerKind(outcome: Outcome | null): BannerKind | null {
+  if (!outcome) return null;
+  if (outcome.type === 'resignation') return 'resigned';
+  if (outcome.type === 'draw') return outcome.reason === 'stalemate' ? 'stalemate' : 'draw';
+  return null;
+}
 
 export function Board({ game, orientation, motion, interactive = true, onMove }: BoardProps) {
   const uid = useId();
@@ -126,7 +146,11 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
   const arriving = transition.type === 'forward' && transition.index === game.cursor ? transition.ply : null;
   const impactDelay = arriving ? arrivalMs(arriving.move, motion) + IMPACT_GAP_MS : 0;
   const toppleDelay = arriving?.mate ? impactDelay + 220 : 0;
-  const banner = arriving?.check ? { kind: arriving.mate ? 'mate' : 'check', delay: impactDelay + 40 } : null;
+  const ending = isAtEnd(game) ? endBannerKind(game.outcome) : null;
+  let banner: { kind: BannerKind; delay: number } | null = null;
+  if (arriving?.check) banner = { kind: arriving.mate ? 'mate' : 'check', delay: impactDelay + 40 };
+  else if (arriving && ending) banner = { kind: ending, delay: impactDelay + 40 }; // ahogado, tablas automáticas
+  else if (transition.type === 'none' && transition.ended && ending) banner = { kind: ending, delay: 120 };
 
   const frame = useMemo(
     () => makeFrame(game.gameId, game.revision, position.board, ids, orientation),
@@ -481,7 +505,7 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
             data-kind={banner.kind}
             style={{ '--banner-delay': `${banner.delay}ms` } as CSSProperties}
           >
-            <div className="banner__band">{banner.kind === 'mate' ? es.banners.mate : es.banners.check}</div>
+            <div className="banner__band">{es.banners[banner.kind]}</div>
           </div>
         </div>
       )}

@@ -245,7 +245,7 @@ export function resign(game: GameSnapshot, loser: Color): GameSnapshot {
   return next(game, {
     manualOutcome: { type: 'resignation', winner: opposite(loser) },
     cursor: game.plies.length,
-    transition: { type: 'none' },
+    transition: { type: 'none', ended: true },
   });
 }
 
@@ -254,7 +254,7 @@ export function agreeDraw(game: GameSnapshot): GameSnapshot {
   return next(game, {
     manualOutcome: { type: 'draw', reason: 'agreement' },
     cursor: game.plies.length,
-    transition: { type: 'none' },
+    transition: { type: 'none', ended: true },
   });
 }
 
@@ -264,7 +264,7 @@ export function claimDraw(game: GameSnapshot): GameSnapshot {
   return next(game, {
     manualOutcome: { type: 'draw', reason: game.claimable },
     cursor: game.plies.length,
-    transition: { type: 'none' },
+    transition: { type: 'none', ended: true },
   });
 }
 

@@ -195,6 +195,15 @@ describe('finales manuales y tablas', () => {
     expect(game.outcome).toEqual({ type: 'draw', reason: 'agreement' });
   });
 
+  it('los finales manuales se marcan en la transición para poder avisarlos', () => {
+    const base = play(createGame(), 'Nf3', 'Nf6', 'Ng1', 'Ng8', 'Nf3', 'Nf6', 'Ng1', 'Ng8');
+    expect(resign(base, 'w').transition).toEqual({ type: 'none', ended: true });
+    expect(agreeDraw(base).transition).toEqual({ type: 'none', ended: true });
+    expect(claimDraw(base).transition).toEqual({ type: 'none', ended: true });
+    // Cualquier otro cambio no lleva la marca.
+    expect(goTo(resign(base, 'w'), 0).transition).toEqual({ type: 'jump' });
+  });
+
   it('la triple repetición se puede reclamar, no es automática', () => {
     let game = createGame();
     game = play(game, 'Nf3', 'Nf6', 'Ng1', 'Ng8');

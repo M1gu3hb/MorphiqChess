@@ -376,6 +376,19 @@
   padding: calc(var(--cell) * 0.26) 0;
 }
 
+/* Tablas y ahogado: aviso azul, sin el rojo de la alarma. Rendición: neutro. */
+.banner[data-kind='draw'] .banner__band,
+.banner[data-kind='stalemate'] .banner__band {
+  border-color: var(--accent);
+  text-shadow: 0 0 calc(var(--cell) * 0.3) rgb(46 230 255 / 0.6);
+}
+
+.banner[data-kind='resigned'] .banner__band {
+  border-color: var(--board-coord);
+  text-shadow: none;
+  font-size: calc(var(--cell) * 0.56);
+}
+
 @keyframes banner-run {
   0% {
     opacity: 0;
