@@ -83,6 +83,7 @@ export const es = {
     newGame: {
       title: '¿Empezar una partida nueva?',
       body: 'Se perderá la partida actual.',
+      bodySaved: 'Se perderá la partida guardada.',
       confirm: 'Sí, nueva partida',
     },
     settings: {

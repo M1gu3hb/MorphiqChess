@@ -4,6 +4,7 @@ import { createGame } from '../../game';
 import { es } from '../../i18n/es';
 import logo from '../../assets/brand/logo-morphiqchess.webp';
 import { Board } from '../board/Board';
+import { Dialog } from '../Dialog';
 import { useSettings } from '../hooks';
 import { Icon } from '../icons';
 
@@ -21,6 +22,7 @@ export function Home({ store, settingsStore, onNew, onContinue }: HomeProps) {
   const canContinue = useMemo(() => store.hasSavedGame(), [store]);
   const [demo] = useState(() => createGame());
   const [turned, setTurned] = useState(false);
+  const [confirmNew, setConfirmNew] = useState(false);
 
   // El tablero de muestra gira solo, para enseñar de qué va el juego. Quieto con movimiento reducido.
   useEffect(() => {
@@ -42,13 +44,21 @@ export function Home({ store, settingsStore, onNew, onContinue }: HomeProps) {
           </h1>
           <p className="home__lead">{es.home.lead}</p>
           <div className="home__cta">
-            <button type="button" className="btn btn--primary btn--xl" onClick={onNew}>
-              <Icon name="play" />
-              {es.home.newGame}
-            </button>
-            {canContinue && (
-              <button type="button" className="btn btn--xl" onClick={onContinue}>
-                {es.home.continueGame}
+            {canContinue ? (
+              // Con una partida guardada, lo principal es seguir jugándola; empezar de cero pide confirmar.
+              <>
+                <button type="button" className="btn btn--primary btn--xl" onClick={onContinue}>
+                  <Icon name="play" />
+                  {es.home.continueGame}
+                </button>
+                <button type="button" className="btn btn--xl" onClick={() => setConfirmNew(true)}>
+                  {es.home.newGame}
+                </button>
+              </>
+            ) : (
+              <button type="button" className="btn btn--primary btn--xl" onClick={onNew}>
+                <Icon name="play" />
+                {es.home.newGame}
               </button>
             )}
           </div>
@@ -63,6 +73,25 @@ export function Home({ store, settingsStore, onNew, onContinue }: HomeProps) {
         </div>
       </main>
       <footer className="home__footer">{es.home.footer}</footer>
+
+      <Dialog open={confirmNew} title={es.dialogs.newGame.title} onClose={() => setConfirmNew(false)}>
+        <p className="dialog__text">{es.dialogs.newGame.bodySaved}</p>
+        <div className="dialog__actions">
+          <button type="button" className="btn btn--ghost" onClick={() => setConfirmNew(false)}>
+            {es.dialogs.cancel}
+          </button>
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => {
+              setConfirmNew(false);
+              onNew();
+            }}
+          >
+            {es.dialogs.newGame.confirm}
+          </button>
+        </div>
+      </Dialog>
     </div>
   );
 }
