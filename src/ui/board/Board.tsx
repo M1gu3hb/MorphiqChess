@@ -225,12 +225,12 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
     );
     clearPending();
     if (move) onMove?.(move);
-    gridRef.current?.focus();
+    gridRef.current?.focus({ preventScroll: true });
   };
 
   const cancelPromotion = () => {
     setPromotion(null);
-    gridRef.current?.focus();
+    gridRef.current?.focus({ preventScroll: true });
   };
 
   /** Seleccionar una pieza propia o jugar hacia un destino (clic, toque o teclado). */

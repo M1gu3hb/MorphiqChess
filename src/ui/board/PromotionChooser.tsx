@@ -16,7 +16,7 @@ export function PromotionChooser({ color, onPick, onCancel }: PromotionChooserPr
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    rootRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
+    rootRef.current?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true });
   }, []);
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
