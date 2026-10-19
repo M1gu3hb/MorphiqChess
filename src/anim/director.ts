@@ -383,7 +383,7 @@ export class Director {
     const { flash, board } = this.targets;
     const x = ((fileOf(king) + 0.5) / 8) * 100;
     const y = ((rowOf(king) + 0.5) / 8) * 100;
-    flash.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(255 77 106 / 0.85), rgb(255 77 106 / 0) 62%)`;
+    flash.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(255 77 106 / 0.6), rgb(255 77 106 / 0) 62%)`;
     this.run(flash, [{ opacity: 0 }, { opacity: 1, offset: 0.16 }, { opacity: 0 }], {
       duration: 900,
       delay: at,
