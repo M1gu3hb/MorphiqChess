@@ -34,7 +34,7 @@ export const es = {
     turnOf: (side: string) => `Turno de ${side}`,
     check: 'Jaque',
     viewing: (n: number, total: number) => `Viendo la jugada ${n} de ${total}`,
-    viewingStart: (total: number) => `Viendo la posición inicial (${total} jugadas)`,
+    viewingStart: (total: number) => `Viendo la posición inicial (${total} ${total === 1 ? 'jugada' : 'jugadas'})`,
     backToGame: 'Volver a la partida',
     resumeHere: 'Retomar desde aquí',
     moves: 'Jugadas',
