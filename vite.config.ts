@@ -1,15 +1,16 @@
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
+import { resolveSiteUrl, siteMeta } from './tools/site-meta.ts';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), siteMeta(resolveSiteUrl(process.env))],
   build: {
     target: 'es2022',
     sourcemap: false,
   },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'tools/**/*.test.ts'],
   },
 });
