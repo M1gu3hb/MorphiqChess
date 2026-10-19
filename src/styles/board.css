@@ -463,9 +463,31 @@
   outline-offset: 2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .sq[data-chk]::before {
-    animation: none;
-    opacity: 0.85;
+/* ---------- movimiento reducido (ajuste de la app, que parte de prefers-reduced-motion) ---------- */
+
+.board[data-motion='reduced'] .sq[data-chk]::before {
+  animation: none;
+  opacity: 0.85;
+}
+
+.board[data-motion='reduced'] .piece[data-mated] .piece-img {
+  transition: none;
+}
+
+.board[data-motion='reduced'] .banner__band {
+  animation-name: banner-fade;
+  letter-spacing: 0.3em;
+}
+
+@keyframes banner-fade {
+  0% {
+    opacity: 0;
+  }
+  12%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
