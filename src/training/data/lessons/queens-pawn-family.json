@@ -1,0 +1,41 @@
+{
+  "id": "queens-pawn-family",
+  "title": "1.d4 — El peón de dama",
+  "summary": "Entendiendo los sistemas con 1.d4",
+  "level": "beginner",
+  "steps": [
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+      "title": "El empuje posicional",
+      "bubbles": [
+        "**{{d4}}** es la prima lenta y estratégica de 1.e4. En lugar de abrir el juego de inmediato, planta una reivindicación central con un peón *defendido por la dama* — una diferencia sutil pero enorme.",
+        "## Qué consigue 1.d4\n\n- Reclama la **casilla d4**, que está protegida de forma natural por la dama blanca en d1.\n- Libera al **alfil de casillas oscuras** para desarrollarse por la diagonal c1-h6.\n- Prepara el característico empuje **{{c4}}** — la jugada que define la familia del peón de dama.\n- Suele conducir a partidas **cerradas** y *estratégicas* donde la comprensión posicional supera al cálculo puro.",
+        "## Por qué les encanta a los grandes maestros\n\n- Las azules tienen menos formas de tomar la iniciativa.\n- Las blancas pueden transponer entre varios sistemas (Catalana, Gambito de Dama, Inglesa, Trompowsky) según la disposición de las azules.\n- Las opresiones de largo aliento son comunes — perfectas para jugadores técnicos.",
+        "> 1.d4 es la combustión lenta. La acción tarda más en llegar — pero dura más tiempo en la partida."
+      ]
+    },
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+      "title": "Respuestas principales",
+      "bubbles": [
+        "La elección de las azules en la primera jugada contra 1.d4 divide al mundo del ajedrez en dos grandes campos: los clásicos que juegan **...d5** y los hipermodernos que prefieren **...{{Nf6}}**.",
+        "## Las respuestas principales\n\n- **1...d5** — *Clásica*. Lleva al Gambito de Dama, la Eslava y la Semieslava. Sólida, principista y rica en teoría.\n- **1...{{Nf6}}** — *Defensas indias*. La familia hipermoderna: India de Rey, Nimzoindia, Indobenoni, Grünfeld, Bogoindia. Las azules dejan que las blancas construyan el centro y contraatacan después.",
+        "- **1...f5** — *Defensa holandesa*. Aguda y arriesgada. Las azules juegan a atacar el flanco de rey a costa de debilitar la diagonal del rey.\n- **1...e6** — *flexible*. A menudo transpone al Gambito de Dama Rehusado o a la Francesa.\n- **1...c5** — Familia *Benoni*. Las azules desafían de inmediato en la columna c.\n- **1...d6** — Configuraciones de *India Antigua* o *Moderna*, donde las azules juegan por ...e5 más adelante.",
+        "## Eligiendo tu respuesta\n\n- *¿Quieres una fortaleza?* — Eslava o Gambito de Dama Rehusado.\n- *¿Quieres contraatacar?* — India de Rey o Grünfeld.\n- *¿Quieres profundidad estratégica?* — Nimzoindia o Indobenoni.\n- *¿Quieres desequilibrio?* — Benoni u Holandesa.",
+        "## Una línea modelo para cada bando\n\nUn Gambito de Dama Rehusado va {{d4}} {{d5}} {{c4}} {{e6}} {{Nc3}} **{{Nf6}}**. Las blancas construyen lentamente hacia {{Nf3}}, {{Bg5}}, {{e3}} y 0-0. Las azules desarrollan con {{Be7}}, {{O-O}}, {{Nbd7}}, **...c6**, **...dxc4**.",
+        "> La familia 1.d4 recompensa al estudiante paciente. Elige un sistema con azules, aprende sus planes y mantente firme durante años."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+      "prompt": "Refleja la reivindicación central de las blancas con la clásica **{{d5}}** — sólida, principista, comprobada por el tiempo.",
+      "hint": "1...d5 planta el peón central propio de las azules y prepara el Gambito de Dama Rehusado o la familia Eslava.",
+      "accept": [
+        "d5"
+      ]
+    }
+  ]
+}

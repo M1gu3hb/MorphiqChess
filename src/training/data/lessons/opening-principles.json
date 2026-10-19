@@ -1,0 +1,83 @@
+{
+  "id": "opening-principles",
+  "title": "Los Tres Principios",
+  "summary": "Centro, desarrollo, seguridad del rey",
+  "level": "beginner",
+  "steps": [
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "title": "Las Tres Leyes",
+      "bubbles": [
+        "Toda gran apertura — desde la Italiana hasta la Siciliana — descansa sobre los mismos tres pilares. Domínalos y nunca tendrás una *mala* apertura, aunque jamás hayas visto la posición.",
+        "## Las tres leyes de la apertura\n\n1. **Controla el centro.** Las cuatro casillas **d4, e4, d5, e5** son la propiedad más valiosa del tablero. Las piezas que las controlan alcanzan más casillas; las que no, son espectadoras.\n2. **Desarrolla rápido tus piezas.** Saca cada pieza menor (caballos, alfiles) de la fila final en las primeras 8-10 jugadas. *No* muevas la misma pieza dos veces a menos que sea obligatorio.",
+        "3. **Pon a salvo a tu rey.** Enroca antes de la jugada 10. Un rey en el centro es un rey en peligro.\n\nUna secuencia de apertura modelo: {{e4}} {{e5}} {{Nf3}} {{Nc6}} {{Bc4}} {{Bc5}} {{O-O}}. Las blancas ya han hecho las tres cosas — peón en el centro, dos piezas desarrolladas, rey refugiado.",
+        "> Desarrolla con propósito. Enroca sin demora. El medio juego empieza donde acaban los principios de apertura."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "prompt": "Reclama tu parte con un peón central — juega **{{e4}}** o **{{d4}}**.",
+      "hint": "Ambas jugadas toman una casilla central y abren líneas para dos piezas a la vez (la dama y un alfil). Es el principio más barato para la primera jugada.",
+      "accept": [
+        "e4",
+        "d4"
+      ]
+    },
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "title": "Ahora Desarrolla",
+      "bubbles": [
+        "Los peones ponen los cimientos; ahora entran las piezas.",
+        "## Orden de desarrollo\n\n- **Primero los peones** — pero solo los centrales, lo justo para abrir líneas.\n- **Caballos antes que alfiles.** Los caballos tienen menos casillas buenas (normalmente f3, c3 o f6, c6), así que desarróllalos primero para comprometer menos elecciones.\n- **Alfiles a casillas activas.** Buscan diagonales que apunten al campo enemigo.\n- **La dama, la última de las menores.** Es demasiado valiosa para exponerla pronto.",
+        "- **Las torres por último** — terminan el desarrollo ocupando columnas abiertas.\n\n¿Por qué los caballos primero? Porque **{{Nf3}}** hace triple servicio: desarrolla una pieza, ataca el peón de e5 y prepara el enroque. Pocas jugadas logran tanto a la vez.",
+        "> Mueve cada pieza una vez antes de mover dos veces ninguna."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "prompt": "Desarrolla un caballo hacia el centro — **{{Nf3}}** es la elección clásica (ataca e5), o **{{Nc3}}** también vale.",
+      "hint": "Ambas jugadas meten al caballo en la acción. ¿Cuál de ellas también ataca el peón de e5 azul?",
+      "accept": [
+        "Nf3",
+        "Nc3"
+      ]
+    },
+    {
+      "kind": "teach",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "title": "Los Alfiles Después",
+      "bubbles": [
+        "Ambos caballos pertenecen a f3 y c3 (o c4 en algunas aperturas). Ahora los alfiles quieren liberarse.",
+        "## Eligiendo casa para un alfil\n\n- **{{Bc4}}** — el montaje de la *Apertura Italiana*. El alfil mira a f7, la casilla más vulnerable del campo azul porque solo la defiende el rey.\n- **{{Bb5}}** — el montaje de la *Ruy López*. Presiona al caballo de c6 (que defiende e5) — la apertura seria más antigua del ajedrez.\n- **{{Bd3}}** — sólida pero bloquea al peón de d. Común en sistemas de 1.d4.",
+        "- **{{Be2}}** — modesta pero flexible. El alfil apoya un ataque en el flanco de rey más adelante.\n\nFíjate en que las azules te han imitado con {{Nc6}}. La simetría está bien durante unas jugadas — el jugador que rompa la simetría con utilidad suele obtener la ventaja.",
+        "> Un alfil con un objetivo vale por dos sin él."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "prompt": "Desarrolla tu alfil de casillas claras. **{{Bc4}}** es la Italiana clásica — vigila f7.",
+      "hint": "¿Dónde necesita defensa el peón de f7 azul? Un alfil en c4 ataca exactamente esa casilla.",
+      "accept": [
+        "Bc4",
+        "Bb5",
+        "Bd3",
+        "Be2"
+      ]
+    },
+    {
+      "kind": "teach",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "title": "Seguridad del Rey",
+      "bubbles": [
+        "Dos piezas menores fuera, centro reclamado, líneas abiertas — este es el momento ideal para **enrocar**.\n\nEl enroque hace tres cosas en una jugada:\n\n- Mete al rey en una esquina, tras una muralla de peones\n- Conecta las torres (ahora pueden defenderse mutuamente por la fila final)\n- Lleva una torre al centro — normalmente a f1 o d1, donde controla una columna semiabierta",
+        "## Una lista útil antes de enrocar\n\n- ¿Sigue el **peón de f** en su casilla inicial? (Moverlo debilita al rey enrocado.)\n- ¿Hay alguna **amenaza inmediata** que deba atender primero?\n- ¿Voy a enrocar al **mismo lado** que mi rival (juego posicional) o al **lado opuesto** (lucha aguda con tormentas de peones)?\n\nDesde la posición de arriba, la continuación natural es {{O-O}}. Después pensarás en la columna d, en la ruptura con el peón c y en jugadas activas de torre.",
+        "> Enroca pronto, enroca a tiempo, y el medio juego se abre contigo en forma."
+      ]
+    }
+  ]
+}

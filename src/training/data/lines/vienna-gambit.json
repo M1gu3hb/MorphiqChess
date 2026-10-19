@@ -1,0 +1,32 @@
+{
+  "id": "vienna-gambit",
+  "source": "FreeChessTrainer",
+  "side": "w",
+  "lines": [
+    {
+      "name": "Defensa Cunningham",
+      "nameEn": "Cunningham Defense",
+      "eco": "C25",
+      "moves": "e4 e5 Nc3 Nc6 f4 exf4 Nf3 Be7"
+    },
+    {
+      "name": "Gambito Hamppe-Allgaier",
+      "nameEn": "Hamppe-Allgaier Gambit",
+      "eco": "C25",
+      "moves": "e4 e5 Nc3 Nc6 f4 exf4 Nf3 g5 h4 g4 Ng5"
+    },
+    {
+      "name": "Gambito Hamppe-Allgaier, Variante Alapin",
+      "nameEn": "Hamppe-Allgaier Gambit, Alapin Variation",
+      "eco": "C25",
+      "moves": "e4 e5 Nc3 Nc6 f4 exf4 Nf3 g5 h4 g4 Ng5 d6"
+    },
+    {
+      "name": "Gambito Hamppe-Allgaier, Variante Thorold",
+      "nameEn": "Hamppe-Allgaier Gambit, Thorold Variation",
+      "eco": "C25",
+      "moves": "e4 e5 f4 exf4 Nf3 Nc6 Nc3 g5 h4 g4 Ng5 h6 Nxf7 Kxf7 d4",
+      "main": true
+    }
+  ]
+}

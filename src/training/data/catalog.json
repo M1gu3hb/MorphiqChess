@@ -1,0 +1,365 @@
+{
+  "courses": [
+    {
+      "id": "italian-game",
+      "name": "Apertura Italiana",
+      "summary": "Clásica, principista, aún jugada al más alto nivel",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "italian-game",
+          "title": "La Apertura Italiana",
+          "summary": "Clásica, principista, aún jugada al más alto nivel",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 3
+        }
+      ],
+      "lines": {
+        "id": "italian-game",
+        "count": 59,
+        "cards": 93
+      }
+    },
+    {
+      "id": "ruy-lopez",
+      "name": "Ruy López",
+      "summary": "La apertura seria más antigua del ajedrez",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "ruy-lopez-basics",
+          "title": "La Ruy López",
+          "summary": "La apertura seria más antigua del ajedrez",
+          "level": "intermediate",
+          "steps": 5,
+          "plays": 3
+        }
+      ],
+      "lines": {
+        "id": "ruy-lopez",
+        "count": 64,
+        "cards": 89
+      }
+    },
+    {
+      "id": "vienna-gambit",
+      "name": "Gambito Viena",
+      "summary": "Cuatro variantes para practicar con blancas tras 1.e4 e5 2.Cc3.",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [],
+      "lines": {
+        "id": "vienna-gambit",
+        "count": 4,
+        "cards": 10
+      }
+    },
+    {
+      "id": "queens-gambit",
+      "name": "Gambito de Dama",
+      "summary": "Ofrece un peón para controlar el centro",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "queens-gambit",
+          "title": "El Gambito de Dama",
+          "summary": "Ofrece un peón para controlar el centro",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 2
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "english",
+      "name": "Apertura Inglesa",
+      "summary": "Juego de flanco flexible",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "english",
+          "title": "La Apertura Inglesa",
+          "summary": "Juego de flanco flexible",
+          "level": "intermediate",
+          "steps": 3,
+          "plays": 1
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "london-system",
+      "name": "Sistema Londres",
+      "summary": "El sistema universal — el mismo planteamiento, siempre",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "london-system",
+          "title": "El Sistema Londres",
+          "summary": "El sistema universal — el mismo planteamiento, siempre",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 2
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "kings-indian-attack",
+      "name": "Ataque India de Rey",
+      "summary": "India de Rey invertida — un sistema con blancas",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "kings-indian-attack",
+          "title": "Ataque India de Rey",
+          "summary": "India de Rey invertida — un sistema con blancas",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 2
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "catalan",
+      "name": "Catalana",
+      "summary": "Apretón posicional desde la primera jugada",
+      "group": "aperturas",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "catalan-advanced",
+          "title": "La Catalana",
+          "summary": "Apretón posicional desde la primera jugada",
+          "level": "advanced",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "sicilian",
+      "name": "Defensa Siciliana",
+      "summary": "La respuesta más afilada de las azules a 1.e4",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "sicilian",
+          "title": "La Defensa Siciliana",
+          "summary": "La respuesta más afilada de las azules a 1.e4",
+          "level": "intermediate",
+          "steps": 5,
+          "plays": 3
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "najdorf",
+      "name": "Siciliana Najdorf",
+      "summary": "La apertura más afilada del ajedrez moderno",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "najdorf-sicilian",
+          "title": "Siciliana Najdorf",
+          "summary": "La apertura más afilada del ajedrez moderno",
+          "level": "advanced",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "caro-kann",
+      "name": "Defensa Caro-Kann",
+      "summary": "Una defensa sólida como una roca contra 1.e4",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "caro-kann",
+          "title": "La Caro-Kann",
+          "summary": "Una defensa sólida como una roca contra 1.e4",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 2
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "french",
+      "name": "Defensa Francesa",
+      "summary": "Una sólida cadena de peones con potencial de contraataque",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "french-defense-deep",
+          "title": "La Defensa Francesa",
+          "summary": "Una sólida cadena de peones con potencial de contraataque",
+          "level": "intermediate",
+          "steps": 4,
+          "plays": 2
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "kings-indian-defense",
+      "name": "Defensa India de Rey",
+      "summary": "Contraataque hipermoderno — la elección del peleador",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "kings-indian-advanced",
+          "title": "Defensa India de Rey",
+          "summary": "Contraataque hipermoderno — la elección del peleador",
+          "level": "advanced",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "nimzo-indian",
+      "name": "Defensa Nimzo-India",
+      "summary": "Obra maestra estratégica — clavar y controlar",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "nimzo-indian-advanced",
+          "title": "Defensa Nimzo-India",
+          "summary": "Obra maestra estratégica — clavar y controlar",
+          "level": "advanced",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "gruenfeld",
+      "name": "Defensa Grünfeld",
+      "summary": "Un sistema hipermoderno de contragolpe",
+      "group": "defensas",
+      "side": "b",
+      "lessons": [
+        {
+          "id": "gruenfeld-advanced",
+          "title": "Defensa Grünfeld",
+          "summary": "Un sistema hipermoderno de contragolpe",
+          "level": "advanced",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "opening-principles",
+      "name": "Los tres principios",
+      "summary": "Centro, desarrollo, seguridad del rey",
+      "group": "fundamentos",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "opening-principles",
+          "title": "Los Tres Principios",
+          "summary": "Centro, desarrollo, seguridad del rey",
+          "level": "beginner",
+          "steps": 7,
+          "plays": 3
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "opening-traps",
+      "name": "Trampas de apertura",
+      "summary": "Reconoce (y evita) errores clásicos",
+      "group": "fundamentos",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "opening-traps",
+          "title": "Trampas Comunes de Apertura",
+          "summary": "Reconoce (y evita) errores clásicos",
+          "level": "intermediate",
+          "steps": 3,
+          "plays": 0
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "kings-pawn-family",
+      "name": "1.e4, el peón de rey",
+      "summary": "Panorama de toda respuesta importante a 1.e4",
+      "group": "fundamentos",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "kings-pawn-family",
+          "title": "1.e4 — El peón de rey",
+          "summary": "Panorama de toda respuesta importante a 1.e4",
+          "level": "beginner",
+          "steps": 3,
+          "plays": 1
+        }
+      ],
+      "lines": null
+    },
+    {
+      "id": "queens-pawn-family",
+      "name": "1.d4, el peón de dama",
+      "summary": "Entendiendo los sistemas con 1.d4",
+      "group": "fundamentos",
+      "side": "w",
+      "lessons": [
+        {
+          "id": "queens-pawn-family",
+          "title": "1.d4 — El peón de dama",
+          "summary": "Entendiendo los sistemas con 1.d4",
+          "level": "beginner",
+          "steps": 3,
+          "plays": 1
+        }
+      ],
+      "lines": null
+    }
+  ],
+  "credits": [
+    {
+      "name": "KarpaChess",
+      "holder": "Mourad Ghafiri",
+      "url": "https://github.com/mourad-ghafiri/KarpaChess",
+      "license": "MIT",
+      "use": "Las 18 lecciones de aperturas y defensas, en español."
+    },
+    {
+      "name": "FreeChessTrainer Opening Dataset",
+      "holder": "FreeChessTrainer",
+      "url": "https://github.com/freechesstrainer/freechess-trainer-openings",
+      "license": "MIT",
+      "use": "Las variantes para practicar la Apertura Italiana, la Ruy López y el Gambito Viena."
+    }
+  ]
+}

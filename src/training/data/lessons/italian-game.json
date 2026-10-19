@@ -1,0 +1,48 @@
+{
+  "id": "italian-game",
+  "title": "La Apertura Italiana",
+  "summary": "Clásica, principista, aún jugada al más alto nivel",
+  "level": "intermediate",
+  "steps": [
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "title": "La Italiana",
+      "bubbles": [
+        "La Apertura Italiana es una de las **más antiguas** del ajedrez y aún — increíblemente — una de las más populares en todos los niveles, incluida la cima del ranking mundial.",
+        "## Las jugadas que la definen\n\nLa secuencia canónica es {{e4}} {{e5}} {{Nf3}} {{Nc6}} {{Bc4}}. Tres jugadas principistas, tres piezas desarrolladas y un alfil apuntando a f7 — la casilla más débil del campo azul.",
+        "## Lo que quiere cada bando\n\n- **Plan blanco:** terminar el desarrollo con {{Nc3}} (o {{c3}} preparando d4), enrocar corto y construir lentamente un ataque en el flanco de rey o avanzar d4 para reclamar el centro.\n- **Plan azul:** imitar con **...{{Nf6}}** y **...{{Bc5}}** (la Giuoco Piano) o **...{{Be7}}** (la Húngara, más tranquila), enrocar corto y disputar el centro con **...d6** o **...d5**.",
+        "- **Estructura de peones:** simétrica al principio, a menudo se vuelve un centro cerrado tras **c3 / d3 / d6**.",
+        "## Por qué funciona\n\nLa Italiana respeta cada principio de apertura: un peón central, dos piezas menores fuera, el rey listo para enrocar. No hace falta una teoría hiperespecífica — solo buenas jugadas.",
+        "> Ajedrez clásico en su forma más pura: piezas fuera, rey a salvo, lucha en el centro."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "prompt": "Abre con el peón del rey — juega **{{e4}}**.",
+      "hint": "La primera jugada más popular de la historia del ajedrez abre líneas tanto para la dama como para el alfil de f1.",
+      "accept": [
+        "e4"
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "prompt": "Desarrolla con **{{Nf3}}** — un caballo que ataca **e5** y prepara el enroque.",
+      "hint": "Dos pájaros de un tiro: esta jugada desarrolla una pieza Y ataca el peón central azul.",
+      "accept": [
+        "Nf3"
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "prompt": "Planta el alfil con **{{Bc4}}** — apuntando directamente a la casilla f7.",
+      "hint": "La casilla más vulnerable del campo azul es f7, defendida solo por el rey. Un alfil en c4 la mira de frente.",
+      "accept": [
+        "Bc4"
+      ]
+    }
+  ]
+}

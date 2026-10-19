@@ -1,0 +1,42 @@
+{
+  "id": "english",
+  "title": "La Apertura Inglesa",
+  "summary": "Juego de flanco flexible",
+  "level": "intermediate",
+  "steps": [
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "title": "Controlar el Centro desde los Flancos",
+      "bubbles": [
+        "La **Apertura Inglesa** ({{c4}}) es la elección del conocedor — un sistema flexible e hipermoderno preferido por campeones del mundo como Botvinnik, Kasparov, Carlsen y Caruana.\n\nEn lugar de marchar peones al centro, las blancas preparan un **control gradual** con el peón c, desarrollan piezas primero y deciden la estructura en función de lo que hagan las azules.",
+        "## Qué quiere cada bando\n\n- **Plan blanco:** jugar primero {{c4}}, después {{Nc3}} y {{Nf3}}, fianchetar el alfil de rey con {{g3}} y {{Bg2}}, y enrocar. La pelea por el centro se libra con d3 o d4 *más adelante*.\n- **Plan azul:** tratar la Inglesa como una Defensa Ortodoxa o pelear simétricamente con **...c5**. La respuesta más valiente es **1...e5** (una *Siciliana invertida*), que puede llevar a un juego salvaje.",
+        "- **Estructura de peones:** suelen aparecer formas tipo *Inglesa / Erizo* — los peones azules en a6, b6, d6, e6, mientras las blancas se expanden con c4-d4-e4 a largo plazo.",
+        "## Una línea modelo\n\n{{c4}} {{e5}} {{Nc3}} {{Nf6}} {{g3}} **d5** {{cxd5}} **{{Nxd5}}** {{Bg2}}. Las blancas se preparan para una larga molienda posicional con el alfil de la diagonal larga apuntando al flanco de dama azul.",
+        "## Por qué encanta a los grandes maestros\n\nLa Inglesa transpone a otras aperturas *solo cuando las blancas lo desean*. Si juegas **1.c4**, puedes elegir más tarde si rumbo a un Gambito de Dama, una Defensa India o una estructura inglesa pura — la flexibilidad es enorme.",
+        "> Control sin compromiso. La Inglesa gana por paciencia."
+      ]
+    },
+    {
+      "kind": "play",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "prompt": "Abre con la Inglesa — juega **{{c4}}**.",
+      "hint": "1.c4 desafía la casilla d5 azul desde el flanco y mantiene flexibles los peones e y d para más adelante.",
+      "accept": [
+        "c4"
+      ]
+    },
+    {
+      "kind": "teach",
+      "fen": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1",
+      "title": "Continuaciones Flexibles",
+      "bubbles": [
+        "Lo poderoso de 1.c4 es el menú de planes que las blancas mantienen abierto.",
+        "## Cuatro planteamientos blancos principales\n\n- **Inglesa Simétrica** — las blancas juegan {{Nc3}}, {{g3}}, {{Bg2}}, {{Nf3}}, **0-0**, y después eligen entre {{d4}} (transponiendo a Gambito de Dama) o maniobras tranquilas.\n- **Sistema Botvinnik** — peones en c4-d3-e4, caballos a c3 y e2, alfil a g2. A prueba de balas y flexible.\n- **Siciliana Invertida** — si las azules juegan 1...e5, las blancas obtienen esencialmente una Siciliana *con un tiempo de más*. Aguda y rentable.",
+        "- **Ataque Mikenas** — 1.c4 {{Nf6}} 2.{{Nc3}} e6 3.e4!? — directo y agresivo, como un 1.e4 retrasado.",
+        "## Transposiciones comunes\n\n- Tras **1.c4 e5 2.{{Nc3}} {{Nf6}} 3.{{Nf3}} {{Nc6}}** — un *tabiya* de Siciliana invertida.\n- Tras **1.c4 c5 2.{{Nf3}} {{Nf6}} 3.{{Nc3}}** — una *Inglesa Simétrica* rumbo al Erizo.\n- Tras **1.c4 e6 2.{{Nc3}} d5** — las blancas pueden jugar d4 y llegar a un *Gambito de Dama Rehusado* en sus términos.",
+        "> Si te disgusta memorizar teoría forzada, la Inglesa te da un sistema. Si amas la estrategia profunda, te da estudio para toda la vida."
+      ]
+    }
+  ]
+}

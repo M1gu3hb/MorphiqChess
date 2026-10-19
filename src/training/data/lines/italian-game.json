@@ -1,0 +1,362 @@
+{
+  "id": "italian-game",
+  "source": "FreeChessTrainer",
+  "side": "w",
+  "lines": [
+    {
+      "name": "Variante clásica, Gambito Albin",
+      "nameEn": "Italian Game: Classical Variation, Albin Gambit",
+      "eco": "C50",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 c3"
+    },
+    {
+      "name": "Gambito Deutz",
+      "nameEn": "Italian Game: Deutz Gambit",
+      "eco": "C50",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d4"
+    },
+    {
+      "name": "Giuoco Pianissimo, Variante Dubois",
+      "nameEn": "Italian Game: Giuoco Pianissimo, Dubois Variation",
+      "eco": "C50",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 f5 Ng5 f4"
+    },
+    {
+      "name": "Giuoco Pianissimo, Gambito Lucchini",
+      "nameEn": "Italian Game: Giuoco Pianissimo, Lucchini Gambit",
+      "eco": "C50",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 d3 f5"
+    },
+    {
+      "name": "Giuoco Pianissimo, Variante normal",
+      "nameEn": "Italian Game: Giuoco Pianissimo, Normal",
+      "eco": "C50",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5"
+    },
+    {
+      "name": "Gambito Evans rehusado",
+      "nameEn": "Italian Game: Evans Gambit Declined",
+      "eco": "C51",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bb6"
+    },
+    {
+      "name": "Gambito Evans rehusado, Variante Hicken",
+      "nameEn": "Italian Game: Evans Gambit Declined, Hicken Variation",
+      "eco": "C51",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bb6 b5 Na5 Nxe5 Qg5 Qf3 Qxe5 Qxf7 Kd8 Bb2"
+    },
+    {
+      "name": "Gambito Evans, Ataque Fraser-Mortimer",
+      "nameEn": "Italian Game: Evans Gambit, Fraser-Mortimer Attack",
+      "eco": "C51",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Bc5 d4 exd4 O-O d6 cxd4 Bb6 Nc3 Bg4 Qa4 Bd7 Qb3 Na5 Bxf7 Kf8 Qc2"
+    },
+    {
+      "name": "Gambito Evans, Variante Steinitz",
+      "nameEn": "Italian Game: Evans Gambit, Steinitz Variation",
+      "eco": "C51",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Bc5 d4 exd4 O-O d6 cxd4 Bb6 Nc3 Na5 Bg5 f6 Be3"
+    },
+    {
+      "name": "Gambito Evans, Variante Ulvestad",
+      "nameEn": "Italian Game: Evans Gambit, Ulvestad Variation",
+      "eco": "C51",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Bc5 d4 exd4 O-O d6 cxd4 Bb6 d5 Na5 Bb2"
+    },
+    {
+      "name": "Gambito Evans",
+      "nameEn": "Italian Game: Evans Gambit",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 O-O d6"
+    },
+    {
+      "name": "Gambito Evans, Defensa Anderssen",
+      "nameEn": "Italian Game: Evans Gambit, Anderssen Defense",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 O-O Nf6 d4 exd4"
+    },
+    {
+      "name": "Gambito Evans, Variante Laroche",
+      "nameEn": "Italian Game: Evans Gambit, Laroche Variation",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 Nf6"
+    },
+    {
+      "name": "Gambito Evans, Variante Levenfish",
+      "nameEn": "Italian Game: Evans Gambit, Levenfish Variation",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 d6 Qb3 Qd7 dxe5 dxe5 O-O Bb6 Ba3 Na5 Nxe5"
+    },
+    {
+      "name": "Gambito Evans, Defensa Pierce",
+      "nameEn": "Italian Game: Evans Gambit, Pierce Defense",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 exd4"
+    },
+    {
+      "name": "Gambito Evans, Ataque Richardson",
+      "nameEn": "Italian Game: Evans Gambit, Richardson Attack",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 O-O Nf6 d4 O-O Nxe5"
+    },
+    {
+      "name": "Gambito Evans, Variante Sokolsky",
+      "nameEn": "Italian Game: Evans Gambit, Sokolsky Variation",
+      "eco": "C52",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 d6 Bg5"
+    },
+    {
+      "name": "Variante clásica, Variante del centro sostenido",
+      "nameEn": "Italian Game: Classical Variation, Center Holding Variation",
+      "eco": "C53",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Qe7 d4 Bb6"
+    },
+    {
+      "name": "Variante clásica, Variante cerrada",
+      "nameEn": "Italian Game: Classical Variation, Closed Variation",
+      "eco": "C53",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Qe7"
+    },
+    {
+      "name": "Variante clásica, Variante La Bourdonnais",
+      "nameEn": "Italian Game: Classical Variation, La Bourdonnais Variation",
+      "eco": "C53",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 d6 d4 exd4 cxd4 Bb6"
+    },
+    {
+      "name": "Variante clásica, Variante Ghulam-Kassim",
+      "nameEn": "Italian Game: Classical Variation, Ghulam-Kassim Variation",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 e5 Ne4 Bd5 Nxf2 Kxf2 dxc3 Kg3"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d3 d6"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 d6 c3 a6"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 d6 c3 a6 a4 Ba7"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 d6 c3 a6 a4 O-O"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 d6 c3 a6 Re1 Ba7"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 O-O c3 d5"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 O-O c3 d6"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo, con a4 a5",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo, with a4 a5",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d3 d6 O-O O-O a4 a5"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo, con a6",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo, with a6",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d3 d6 Nbd2 a6"
+    },
+    {
+      "name": "Variante clásica, Giuoco Pianissimo, con h6",
+      "nameEn": "Italian Game: Classical Variation, Giuoco Pianissimo, with h6",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d3 d6 c3 h6"
+    },
+    {
+      "name": "Variante clásica, Gambito Greco, Variante Greco",
+      "nameEn": "Italian Game: Classical Variation, Greco Gambit, Greco Variation",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Nxc3"
+    },
+    {
+      "name": "Variante clásica, Gambito Greco, Ataque Moeller-Bayonet",
+      "nameEn": "Italian Game: Classical Variation, Greco Gambit, Moeller-Bayonet Attack",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Bxc3 d5 Bf6 Re1 Ne7 Rxe4 d6 g4"
+    },
+    {
+      "name": "Variante clásica, Gambito Greco, Ataque Moeller-Therkatz",
+      "nameEn": "Italian Game: Classical Variation, Greco Gambit, Moeller-Therkatz Attack",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Bxc3 d5"
+    },
+    {
+      "name": "Variante clásica, con d5",
+      "nameEn": "Italian Game: Classical Variation, with d5",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d3 d5"
+    },
+    {
+      "name": "Giuoco Piano, Variante Bernstein",
+      "nameEn": "Italian Game: Giuoco Piano, Bernstein Variation",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Nxc3 bxc3 Bxc3 Qb3 d5"
+    },
+    {
+      "name": "Giuoco Piano, Ataque de Greco",
+      "nameEn": "Italian Game: Giuoco Piano, Greco's Attack",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3"
+    },
+    {
+      "name": "Giuoco Piano, Ataque Holzhausen",
+      "nameEn": "Italian Game: Giuoco Piano, Holzhausen Attack",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 O-O Bc5 d4 Bxd4 Nxd4 Nxd4 Bg5 d6 f4 Qe7 fxe5 dxe5 Nc3"
+    },
+    {
+      "name": "Giuoco Piano, Variante Steinitz",
+      "nameEn": "Italian Game: Giuoco Piano, Steinitz Variation",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Bxc3 bxc3 d5 Ba3"
+    },
+    {
+      "name": "Giuoco Piano, Variante Therkatz-Herzog",
+      "nameEn": "Italian Game: Giuoco Piano, Therkatz-Herzog Variation",
+      "eco": "C54",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4 Nc3 Nxe4 O-O Bxc3 d5 Bf6 Re1 Ne7 Rxe4 d6 Bg5 Bxg5 Nxg5 O-O Nxh7",
+      "main": true
+    },
+    {
+      "name": "Defensa de los Dos Caballos",
+      "nameEn": "Italian Game: Two Knights Defense",
+      "eco": "C55",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 O-O Bc5 d4 Bxd4 Nxd4 Nxd4 Bg5 d6"
+    },
+    {
+      "name": "Gambito Escocés, Variante Canal",
+      "nameEn": "Italian Game: Scotch Gambit, Canal Variation",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O Nxe4 Re1 d5 Nc3"
+    },
+    {
+      "name": "Gambito Escocés, Gambito doble aceptado",
+      "nameEn": "Italian Game: Scotch Gambit, Double Gambit Accepted",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Nxe4"
+    },
+    {
+      "name": "Gambito Escocés, Ataque Max Lange",
+      "nameEn": "Italian Game: Scotch Gambit, Max Lange Attack",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O Bc5"
+    },
+    {
+      "name": "Gambito Escocés, Gambito Nakhmanson",
+      "nameEn": "Italian Game: Scotch Gambit, Nakhmanson Gambit",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Nxe4 Nc3"
+    },
+    {
+      "name": "Invitación escocesa rehusada",
+      "nameEn": "Italian Game: Scotch Invitation Declined",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 d6"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Ataque Max Lange",
+      "nameEn": "Italian Game: Two Knights Defense, Max Lange Attack",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 O-O Bc5 e5"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Ataque Max Lange, Variante Berger",
+      "nameEn": "Italian Game: Two Knights Defense, Max Lange Attack, Berger Variation",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 d5 exf6 dxc4 Re1 Be6 Ng5 Qd5 Nc3 Qf5 g4 Qg6 Nce4 Bb6 f4 O-O-O"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Ataque Max Lange, Variante Krause",
+      "nameEn": "Italian Game: Two Knights Defense, Max Lange Attack, Krause Variation",
+      "eco": "C56",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 Ng4 c3"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Ataque del Hígado Frito",
+      "nameEn": "Italian Game: Two Knights Defense, Fried Liver Attack",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Fritz, Variante Gruber",
+      "nameEn": "Italian Game: Two Knights Defense, Fritz, Gruber Variation",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nd4 c3 b5 Bf1 Nxd5 Ne4"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Ataque Lolli",
+      "nameEn": "Italian Game: Two Knights Defense, Lolli Attack",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 d4"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Contraataque Traxler, Línea del sacrificio de alfil",
+      "nameEn": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Bxf7"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Contraataque Traxler, Línea de la marcha del rey",
+      "nameEn": "Italian Game: Two Knights Defense, Traxler Counterattack, King March Line",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Nxf7 Bxf2 Kxf2 Nxe4 Ke3"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Contraataque Traxler, Línea del sacrificio de caballo",
+      "nameEn": "Italian Game: Two Knights Defense, Traxler Counterattack, Knight Sacrifice Line",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Nxf7"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Variante Traxler, Gambito Trencianske-Teplice",
+      "nameEn": "Italian Game: Two Knights Defense, Traxler Variation, Trencianske-Teplice Gambit",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Bxf7 Ke7 d4"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Variante Ulvestad, Gambito Kurkin",
+      "nameEn": "Italian Game: Two Knights Defense, Ulvestad Variation, Kurkin Gambit",
+      "eco": "C57",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 b5 Bf1 h6 Nxf7"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Variante Paoli",
+      "nameEn": "Italian Game: Two Knights Defense, Paoli Variation",
+      "eco": "C58",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5 c6 dxc6 bxc6 Qf3 Qc7 Bd3"
+    },
+    {
+      "name": "Defensa de los Dos Caballos, Variante Knorre",
+      "nameEn": "Italian Game: Two Knights Defense, Knorre Variation",
+      "eco": "C59",
+      "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5 c6 dxc6 bxc6 Be2 h6 Nf3 e4 Ne5 Bd6 d4 Qc7 Bd2"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "id": "ruy-lopez",
+  "source": "FreeChessTrainer",
+  "side": "w",
+  "lines": [
+    {
+      "name": "Variante Bird, Variante Paulsen",
+      "nameEn": "Ruy Lopez: Bird Variation, Paulsen Variation",
+      "eco": "C61",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nd4 Nxd4 exd4 O-O Ne7"
+    },
+    {
+      "name": "Defensa Steinitz antigua, Variante Semi-Duras",
+      "nameEn": "Ruy Lopez: Old Steinitz Defense, Semi-Duras Variation",
+      "eco": "C62",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 d6 d4 Bd7 c4"
+    },
+    {
+      "name": "Defensa Steinitz, Gambito del centro",
+      "nameEn": "Ruy Lopez: Steinitz Defense, Center Gambit",
+      "eco": "C62",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 d6 d4 exd4 O-O"
+    },
+    {
+      "name": "Defensa Steinitz, Ataque Nimzowitsch",
+      "nameEn": "Ruy Lopez: Steinitz Defense, Nimzowitsch Attack",
+      "eco": "C62",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 d6 d4 Bd7 Nc3 Nf6 Bxc6"
+    },
+    {
+      "name": "Defensa clásica, Variante Zaitsev",
+      "nameEn": "Ruy Lopez: Classical Defense, Zaitsev Variation",
+      "eco": "C64",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Bc5 O-O Nd4 b4"
+    },
+    {
+      "name": "Variante clásica, Variante Charousek",
+      "nameEn": "Ruy Lopez: Classical Variation, Charousek Variation",
+      "eco": "C64",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Bc5 c3 Bb6"
+    },
+    {
+      "name": "Variante clásica, Gambito Cordel",
+      "nameEn": "Ruy Lopez: Classical Variation, Cordel Gambit",
+      "eco": "C64",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Bc5 c3 f5"
+    },
+    {
+      "name": "Variante clásica, Gambito Konikowski",
+      "nameEn": "Ruy Lopez: Classical Variation, Konikowski Gambit",
+      "eco": "C64",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Bc5 c3 d5"
+    },
+    {
+      "name": "Defensa Berlín, Trampa Mortimer",
+      "nameEn": "Ruy Lopez: Berlin Defense, Mortimer Trap",
+      "eco": "C65",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 d3 Ne7 Nxe5 c6"
+    },
+    {
+      "name": "Defensa Berlín, Ataque Nyholm",
+      "nameEn": "Ruy Lopez: Berlin Defense, Nyholm Attack",
+      "eco": "C65",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 d4 exd4 O-O"
+    },
+    {
+      "name": "Defensa Berlín, Variante Showalter cerrada",
+      "nameEn": "Ruy Lopez: Berlin Defense, Closed Showalter Variation",
+      "eco": "C66",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O d6 d4 Bd7 Nc3 Be7 Bxc6"
+    },
+    {
+      "name": "Defensa Berlín, Variante Minckwitz",
+      "nameEn": "Ruy Lopez: Berlin Defense, Minckwitz Variation",
+      "eco": "C67",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Be7 dxe5"
+    },
+    {
+      "name": "Defensa Berlín, Variante Pillsbury",
+      "nameEn": "Ruy Lopez: Berlin Defense, Pillsbury Variation",
+      "eco": "C67",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Be7 Qe2 Nd6 Bxc6 bxc6 dxe5 Nb7 b3"
+    },
+    {
+      "name": "Defensa Berlín, Variante Zukertort",
+      "nameEn": "Ruy Lopez: Berlin Defense, Zukertort Variation",
+      "eco": "C67",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Be7 Qe2 Nd6 Bxc6 bxc6 dxe5 Nb7 c4"
+    },
+    {
+      "name": "Variante del cambio, Variante Lutikov",
+      "nameEn": "Ruy Lopez: Exchange Variation, Lutikov Variation",
+      "eco": "C68",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 bxc6"
+    },
+    {
+      "name": "Variante del cambio, Gambito Alapin",
+      "nameEn": "Ruy Lopez: Exchange Variation, Alapin Gambit",
+      "eco": "C69",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O Bg4 h3 h5"
+    },
+    {
+      "name": "Variante del cambio, Variante Bronstein",
+      "nameEn": "Ruy Lopez: Exchange Variation, Bronstein Variation",
+      "eco": "C69",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O Qd6"
+    },
+    {
+      "name": "Variante del cambio, Variante Gligoric",
+      "nameEn": "Ruy Lopez: Exchange Variation, Gligoric Variation",
+      "eco": "C69",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O f6"
+    },
+    {
+      "name": "Variante del cambio, Variante del alfil de rey",
+      "nameEn": "Ruy Lopez: Exchange Variation, King's Bishop Variation",
+      "eco": "C69",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O Bd6"
+    },
+    {
+      "name": "Defensa Morphy, Variante noruega, Gambito Nightingale",
+      "nameEn": "Ruy Lopez: Morphy Defense, Norwegian Variation, Nightingale Gambit",
+      "eco": "C70",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 b5 Bb3 Na5 Bxf7"
+    },
+    {
+      "name": "Defensa Morphy, Defensa Steinitz moderna",
+      "nameEn": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+      "eco": "C71",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6 c4"
+    },
+    {
+      "name": "Variante cerrada, Variante Kecskemet",
+      "nameEn": "Ruy Lopez: Closed, Kecskemet Variation",
+      "eco": "C72",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6 O-O Bd7 c3 Nf6 d4 Be7 Nbd2 O-O Re1 Be8"
+    },
+    {
+      "name": "Defensa Morphy, Defensa Steinitz moderna",
+      "nameEn": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+      "eco": "C72",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6 O-O"
+    },
+    {
+      "name": "Defensa Morphy, Defensa Steinitz moderna",
+      "nameEn": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+      "eco": "C74",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6 c3"
+    },
+    {
+      "name": "Defensa Morphy, Defensa Steinitz moderna",
+      "nameEn": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+      "eco": "C74",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 d6 c3 f5 exf5 Bxf5 O-O"
+    },
+    {
+      "name": "Defensa Morphy, Variante Anderssen",
+      "nameEn": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+      "eco": "C77",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 d3"
+    },
+    {
+      "name": "Variante Brix",
+      "nameEn": "Ruy Lopez: Brix Variation",
+      "eco": "C78",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O g6"
+    },
+    {
+      "name": "Defensa Morphy",
+      "nameEn": "Ruy Lopez: Morphy Defense",
+      "eco": "C78",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O"
+    },
+    {
+      "name": "Defensa Morphy, Ataque del ala",
+      "nameEn": "Ruy Lopez: Morphy Defense, Wing Attack",
+      "eco": "C78",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O b5 Bb3 Be7 a4"
+    },
+    {
+      "name": "Defensa Steinitz diferida, Variante Boleslavsky",
+      "nameEn": "Ruy Lopez: Steinitz Defense Deferred, Boleslavsky Variation",
+      "eco": "C79",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O d6 Bxc6 bxc6 d4 Nxe4 Re1 f5 dxe5 d5 Nc3"
+    },
+    {
+      "name": "Variante abierta",
+      "nameEn": "Ruy Lopez: Open",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4"
+    },
+    {
+      "name": "Variante abierta, Gambito Harksen",
+      "nameEn": "Ruy Lopez: Open, Harksen Gambit",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 c4"
+    },
+    {
+      "name": "Variante abierta, Variante Knorre",
+      "nameEn": "Ruy Lopez: Open, Knorre Variation",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 Nc3"
+    },
+    {
+      "name": "Variante abierta, Línea principal",
+      "nameEn": "Ruy Lopez: Open, Main Line",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6"
+    },
+    {
+      "name": "Variante abierta, Variante Richter",
+      "nameEn": "Ruy Lopez: Open, Richter Variation",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 d5"
+    },
+    {
+      "name": "Variante abierta, Gambito Skipworth",
+      "nameEn": "Ruy Lopez: Open, Skipworth Gambit",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 Re1 d5"
+    },
+    {
+      "name": "Variante abierta, Variante Zukertort",
+      "nameEn": "Ruy Lopez: Open, Zukertort Variation",
+      "eco": "C80",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Ne7"
+    },
+    {
+      "name": "Variante abierta, Ataque Howell",
+      "nameEn": "Ruy Lopez: Open, Howell Attack",
+      "eco": "C81",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 Qe2 Be7 c4"
+    },
+    {
+      "name": "Variante abierta, Ataque Howell, Variante Ekstrom",
+      "nameEn": "Ruy Lopez: Open, Howell Attack, Ekstrom Variation",
+      "eco": "C81",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 Qe2 Be7 Rd1 O-O c4 bxc4 Bxc4 Qd7"
+    },
+    {
+      "name": "Variante abierta, Variante Berlín",
+      "nameEn": "Ruy Lopez: Open, Berlin Variation",
+      "eco": "C82",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 c3 Nc5"
+    },
+    {
+      "name": "Variante abierta, Variante Dilworth",
+      "nameEn": "Ruy Lopez: Open, Dilworth Variation",
+      "eco": "C82",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 c3 Bc5 Nbd2 O-O Bc2 Nxf2"
+    },
+    {
+      "name": "Variante abierta, Variante italiana",
+      "nameEn": "Ruy Lopez: Open, Italian Variation",
+      "eco": "C82",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 c3 Bc5"
+    },
+    {
+      "name": "Variante abierta, Ataque Motzko, Variante Nenarokov",
+      "nameEn": "Ruy Lopez: Open, Motzko Attack, Nenarokov Variation",
+      "eco": "C82",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 c3 Bc5 Qd3 Ne7"
+    },
+    {
+      "name": "Variante abierta, Defensa clásica, Línea principal",
+      "nameEn": "Ruy Lopez: Open, Classical Defense, Main Line",
+      "eco": "C83",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 Be7 Re1 b5 Bb3 d5 dxe5 Be6 c3"
+    },
+    {
+      "name": "Variante cerrada, Gambito Vasco",
+      "nameEn": "Ruy Lopez: Closed, Basque Gambit",
+      "eco": "C84",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 d4 exd4 e5 Ne4 c3"
+    },
+    {
+      "name": "Variante cerrada, Ataque Worrall, Línea del enroque retrasado",
+      "nameEn": "Ruy Lopez: Closed, Worrall Attack, Delayed Castling Line",
+      "eco": "C86",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Qe2 b5 Bb3 d6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Ruy Lopez: Closed",
+      "eco": "C88",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O"
+    },
+    {
+      "name": "Variante cerrada, Variante Leonhardt",
+      "nameEn": "Ruy Lopez: Closed, Leonhardt Variation",
+      "eco": "C88",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 Na5 Bc2 c5 d4 Qc7 h3 Nc6 d5 Nb8 Nbd2 g5"
+    },
+    {
+      "name": "Variante cerrada, Ataque Rosen",
+      "nameEn": "Ruy Lopez: Closed, Rosen Attack",
+      "eco": "C88",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 d4"
+    },
+    {
+      "name": "Ataque Marshall",
+      "nameEn": "Ruy Lopez: Marshall Attack",
+      "eco": "C89",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5"
+    },
+    {
+      "name": "Ataque Marshall, Línea principal, Variante Spassky",
+      "nameEn": "Ruy Lopez: Marshall Attack, Main Line, Spassky Variation",
+      "eco": "C89",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5 c6 d4 Bd6 Re1 Qh4 g3 Qh3 Be3 Bg4 Qd3 Rae8 Nd2 Re6 a4 Qh5",
+      "main": true
+    },
+    {
+      "name": "Ataque Marshall, Variante moderna",
+      "nameEn": "Ruy Lopez: Marshall Attack, Modern Variation",
+      "eco": "C89",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5 c6"
+    },
+    {
+      "name": "Ataque Marshall, Ataque Marshall original",
+      "nameEn": "Ruy Lopez: Marshall Attack, Original Marshall Attack",
+      "eco": "C89",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5 Nf6"
+    },
+    {
+      "name": "Ataque Marshall, Variante Steiner",
+      "nameEn": "Ruy Lopez: Marshall Attack, Steiner Variation",
+      "eco": "C89",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O c3 d5 exd5 e4"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Ruy Lopez: Closed",
+      "eco": "C90",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O"
+    },
+    {
+      "name": "Variante cerrada, Variante Karpov",
+      "nameEn": "Ruy Lopez: Closed, Karpov Variation",
+      "eco": "C92",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Nd7"
+    },
+    {
+      "name": "Variante cerrada, Variante Kholmov",
+      "nameEn": "Ruy Lopez: Closed, Kholmov Variation",
+      "eco": "C92",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Be6"
+    },
+    {
+      "name": "Variante cerrada, Híbrido Smyslov-Breyer-Zaitsev",
+      "nameEn": "Ruy Lopez: Closed, Smyslov-Breyer-Zaitsev Hybrid",
+      "eco": "C92",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Bb7 d4 Re8 Nbd2 Bf8 a3 h6"
+    },
+    {
+      "name": "Variante cerrada, Sistema Zaitsev",
+      "nameEn": "Ruy Lopez: Closed, Zaitsev System",
+      "eco": "C92",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Re8"
+    },
+    {
+      "name": "Variante cerrada, Defensa Breyer",
+      "nameEn": "Ruy Lopez: Closed, Breyer Defense",
+      "eco": "C95",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Nb8 d4 Nbd7 Nh4"
+    },
+    {
+      "name": "Variante cerrada, Variante Borisenko",
+      "nameEn": "Ruy Lopez: Closed, Borisenko Variation",
+      "eco": "C96",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Na5 Bc2 c5 d4 Nc6"
+    },
+    {
+      "name": "Variante cerrada, Defensa Chigorin",
+      "nameEn": "Ruy Lopez: Closed, Chigorin Defense",
+      "eco": "C96",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Na5 Bc2"
+    },
+    {
+      "name": "Variante cerrada, Chigorin, Sistema Yugoslavo",
+      "nameEn": "Ruy Lopez: Closed, Chigorin, Yugoslav System",
+      "eco": "C97",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Na5 Bc2 c5 d4 Qc7 Nbd2 Bd7 Nf1 Rfe8 Ne3 g6"
+    },
+    {
+      "name": "Variante cerrada, Defensa Chigorin, Sistema Panov",
+      "nameEn": "Ruy Lopez: Closed, Chigorin Defense, Panov System",
+      "eco": "C99",
+      "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Na5 Bc2 c5 d4 Qc7 Nbd2 cxd4 cxd4"
+    }
+  ]
+}
