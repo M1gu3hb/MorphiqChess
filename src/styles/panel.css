@@ -193,8 +193,9 @@
   min-height: 0;
 }
 
+/* Móvil: la lista mide lo que ocupan sus jugadas y, pasado un tope, se desplaza. */
 .moves {
-  flex: 1 1 0;
+  flex: 0 1 auto;
   min-height: 0;
   max-height: 210px;
   overflow-y: auto;
@@ -203,8 +204,10 @@
   position: relative;
 }
 
+/* Escritorio: la tarjeta ocupa el alto que sobra en la columna y la lista llena la tarjeta. */
 @media (min-width: 980px) {
   .moves {
+    flex: 1 1 0;
     max-height: none;
   }
 }
