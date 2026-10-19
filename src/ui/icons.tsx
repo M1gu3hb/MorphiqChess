@@ -13,6 +13,9 @@ const PATHS = {
   rotate: 'M20 12a8 8 0 1 1-2.6-5.9M20 4v5h-5',
   close: 'M6 6l12 12M18 6 6 18',
   play: 'M8 5v14l11-7z',
+  menu: 'M4 7h16M4 12h16M4 17h16',
+  fullscreen: 'M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5',
+  exitFullscreen: 'M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5',
 } as const;
 
 export type IconName = keyof typeof PATHS;

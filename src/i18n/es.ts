@@ -25,7 +25,7 @@ export const es = {
     continueGame: 'Continuar partida',
     features: [
       'Animaciones de movimiento, captura, jaque y jaque mate',
-      'Flechas para revisar cualquier jugada anterior',
+      'Barra lateral para revisar cualquier jugada anterior',
       'Reglas completas: enroque, al paso, coronación y tablas',
     ],
     footer: 'Un proyecto de Astral Morphiq Systems',
@@ -54,6 +54,24 @@ export const es = {
       settings: 'Ajustes',
       home: 'Inicio',
     },
+  },
+  menu: {
+    title: 'Menú',
+  },
+  rail: {
+    title: 'Herramientas',
+    open: 'Abrir herramientas',
+    close: 'Cerrar herramientas',
+    scrub: 'Recorrer las jugadas',
+    scrubText: (n: number, total: number) => (n === 0 ? 'Posición inicial' : `Jugada ${n} de ${total}`),
+    fullscreen: 'Pantalla completa',
+    exitFullscreen: 'Salir de pantalla completa',
+    menu: 'Menú',
+  },
+  strip: {
+    viewing: (n: number, total: number) => (n === 0 ? 'Posición inicial' : `Jugada ${n} de ${total}`),
+    back: 'Volver',
+    resume: 'Retomar aquí',
   },
   banners: {
     check: 'JAQUE',
@@ -92,6 +110,10 @@ export const es = {
       rotateHelp: 'Cada pieza gira 180° sobre su propio eje para quedar derecha frente a quien juega.',
       motion: 'Animaciones completas',
       motionHelp: 'Desactívalas para reducir el movimiento: sin giros ni efectos grandes.',
+      autoFullscreen: 'Pantalla completa al jugar',
+      autoFullscreenHelp: 'Al empezar o continuar una partida se oculta todo menos el tablero.',
+      iphoneTip:
+        'En iPhone, para jugar a pantalla completa abre el menú Compartir y elige «Añadir a pantalla de inicio».',
       close: 'Cerrar',
     },
   },
@@ -99,6 +121,7 @@ export const es = {
     title: 'Fin de la partida',
     newGame: 'Nueva partida',
     review: 'Revisar jugadas',
+    close: 'Cerrar',
   },
   shortcuts: {
     title: 'Atajos de teclado',

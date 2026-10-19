@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { GameStore, SettingsStore } from './game';
 import { Home } from './ui/screens/Home';
 import { GameScreen } from './ui/screens/GameScreen';
+import { enterFullscreen, exitFullscreen } from './ui/useFullscreen';
 
 type Screen = 'home' | 'game';
 
@@ -32,6 +33,8 @@ export function App() {
 
   useEffect(() => {
     document.title = TITLES[screen];
+    // Fuera de la partida (botón «Inicio», atrás del navegador) se vuelve a la ventana normal.
+    if (screen === 'home') void exitFullscreen();
     // Al cambiar de pantalla, el foco pasa al título: quien usa lector de pantalla sabe dónde está.
     if (firstRender.current) {
       firstRender.current = false;
@@ -39,6 +42,12 @@ export function App() {
     }
     document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true });
   }, [screen]);
+
+  /** El navegador solo concede pantalla completa dentro del toque, así que se pide antes de cambiar de pantalla. */
+  const startGame = () => {
+    if (settingsStore.getSnapshot().autoFullscreen) void enterFullscreen();
+    go('game');
+  };
 
   const go = (next: Screen) => {
     const base = `${window.location.pathname}${window.location.search}`;
@@ -56,11 +65,11 @@ export function App() {
       settingsStore={settingsStore}
       onNew={() => {
         store.newGame();
-        go('game');
+        startGame();
       }}
       onContinue={() => {
         store.loadSaved();
-        go('game');
+        startGame();
       }}
     />
   );

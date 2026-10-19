@@ -44,148 +44,7 @@
   text-transform: uppercase;
 }
 
-/* ---------- estado ---------- */
-
-.status__row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.status__title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.status__sub {
-  margin-top: 2px;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.status__sub--check {
-  color: #ff8da1;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.status__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-3);
-}
-
-.status__actions .btn {
-  flex: 1 1 150px;
-}
-
-.status[data-state='over'] {
-  border-color: var(--brand);
-}
-
-.chip {
-  flex: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid var(--line-strong);
-}
-
-.chip[data-side='w'] {
-  background: var(--sq-light);
-  border-color: #fff;
-  box-shadow: 0 0 0 4px rgb(234 240 247 / 0.14);
-}
-
-.chip[data-side='b'] {
-  background: var(--brand);
-  border-color: #8db9ff;
-  box-shadow: 0 0 0 4px rgb(30 91 255 / 0.28);
-}
-
-.chip[data-draw] {
-  background: linear-gradient(90deg, var(--sq-light) 50%, var(--brand) 50%);
-  border-color: #8db9ff;
-}
-
-.chip--neutral {
-  border-style: dashed;
-}
-
-/* ---------- flechas del historial ---------- */
-
-.history-bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto 1fr 1fr;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.history-bar__pos {
-  min-width: 84px;
-  text-align: center;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
-.history-bar__now {
-  color: var(--text);
-  font-weight: 800;
-}
-
-.history-bar__sep {
-  margin: 0 4px;
-  opacity: 0.6;
-}
-
-/* ---------- capturas ---------- */
-
-.captured__row {
-  display: grid;
-  grid-template-columns: 78px 1fr auto;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 40px;
-}
-
-.captured__who {
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.captured__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 36px;
-  padding-right: 8px;
-}
-
-.captured__piece img {
-  height: 34px;
-  width: auto;
-  margin-right: -7px;
-}
-
-.captured__none {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-.captured__lead {
-  color: var(--accent);
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-}
-
-/* ---------- lista de jugadas ---------- */
+/* ---------- lista de jugadas (dentro del menú) ---------- */
 
 .moves-card {
   display: flex;
@@ -193,23 +52,15 @@
   min-height: 0;
 }
 
-/* Móvil: la lista mide lo que ocupan sus jugadas y, pasado un tope, se desplaza. */
+/* La lista mide lo que ocupan sus jugadas y, pasado un tope, se desplaza. */
 .moves {
   flex: 0 1 auto;
   min-height: 0;
-  max-height: 210px;
+  max-height: min(34dvh, 260px);
   overflow-y: auto;
   scrollbar-color: var(--line-strong) transparent;
   scrollbar-width: thin;
   position: relative;
-}
-
-/* Escritorio: la tarjeta ocupa el alto que sobra en la columna y la lista llena la tarjeta. */
-@media (min-width: 980px) {
-  .moves {
-    flex: 1 1 0;
-    max-height: none;
-  }
 }
 
 .moves__none {
@@ -257,26 +108,8 @@
   color: var(--on-brand);
 }
 
-/* ---------- móvil: tarjetas más compactas para que lo importante quepa en pantalla ---------- */
-
 @media (max-width: 979px) {
   .card {
     padding: 12px 14px;
-  }
-
-  .captured__row {
-    min-height: 34px;
-  }
-
-  .captured__list {
-    min-height: 30px;
-  }
-
-  .captured__piece img {
-    height: 28px;
-  }
-
-  .status__title {
-    font-size: 1.05rem;
   }
 }

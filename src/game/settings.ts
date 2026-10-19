@@ -9,6 +9,8 @@ export interface Settings {
   readonly motion: MotionPreference;
   /** Girar todas las piezas 180° en cada turno para dejarlas derechas frente a quien juega. */
   readonly rotatePieces: boolean;
+  /** Pasar a pantalla completa al empezar o continuar una partida (donde el navegador lo permite). */
+  readonly autoFullscreen: boolean;
 }
 
 const STORAGE_KEY = 'morphiqchess:settings:v1';
@@ -23,8 +25,17 @@ function systemMotion(): MotionPreference {
   }
 }
 
+/** En pantallas táctiles lo normal es jugar a pantalla completa; con ratón se activa a mano. */
+function touchFirst(): boolean {
+  try {
+    return typeof matchMedia !== 'undefined' && matchMedia('(pointer: coarse)').matches;
+  } catch {
+    return false;
+  }
+}
+
 function load(): Settings {
-  const defaults: Settings = { motion: systemMotion(), rotatePieces: true };
+  const defaults: Settings = { motion: systemMotion(), rotatePieces: true, autoFullscreen: touchFirst() };
   try {
     const raw = typeof localStorage === 'undefined' ? null : localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaults;
@@ -32,6 +43,7 @@ function load(): Settings {
     return {
       motion: data.motion === 'full' || data.motion === 'reduced' ? data.motion : defaults.motion,
       rotatePieces: typeof data.rotatePieces === 'boolean' ? data.rotatePieces : defaults.rotatePieces,
+      autoFullscreen: typeof data.autoFullscreen === 'boolean' ? data.autoFullscreen : defaults.autoFullscreen,
     };
   } catch {
     return defaults;
