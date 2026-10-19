@@ -36,8 +36,11 @@ Estado inmutable de una partida, sin saber nada de React ni del DOM.
   acciones (`play`, `goTo`, `undo`, `resumeFromCursor`, `resign`, `agreeDraw`, `claimDraw`, `newGame`).
 - **Guardado versionado** (`morphiqchess:game:v1`): se guardan jugadas en coordenadas y se **revalidan
   reproduciéndolas** al cargar, así una partida dañada o manipulada nunca entra al juego.
-- `SettingsStore`: preferencias (giro de piezas y animaciones completas o reducidas). El movimiento
-  reducido arranca con `prefers-reduced-motion`.
+- `SettingsStore`: preferencias (giro de piezas, animaciones completas o reducidas y pantalla completa
+  al jugar). El movimiento reducido arranca con `prefers-reduced-motion`; la pantalla completa
+  automática, con los dispositivos táctiles.
+- `tallyMaterial`: piezas capturadas por cada bando y ventaja de material hasta el cursor del historial
+  (por eso las franjas cambian al revisar jugadas).
 - `orientationAt`: hacia quién miran las piezas (0° Blancas, 180° Azules); con la partida terminada se
   quedan mirando al ganador.
 
@@ -73,7 +76,25 @@ Estructura de cada pieza en el DOM:
   eventos, y encima la capa de piezas y la de efectos.
 - **Entrada:** clic y clic, arrastre (con umbral para no confundirlo con un toque), pantalla táctil y
   teclado (flechas, Enter o espacio, Esc). El foco virtual usa `aria-activedescendant`.
-- **Panel:** estado del turno, flechas de historial, capturas, lista de jugadas y acciones.
+- **Pantalla de juego:** ocupa toda la pantalla (`position: fixed`, `100dvh`, áreas seguras) y no se
+  desplaza. Se compone de la escena (`.stage`: franja del jugador de arriba, tablero, franja del de abajo)
+  y el cajón lateral (`.rail`). El tamaño del tablero sale de una sola variable (`--board-size`) y, en
+  teléfono acostado, las franjas pasan a las esquinas para darle todo el alto. Al no haber nada que
+  cambie de alto al revisar jugadas, el tablero no se mueve (antes la tarjeta de estado empujaba el
+  tablero 70–120 px al entrar o salir de una jugada anterior).
+- **Cajón lateral:** `useDrawer` guarda el avance (0 = cerrado, 1 = abierto) y lo aplica directo al
+  `transform` del cajón y de la escena en cada fotograma, sin pasar por React, para que el gesto siga
+  al dedo sin tirones; React solo se entera al soltar. Al abrir, la escena se encoge y se corre
+  (`pushGeometry`, aparte y con pruebas) para que el tablero entero quede a la vista junto al cajón.
+  Tocar el asa lo alterna, arrastrarlo lo sigue, un lanzamiento rápido lo abre o cierra por velocidad,
+  tocar fuera lo cierra (sin tocar piezas) y Escape también. Cerrado, el panel es `inert`.
+  La guía de jugadas (`Scrubber`) es un `role="slider"` propio con puntero y teclado.
+- **Pantalla completa:** `useFullscreen` (API estándar y prefijo `webkit`) y `useWakeLock`. El navegador
+  solo la concede dentro de un toque, así que se pide al empezar o continuar desde Inicio y se sale al
+  volver a Inicio. En iPhone no existe para páginas web: se aprovecha como app instalada
+  (`display_override` y metas `apple-mobile-web-app-*`).
+- **Menú:** un diálogo con la lista de jugadas y las acciones (tablas, rendirse, nueva partida, ajustes,
+  inicio). El resultado de la partida aparece solo cuando termina aquí mismo y tras la animación del final.
 - **Diálogos:** el elemento nativo `<dialog>` (foco atrapado, Esc, foco de vuelta a quien lo abrió).
 - **Navegación:** `#/partida` con `history.pushState`; no necesita reescrituras en el servidor.
 - **Accesibilidad:** cada casilla tiene su etiqueta, una región `aria-live` anuncia cada jugada y el
@@ -102,5 +123,5 @@ cambiar la marca es cambiar ese archivo. Sin gradientes ni efectos de cristal.
 | Nuevas piezas o tablero         | Reemplazar `src/assets/pieces/*` y el marco en `ui/board/BoardFrame.tsx`; ver `tokens.css`  |
 | Jugar contra la computadora     | Nueva capa que llame a `legalMovesOf` y juegue con `GameStore.play`; no toca la interfaz |
 | Partida en línea                | Reemplazar `GameStore` por uno que sincronice jugadas (el resto solo lee `GameSnapshot`) |
-| Relojes                         | Estado aparte en `game/` y un componente en `ui/panel/`                                  |
+| Relojes                         | Estado aparte en `game/` y mostrarlos en las franjas de `ui/stage/PlayerStrip.tsx`       |
 | Exportar o importar partidas    | PGN a partir de `Ply.san` y `serializeGame`                                              |

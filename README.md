@@ -14,8 +14,15 @@ Un proyecto de Astral Morphiq Systems.
 - Animaciones: giro de las piezas en su eje, desplazamiento real de cada pieza (el caballo salta),
   captura con fragmentos, jaque, jaque mate (el rey cae), coronación, enroque, y avisos de final de
   partida (ahogado, tablas, rendición).
-- Flechas para revisar cualquier jugada anterior (inicio, anterior, siguiente, final), con la
-  animación hacia atrás y hacia delante; «Retomar desde aquí» continúa la partida desde esa jugada.
+- **Pantalla de juego inmersiva:** solo el tablero, una franja pegada a cada jugador (turno, piezas
+  capturadas y ventaja) y nada que se desplace. En el móvil entra a pantalla completa y la pantalla no
+  se apaga mientras juegas (en iPhone: «Añadir a pantalla de inicio»).
+- **Cajón lateral:** las herramientas están en el borde derecho, entre los dos jugadores. Se abren con un
+  toque al asa o deslizándola con el dedo (o el ratón); el tablero se encoge lo justo para seguir entero
+  a la vista. Dentro: una guía para deslizar por las jugadas, inicio, anterior, siguiente, final,
+  deshacer, pantalla completa y menú (lista de jugadas, tablas, rendirse, nueva partida, ajustes).
+- Revisar cualquier jugada anterior con la animación hacia atrás y hacia delante, sin que el tablero
+  se mueva de lugar; «Retomar aquí» continúa la partida desde esa jugada.
 - Deshacer, rendirse, proponer tablas y empezar una partida nueva.
 - La partida se guarda sola en el dispositivo y se puede continuar al volver.
 - Juego con ratón (clic o arrastre), con el dedo y solo con teclado.
@@ -47,7 +54,7 @@ src/
   engine/   Reglas del ajedrez en TypeScript puro (sin DOM): jugadas legales, SAN, FEN, resultados.
   game/     Estado de la partida: historial, ids estables de pieza, deshacer, guardado, ajustes.
   anim/     Director de animaciones (Web Animations API) y su temporización.
-  ui/       Componentes de React: tablero, panel, pantallas y diálogos.
+  ui/       Componentes de React: tablero, franjas de jugador, cajón lateral, pantallas y diálogos.
   styles/   CSS por área, con los colores y medidas de la marca en tokens.css.
   i18n/     Todos los textos de la interfaz (es.ts).
   assets/   Logo y piezas de Morphiq (WebP).
