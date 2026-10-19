@@ -428,7 +428,12 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
   }
 
   return (
-    <div ref={boardRef} className="board" data-motion={motion}>
+    <div
+      ref={boardRef}
+      className="board"
+      data-motion={motion}
+      style={{ '--impact-delay': `${impactDelay}ms` } as CSSProperties}
+    >
       <BoardFrame />
 
       <div

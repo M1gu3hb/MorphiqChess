@@ -148,7 +148,21 @@
     rgb(255 77 106 / 0.6) 36%,
     rgb(255 77 106 / 0) 74%
   );
-  animation: check-pulse 1.5s ease-in-out infinite;
+  /* Aparece cuando la pieza que da jaque llega (--impact-delay) y luego late. */
+  animation:
+    check-appear 240ms var(--impact-delay, 0ms) ease-out both,
+    check-pulse 1.5s calc(var(--impact-delay, 0ms) + 240ms) ease-in-out infinite;
+}
+
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 0.65;
+    transform: none;
+  }
 }
 
 @keyframes check-pulse {
