@@ -1,0 +1,95 @@
+.home {
+  min-height: 100dvh;
+}
+
+.home__main {
+  flex: 1;
+  display: grid;
+  gap: var(--space-6);
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--gutter);
+}
+
+.home__copy {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+}
+
+.home__logo {
+  width: min(460px, 86%);
+  height: auto;
+  margin-left: -4px;
+}
+
+.home__title {
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  outline: none;
+}
+
+.home__lead {
+  max-width: 34rem;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+}
+
+.home__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.home__features {
+  display: grid;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.home__features li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.home__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 9px;
+  height: 9px;
+  background: var(--frame);
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 40% 100%, 0 100%);
+}
+
+.home__board {
+  width: min(100%, 560px);
+  justify-self: center;
+}
+
+.home__footer {
+  padding: var(--space-4) var(--gutter) var(--space-5);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .home__main {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 56px;
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .home__board {
+    justify-self: end;
+  }
+}
