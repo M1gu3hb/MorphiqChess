@@ -5,7 +5,7 @@
   "description": "MorphiqChess: ajedrez para dos jugadores con el tablero y las piezas de Morphiq.",
   "type": "module",
   "engines": {
-    "node": ">=20.19"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "vite",
