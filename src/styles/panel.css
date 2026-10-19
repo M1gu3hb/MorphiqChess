@@ -1,0 +1,255 @@
+/* ---------- tarjetas ---------- */
+
+.card {
+  position: relative;
+  padding: var(--space-4);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+
+/* Esquinas en «L» como las del tablero. */
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 0 solid var(--frame);
+  pointer-events: none;
+}
+
+.card::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-top-left-radius: var(--radius-m);
+}
+
+.card::after {
+  right: -1px;
+  bottom: -1px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-bottom-right-radius: var(--radius-m);
+}
+
+.card__title {
+  margin-bottom: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---------- estado ---------- */
+
+.status__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.status__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.status__sub {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.status__sub--check {
+  color: #ff8da1;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.status__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.status__actions .btn {
+  flex: 1 1 150px;
+}
+
+.status[data-state='over'] {
+  border-color: var(--brand);
+}
+
+.chip {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--line-strong);
+}
+
+.chip[data-side='w'] {
+  background: var(--sq-light);
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 240 247 / 0.14);
+}
+
+.chip[data-side='b'] {
+  background: var(--brand);
+  border-color: #8db9ff;
+  box-shadow: 0 0 0 4px rgb(30 91 255 / 0.28);
+}
+
+.chip[data-draw] {
+  background: linear-gradient(90deg, var(--sq-light) 50%, var(--brand) 50%);
+  border-color: #8db9ff;
+}
+
+.chip--neutral {
+  border-style: dashed;
+}
+
+/* ---------- flechas del historial ---------- */
+
+.history-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.history-bar__pos {
+  min-width: 84px;
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-bar__now {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.history-bar__sep {
+  margin: 0 4px;
+  opacity: 0.6;
+}
+
+/* ---------- capturas ---------- */
+
+.captured__row {
+  display: grid;
+  grid-template-columns: 78px 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+}
+
+.captured__who {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.captured__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 36px;
+  padding-right: 8px;
+}
+
+.captured__piece img {
+  height: 34px;
+  width: auto;
+  margin-right: -7px;
+}
+
+.captured__none {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.captured__lead {
+  color: var(--accent);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- lista de jugadas ---------- */
+
+.moves-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.moves {
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: 210px;
+  overflow-y: auto;
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
+  position: relative;
+}
+
+@media (min-width: 980px) {
+  .moves {
+    max-height: none;
+  }
+}
+
+.moves__none {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.moves__row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 4px 1px 0;
+}
+
+.moves__row:nth-child(odd) {
+  background: rgb(255 255 255 / 0.025);
+}
+
+.moves__n {
+  padding-right: 6px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.moves__ply {
+  min-height: 34px;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  font-weight: 600;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.moves__ply:hover {
+  background: var(--bg-hover);
+}
+
+.moves__ply[aria-current='step'] {
+  background: var(--brand);
+  color: var(--on-brand);
+}
