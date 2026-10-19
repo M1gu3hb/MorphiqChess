@@ -21,10 +21,11 @@ export function MoveList({ game, store }: MoveListProps) {
       list.scrollTop = game.cursor === 0 ? 0 : list.scrollTop;
       return;
     }
-    const top = current.offsetTop - list.offsetTop;
-    const bottom = top + current.offsetHeight;
-    if (top < list.scrollTop) list.scrollTop = top - 8;
-    else if (bottom > list.scrollTop + list.clientHeight) list.scrollTop = bottom - list.clientHeight + 8;
+    // Con rectángulos en pantalla: no depende de qué elemento sea el offsetParent de cada botón.
+    const listBox = list.getBoundingClientRect();
+    const box = current.getBoundingClientRect();
+    if (box.top < listBox.top) list.scrollTop -= listBox.top - box.top + 8;
+    else if (box.bottom > listBox.bottom) list.scrollTop += box.bottom - listBox.bottom + 8;
   }, [game.cursor, game.plies.length]);
 
   const rows: number[] = [];
