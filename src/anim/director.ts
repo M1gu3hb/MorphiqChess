@@ -52,6 +52,16 @@ function partsOf(piece: HTMLElement): Parts | null {
   return lift && face && shadow ? { lift, face, shadow } : null;
 }
 
+/**
+ * Ancho de la capa según el layout, no su rectángulo en pantalla: si un ancestro se escala (el
+ * cajón lateral abierto encoge el tablero), las distancias de las animaciones siguen siendo las
+ * del tablero sin escalar y las piezas llegan exactamente a su casilla.
+ */
+function layoutWidth(element: HTMLElement): number {
+  const width = Number.parseFloat(getComputedStyle(element).width);
+  return Number.isFinite(width) ? width : element.getBoundingClientRect().width;
+}
+
 const colorVar = (color: Color): readonly string[] =>
   color === 'w'
     ? ['var(--sq-light)', '#9cc4ff', '#ffffff']
@@ -92,7 +102,7 @@ export class Director {
     const previous = this.prev;
     this.prev = frame;
     this.cancelAll();
-    this.cellPx = this.targets.pieces.getBoundingClientRect().width / 8;
+    this.cellPx = layoutWidth(this.targets.pieces) / 8;
 
     // Primer dibujo o partida nueva.
     if (previous === null || previous.gameId !== frame.gameId || transition.type === 'reset') {
