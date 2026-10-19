@@ -253,3 +253,27 @@
   background: var(--brand);
   color: var(--on-brand);
 }
+
+/* ---------- móvil: tarjetas más compactas para que lo importante quepa en pantalla ---------- */
+
+@media (max-width: 979px) {
+  .card {
+    padding: 12px 14px;
+  }
+
+  .captured__row {
+    min-height: 34px;
+  }
+
+  .captured__list {
+    min-height: 30px;
+  }
+
+  .captured__piece img {
+    height: 28px;
+  }
+
+  .status__title {
+    font-size: 1.05rem;
+  }
+}
