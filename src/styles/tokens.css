@@ -1,0 +1,60 @@
+/*
+ * Tokens de diseño de MorphiqChess.
+ * Todo color, radio, sombra o duración sale de aquí: cambiar la marca = cambiar este archivo.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Marca (medidos del tablero original) */
+  --brand: #1e5bff;
+  --brand-strong: #0a5cff;
+  --frame: #025bf9;
+  --accent: #2ee6ff;
+  --danger: #ff4d6a;
+  --success: #3ddc97;
+
+  /* Superficies */
+  --bg: #050a14;
+  --bg-raised: #0a1426;
+  --bg-sunken: #060d1b;
+  --bg-hover: #0f1d38;
+  --line: #17294d;
+  --line-strong: #264682;
+
+  /* Texto */
+  --text: #e8eef8;
+  --text-muted: #93a6c4;
+  --on-brand: #ffffff;
+
+  /* Tablero */
+  --sq-light: #eaf0f7;
+  --sq-dark: #07172f;
+  --board-margin: #071529;
+  --board-coord: #8fb4f0;
+
+  /* Tipografía */
+  --font: 'Exo 2 Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Forma */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.5, 0, 0.2, 1);
+  --t-fast: 140ms;
+  --t-base: 220ms;
+
+  /* Espaciado */
+  --gutter: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* Foco visible (≥3:1 contra las superficies oscuras) */
+  --focus: #8fb8ff;
+}

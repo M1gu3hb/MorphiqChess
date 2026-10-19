@@ -1,0 +1,457 @@
+/*
+ * Tablero. Toda la geometría está en proporciones del diseño original (1254 × 1254):
+ * - `.board` es contenedor, así `cqw` = 1% del ancho del tablero y `--cell` = una casilla.
+ * - Las capas (`.board-layer`) cubren exactamente las 8 × 8 casillas.
+ * - Las piezas se colocan con porcentajes de su propio tamaño: sin medir píxeles en JS.
+ */
+.board {
+  --cell: calc(100cqw * 1092 / 8 / 1254);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.board-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bf-margin {
+  fill: var(--board-margin);
+}
+.bf-light {
+  fill: var(--sq-light);
+}
+.bf-dark {
+  fill: var(--sq-dark);
+}
+.bf-frame {
+  fill: none;
+  stroke: var(--frame);
+  stroke-width: 7;
+}
+.bf-brackets polygon {
+  fill: var(--frame);
+}
+.bf-coords text {
+  fill: var(--board-coord);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 34px;
+  text-anchor: middle;
+}
+
+/* ---------- capas ---------- */
+
+.board-layer {
+  position: absolute;
+  left: calc(82 / 1254 * 100%);
+  top: calc(83 / 1254 * 100%);
+  width: calc(1092 / 1254 * 100%);
+  height: calc(1092 / 1254 * 100%);
+}
+
+/* ---------- casillas ---------- */
+
+.board-grid {
+  display: flex;
+  flex-direction: column;
+  touch-action: none;
+  outline: none;
+  z-index: 1;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+.sq {
+  --dot: rgb(30 91 255 / 0.78);
+  position: relative;
+  cursor: default;
+}
+
+.sq[data-tone='dark'] {
+  --dot: rgb(103 152 255 / 0.9);
+}
+
+.sq[data-own] {
+  cursor: grab;
+}
+
+.sq::before,
+.sq::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.sq::before {
+  inset: 0;
+}
+
+/* Última jugada */
+.sq[data-last]::before {
+  background: rgb(10 92 255 / 0.3);
+  box-shadow: inset 0 0 0 calc(var(--cell) * 0.045) var(--accent);
+}
+
+/* Pieza seleccionada */
+.sq[data-sel]::before {
+  background: rgb(30 91 255 / 0.5);
+  box-shadow: inset 0 0 0 calc(var(--cell) * 0.07) var(--brand-strong);
+}
+
+/* Destino posible: punto (casilla vacía) o marco (captura) */
+.sq[data-tgt]::after {
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  height: 30%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--dot);
+}
+
+.sq[data-cap]::after {
+  inset: 0;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  translate: none;
+  border-radius: 0;
+  background: rgb(255 77 106 / 0.22);
+  box-shadow: inset 0 0 0 calc(var(--cell) * 0.07) var(--danger);
+}
+
+.sq[data-hov]::before {
+  background: rgb(46 230 255 / 0.28);
+  box-shadow: inset 0 0 0 calc(var(--cell) * 0.07) var(--accent);
+}
+
+/* Rey en jaque */
+.sq[data-chk]::before {
+  background: radial-gradient(
+    circle at 50% 55%,
+    rgb(255 77 106 / 0.95) 0,
+    rgb(255 77 106 / 0.6) 36%,
+    rgb(255 77 106 / 0) 74%
+  );
+  animation: check-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes check-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  .board-grid[data-interactive] .sq[data-own]:hover::before {
+    background: rgb(30 91 255 / 0.22);
+  }
+}
+
+/* Foco de teclado: doble anillo, visible sobre casillas claras y oscuras */
+.board-grid:focus-visible .sq[data-foc] {
+  outline: calc(var(--cell) * 0.06) solid #fff;
+  outline-offset: calc(var(--cell) * -0.06);
+  box-shadow: inset 0 0 0 calc(var(--cell) * 0.12) var(--brand-strong);
+}
+
+/* ---------- piezas ---------- */
+
+.pieces {
+  --k: 0.74;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.piece {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12.5%;
+  height: 12.5%;
+  transform: translate(calc(var(--f) * 100%), calc(var(--r) * 100%));
+  z-index: var(--z, 1);
+  will-change: transform;
+}
+
+.piece-shadow,
+.piece-face {
+  position: absolute;
+  inset: 0;
+  rotate: var(--a, 0deg);
+  transform-origin: 50% 50%;
+}
+
+.piece-shadow::before {
+  content: '';
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 1%;
+  height: 17%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(0 4 16 / 0.6), rgb(0 4 16 / 0));
+}
+
+.piece-lift {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 50%;
+}
+
+.piece-img {
+  position: absolute;
+  bottom: 5%;
+  left: calc((1 - var(--k)) * 50%);
+  width: calc(var(--k) * 100%);
+  height: auto;
+  aspect-ratio: 156 / 260;
+  transform-origin: 50% 94%;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.piece[data-dragging] {
+  z-index: 90;
+}
+
+.piece[data-dragging] .piece-lift {
+  scale: 1.12;
+}
+
+/* Rey en jaque mate: se inclina (queda tumbado) */
+.piece[data-mated] .piece-img {
+  transform: rotate(72deg) translateY(6%);
+  filter: saturate(0.6) brightness(0.82);
+  transition:
+    transform 750ms cubic-bezier(0.3, 1.45, 0.45, 1) var(--topple-delay, 0ms),
+    filter 500ms ease var(--topple-delay, 0ms);
+}
+
+/* ---------- efectos ---------- */
+
+.fx {
+  pointer-events: none;
+  z-index: 5;
+}
+
+.fx-at {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12.5%;
+  height: 12.5%;
+  transform: translate(calc(var(--f) * 100%), calc(var(--r) * 100%));
+}
+
+.fx-ring {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  border: calc(var(--cell) * 0.055) solid var(--ring, var(--accent));
+  box-shadow: 0 0 calc(var(--cell) * 0.25) var(--ring, var(--accent));
+  opacity: 0;
+}
+
+.fx-glow {
+  position: absolute;
+  inset: -40%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, var(--ring, var(--accent)), transparent);
+  opacity: 0;
+}
+
+.fx-spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--cell) * 0.07);
+  height: calc(var(--cell) * 0.07);
+  margin: calc(var(--cell) * -0.035) 0 0 calc(var(--cell) * -0.035);
+  background: var(--spark, var(--accent));
+  box-shadow: 0 0 calc(var(--cell) * 0.12) var(--spark, var(--accent));
+  opacity: 0;
+}
+
+.fx-trail {
+  position: absolute;
+  height: calc(var(--cell) * 0.05);
+  margin-top: calc(var(--cell) * -0.025);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, rgb(46 230 255 / 0), rgb(46 230 255 / 0.85));
+  box-shadow: 0 0 calc(var(--cell) * 0.12) rgb(46 230 255 / 0.5);
+  opacity: 0;
+}
+
+.fx-ghost {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12.5%;
+  height: 12.5%;
+}
+
+.board-flash {
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+}
+
+.banner-layer {
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* ---------- aviso de jaque / mate ---------- */
+
+.banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 7;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.banner__band {
+  width: 100%;
+  padding: calc(var(--cell) * 0.2) 0;
+  text-align: center;
+  background: rgb(5 10 20 / 0.9);
+  border-block: calc(var(--cell) * 0.04) solid var(--danger);
+  color: #fff;
+  font-weight: 800;
+  font-size: calc(var(--cell) * 0.62);
+  line-height: 1;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-transform: uppercase;
+  text-shadow: 0 0 calc(var(--cell) * 0.3) rgb(255 77 106 / 0.8);
+  opacity: 0;
+  animation: banner-run var(--banner-ms, 1500ms) var(--banner-delay, 0ms) cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.banner[data-kind='mate'] .banner__band {
+  background: rgb(255 77 106 / 0.94);
+  border-color: #fff;
+  text-shadow: 0 2px calc(var(--cell) * 0.18) rgb(60 0 12 / 0.6);
+  font-size: calc(var(--cell) * 0.7);
+  padding: calc(var(--cell) * 0.26) 0;
+}
+
+@keyframes banner-run {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.15);
+    letter-spacing: 0.7em;
+  }
+  14% {
+    opacity: 1;
+    transform: scaleY(1);
+    letter-spacing: 0.3em;
+  }
+  80% {
+    opacity: 1;
+    transform: scaleY(1);
+    letter-spacing: 0.3em;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0.6);
+    letter-spacing: 0.3em;
+  }
+}
+
+/* ---------- coronación ---------- */
+
+.promo {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  background: rgb(5 10 20 / 0.78);
+}
+
+.promo__box {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--bg-raised);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  max-width: 92%;
+}
+
+.promo__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__row {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.promo__btn {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  padding: var(--space-2) var(--space-2) 6px;
+  min-width: 56px;
+  background: var(--sq-light);
+  border: 2px solid transparent;
+  border-radius: var(--radius-s);
+  color: var(--sq-dark);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.promo__btn img {
+  width: clamp(40px, 11cqw, 78px);
+  aspect-ratio: 156 / 260;
+  object-fit: contain;
+}
+
+.promo__btn:hover {
+  border-color: var(--brand-strong);
+}
+
+.promo__btn:focus-visible {
+  outline: 3px solid var(--brand-strong);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sq[data-chk]::before {
+    animation: none;
+    opacity: 0.85;
+  }
+}
