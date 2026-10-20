@@ -22,6 +22,23 @@ export interface EngineTransport {
 
 export type TransportFactory = () => EngineTransport;
 
+let prefetched = false;
+
+/**
+ * Pide con tiempo los archivos del motor (unos 2 MB) para que, al empezar la partida, ya estén en la caché
+ * del navegador. Si falla no pasa nada: se descargan al arrancar el motor.
+ */
+export function prefetchEngine(): void {
+  if (prefetched || typeof fetch === 'undefined') return;
+  // Con el ahorro de datos activado no se gasta ancho de banda por adelantado.
+  const connection = typeof navigator === 'undefined' ? undefined : (navigator as { connection?: { saveData?: boolean } }).connection;
+  if (connection?.saveData) return;
+  prefetched = true;
+  for (const url of [ENGINE_URL, ENGINE_URL.replace(/\.js$/, '.wasm')]) {
+    void fetch(url, { priority: 'low' }).catch(() => undefined);
+  }
+}
+
 /** Transporte real: un Web Worker que ejecuta Stockfish y habla UCI con mensajes de texto. */
 export function workerTransport(url: string = ENGINE_URL): EngineTransport {
   const worker = new Worker(url);

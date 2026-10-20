@@ -2,7 +2,7 @@
  * Lo que hace un rival con el motor: pensar su jugada, dar una pista y decidir si acepta tablas.
  * Funciones puras sobre un `UciEngine` (que puede ser uno falso en las pruebas).
  */
-import type { Move } from '../engine';
+import type { Color, Move } from '../engine';
 import type { UciEngine } from './engine';
 import type { Persona } from './personas';
 import { pickMove, planAnalysis, planSearch } from './strength';
@@ -71,6 +71,28 @@ export async function evaluate(engine: UciEngine, situation: Situation, signal?:
 export const DRAW_ACCEPT_CP = 40;
 
 export const acceptsDraw = (botScore: number | null): boolean => botScore !== null && botScore <= DRAW_ACCEPT_CP;
+
+/** No se aceptan tablas antes de esta jugada (en medias jugadas): sería un empate «gratis» a los dos movimientos. */
+export const MIN_PLIES_FOR_DRAW = 20;
+
+export type DrawAnswer = 'accept' | 'decline' | 'too-early';
+
+/**
+ * La respuesta del rival a una oferta de tablas: analiza la posición a fondo y las acepta si no está mejor.
+ * `sideToMove` es quien tiene el turno en la posición (de ahí sale el signo de la valoración).
+ */
+export async function answerDrawOffer(
+  engine: UciEngine,
+  situation: Situation,
+  botSide: Color,
+  sideToMove: Color,
+  signal?: AbortSignal,
+): Promise<DrawAnswer> {
+  if (situation.moves.length < MIN_PLIES_FOR_DRAW) return 'too-early';
+  const score = await evaluate(engine, situation, signal);
+  if (score === null) return 'decline';
+  return acceptsDraw(sideToMove === botSide ? score : -score) ? 'accept' : 'decline';
+}
 
 /**
  * Cuánto «piensa» como mínimo antes de mover (ms). Da tiempo a que termine la animación de la jugada de

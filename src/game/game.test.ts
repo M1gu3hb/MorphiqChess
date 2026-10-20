@@ -379,6 +379,31 @@ describe('GameStore', () => {
     expect(storage.length).toBe(0);
   });
 
+  it('peekSaved muestra la partida guardada sin cargarla', () => {
+    const storage = new MemoryStorage();
+    const store = new GameStore(createGame(), storage);
+    expect(store.peekSaved()).toBeNull();
+    store.play(sanToMove(positionAt(store.getSnapshot()), 'e4')!);
+    store.play(sanToMove(positionAt(store.getSnapshot()), 'e5')!);
+
+    const other = new GameStore(createGame(), storage);
+    const before = other.getSnapshot();
+    let notified = 0;
+    other.subscribe(() => notified++);
+    expect(other.peekSaved()?.plies).toHaveLength(2);
+    expect(other.getSnapshot()).toBe(before);
+    expect(notified).toBe(0);
+  });
+
+  it('peekSaved no se rompe con lo dañado ni sin almacenamiento', () => {
+    const storage = new MemoryStorage();
+    storage.setItem(GAME_STORAGE_KEY, '{no es json');
+    expect(new GameStore(createGame(), storage).peekSaved()).toBeNull();
+    storage.setItem(GAME_STORAGE_KEY, JSON.stringify({ v: 1, moves: 'nada' }));
+    expect(new GameStore(createGame(), storage).peekSaved()).toBeNull();
+    expect(new GameStore(createGame(), null).peekSaved()).toBeNull();
+  });
+
   it('funciona sin almacenamiento', () => {
     const store = new GameStore(createGame(), null);
     store.play(sanToMove(positionAt(store.getSnapshot()), 'e4')!);

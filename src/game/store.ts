@@ -68,27 +68,27 @@ export class GameStore {
     }
   }
 
+  /** La partida guardada, sin cargarla (por ejemplo, para mostrar un resumen). `null` si falta o está dañada. */
+  peekSaved(): GameSnapshot | null {
+    if (!this.storage) return null;
+    try {
+      return deserializeGame(JSON.parse(this.storage.getItem(this.storageKey) ?? 'null'));
+    } catch {
+      return null;
+    }
+  }
+
   /** ¿Hay una partida guardada para continuar? */
   hasSavedGame(): boolean {
-    if (!this.storage) return false;
-    try {
-      return deserializeGame(JSON.parse(this.storage.getItem(this.storageKey) ?? 'null')) !== null;
-    } catch {
-      return false;
-    }
+    return this.peekSaved() !== null;
   }
 
   /** Carga la partida guardada; si falta o está dañada, no cambia nada y devuelve false. */
   loadSaved(): boolean {
-    if (!this.storage) return false;
-    try {
-      const saved = deserializeGame(JSON.parse(this.storage.getItem(this.storageKey) ?? 'null'));
-      if (!saved) return false;
-      this.commit(saved);
-      return true;
-    } catch {
-      return false;
-    }
+    const saved = this.peekSaved();
+    if (!saved) return false;
+    this.commit(saved);
+    return true;
   }
 
   newGame(): void {

@@ -303,3 +303,44 @@ describe('partida nueva', () => {
     await search;
   });
 });
+
+describe('precarga del motor', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    vi.resetModules();
+  });
+
+  // La precarga recuerda si ya se hizo: cada prueba necesita el módulo «limpio».
+  const fresh = () => import('./engine');
+
+  it('pide el programa y su .wasm, una sola vez', async () => {
+    const fetchMock = vi.fn(() => Promise.resolve(new Response('')));
+    vi.stubGlobal('fetch', fetchMock);
+    const { prefetchEngine, ENGINE_URL } = await fresh();
+    prefetchEngine();
+    prefetchEngine();
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(fetchMock.mock.calls.map((call) => (call as unknown[])[0])).toEqual([
+      ENGINE_URL,
+      ENGINE_URL.replace(/\.js$/, '.wasm'),
+    ]);
+  });
+
+  it('con el ahorro de datos activado no descarga nada por adelantado', async () => {
+    const fetchMock = vi.fn(() => Promise.resolve(new Response('')));
+    vi.stubGlobal('fetch', fetchMock);
+    vi.stubGlobal('navigator', { connection: { saveData: true } });
+    const { prefetchEngine } = await fresh();
+    prefetchEngine();
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it('si la petición falla no pasa nada: se descargará al arrancar el motor', async () => {
+    const fetchMock = vi.fn(() => Promise.reject(new TypeError('sin conexión')));
+    vi.stubGlobal('fetch', fetchMock);
+    const { prefetchEngine } = await fresh();
+    expect(() => prefetchEngine()).not.toThrow();
+    await Promise.resolve();
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+});

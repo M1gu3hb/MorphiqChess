@@ -2,7 +2,17 @@ import { describe, expect, it } from 'vitest';
 import { applyMove, generateLegalMoves, initialPosition, parseFen, toFen, type Position } from '../engine';
 import { UciEngine } from './engine';
 import type { Persona } from './personas';
-import { acceptsDraw, chooseMove, DRAW_ACCEPT_CP, evaluate, suggestMove, thinkTime, type Situation } from './player';
+import {
+  acceptsDraw,
+  answerDrawOffer,
+  chooseMove,
+  DRAW_ACCEPT_CP,
+  evaluate,
+  MIN_PLIES_FOR_DRAW,
+  suggestMove,
+  thinkTime,
+  type Situation,
+} from './player';
 import { createFakeEngine, type FakeEngineOptions } from './testing';
 import { findMoveByUci, moveToUci } from './uci';
 
@@ -139,6 +149,55 @@ describe('tablas', () => {
     expect(acceptsDraw(DRAW_ACCEPT_CP + 1)).toBe(false);
     expect(acceptsDraw(250)).toBe(false);
     expect(acceptsDraw(null)).toBe(false);
+  });
+});
+
+describe('oferta de tablas', () => {
+  /** Una partida de `plies` jugadas (el caballo de g1 y el de b1 van y vienen) para pasar el umbral de «muy pronto». */
+  const shuffle = (plies: number): string[] =>
+    Array.from({ length: plies }, (_, i) => ['g1f3', 'g8f6', 'f3g1', 'f6g8'][i % 4]!);
+  const scored = (score: number) => ({ answer: () => ({ bestmove: 'e2e4', lines: [{ move: 'e2e4', score }] }) });
+
+  it('al principio de la partida es muy pronto y ni siquiera consulta al motor', async () => {
+    const { fake, engine } = engineWith(scored(-500));
+    const early = situation(shuffle(MIN_PLIES_FOR_DRAW - 1));
+    expect(await answerDrawOffer(engine, early, 'b', 'w')).toBe('too-early');
+    expect(fake.searches).toHaveLength(0);
+  });
+
+  it('las acepta si el rival no está mejor', async () => {
+    const { engine } = engineWith(scored(-120));
+    const current = situation(shuffle(MIN_PLIES_FOR_DRAW));
+    // Le toca al rival (Azules) y su valoración es -120: va peor, acepta.
+    expect(await answerDrawOffer(engine, current, 'b', 'b')).toBe('accept');
+  });
+
+  it('las rechaza si el rival está mejor', async () => {
+    const { engine } = engineWith(scored(300));
+    const current = situation(shuffle(MIN_PLIES_FOR_DRAW));
+    expect(await answerDrawOffer(engine, current, 'b', 'b')).toBe('decline');
+  });
+
+  it('la valoración es de quien tiene el turno: si le toca a la persona, se invierte', async () => {
+    const current = situation(shuffle(MIN_PLIES_FOR_DRAW));
+    // Al turno está la persona (Blancas) y el motor le da +300: el rival (Azules) va peor y acepta.
+    expect(await answerDrawOffer(engineWith(scored(300)).engine, current, 'b', 'w')).toBe('accept');
+    // Y si el motor le da -300 a la persona, el rival está mejor y rechaza.
+    expect(await answerDrawOffer(engineWith(scored(-300)).engine, current, 'b', 'w')).toBe('decline');
+  });
+
+  it('si no consigue valorar la posición, las rechaza', async () => {
+    const { engine } = engineWith({ answer: () => ({ bestmove: 'e2e4', lines: [] }) });
+    expect(await answerDrawOffer(engine, situation(shuffle(MIN_PLIES_FOR_DRAW)), 'b', 'b')).toBe('decline');
+  });
+
+  it('se puede cancelar', async () => {
+    const { engine } = engineWith(scored(0));
+    const controller = new AbortController();
+    controller.abort();
+    await expect(
+      answerDrawOffer(engine, situation(shuffle(MIN_PLIES_FOR_DRAW)), 'b', 'b', controller.signal),
+    ).rejects.toMatchObject({ kind: 'aborted' });
   });
 });
 
