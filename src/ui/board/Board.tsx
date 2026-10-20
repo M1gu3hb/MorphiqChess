@@ -35,7 +35,7 @@ import {
 import { describePiece, es } from '../../i18n/es';
 import { PIECE_SRC } from '../pieceArt';
 import { BoardFrame } from './BoardFrame';
-import { fileOf, rowOf, squareAt } from './geometry';
+import { fileOf, rowOf, squareAt, viewSq } from './geometry';
 import { PieceView } from './PieceView';
 import { PromotionChooser } from './PromotionChooser';
 
@@ -44,6 +44,11 @@ export interface BoardProps {
   /** Hacia quién miran las piezas: 0° = Blancas (abajo), 180° = Azules (arriba). */
   readonly orientation: Orientation;
   readonly motion: MotionMode;
+  /**
+   * Vista de Azules: el tablero se ve girado 180° (Azules abajo, a1 arriba a la derecha). Las piezas
+   * siguen derechas para quien mira; el giro de `orientation` es otra cosa (ver arriba).
+   */
+  readonly flipped?: boolean;
   /** false = tablero decorativo (sin foco ni clics). */
   readonly interactive?: boolean;
   /** Solo ese bando puede mover (entrenamiento); `null`, nadie; sin definir, quien tiene el turno. */
@@ -93,7 +98,16 @@ function endBannerKind(outcome: Outcome | null): BannerKind | null {
   return null;
 }
 
-export function Board({ game, orientation, motion, interactive = true, playAs, hints, onMove }: BoardProps) {
+export function Board({
+  game,
+  orientation,
+  motion,
+  flipped = false,
+  interactive = true,
+  playAs,
+  hints,
+  onMove,
+}: BoardProps) {
   const uid = useId();
   const boardRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -107,7 +121,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
   const [selection, setSelection] = useState<Selection | null>(null);
   const [promotion, setPromotion] = useState<PromotionRequest | null>(null);
   const [hoverSq, setHoverSq] = useState<number | null>(null);
-  const [focusSq, setFocusSq] = useState<number>(12); // e2
+  const [focusSq, setFocusSq] = useState<number>(flipped ? 52 : 12); // e2, o e7 con el tablero girado
 
   /* ---------- datos derivados de la partida ---------- */
 
@@ -160,8 +174,8 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
   else if (transition.type === 'none' && transition.ended && ending) banner = { kind: ending, delay: 120 };
 
   const frame = useMemo(
-    () => makeFrame(game.gameId, game.revision, position.board, ids, orientation),
-    [game.gameId, game.revision, position, ids, orientation],
+    () => makeFrame(game.gameId, game.revision, position.board, ids, orientation, flipped),
+    [game.gameId, game.revision, position, ids, orientation, flipped],
   );
 
   const pieceList = useMemo(() => {
@@ -199,8 +213,8 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
     const drop = dropRef.current;
     dropRef.current = null;
     director.update({ frame, transition: game.transition, motion, drop });
-    // El director solo reacciona a cambios de partida, de estado, de orientación o de movimiento.
-  }, [game.gameId, game.revision, orientation, motion]);
+    // El director solo reacciona a cambios de partida, de estado, de orientación, de vista o de movimiento.
+  }, [game.gameId, game.revision, orientation, motion, flipped]);
 
   /* ---------- acciones ---------- */
 
@@ -268,7 +282,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
     const x = (clientX - rect.left) / rect.width;
     const y = (clientY - rect.top) / rect.height;
     if (x < 0 || x >= 1 || y < 0 || y >= 1) return null;
-    return squareAt(Math.floor(x * 8), Math.floor(y * 8));
+    return viewSq(squareAt(Math.floor(x * 8), Math.floor(y * 8)), flipped);
   };
 
   const pieceElement = (id: number): HTMLElement | null =>
@@ -350,10 +364,12 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
       // la asienta desde ahí, sin que dé un salto.
       const rect = gridRef.current.getBoundingClientRect();
       const cell = rect.width / 8;
+      const fromAt = viewSq(drag.from, flipped);
+      const overAt = viewSq(over, flipped);
       const hint: DropHint = {
         id: drag.id,
-        dx: (fileOf(drag.from) - fileOf(over)) * cell + dx,
-        dy: (rowOf(drag.from) - rowOf(over)) * cell + dy,
+        dx: (fileOf(fromAt) - fileOf(overAt)) * cell + dx,
+        dy: (rowOf(fromAt) - rowOf(overAt)) * cell + dy,
       };
       if (element) element.style.translate = `${hint.dx}px ${hint.dy}px`;
       played = attemptMove(drag.from, over, hint);
@@ -374,8 +390,10 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (!interactive || pendingPromotion) return;
     if (event.altKey || event.ctrlKey || event.metaKey) return;
-    let file = fileOf(focusSq);
-    let row = rowOf(focusSq);
+    // Las flechas se mueven por la pantalla, no por el tablero.
+    const focusAt = viewSq(focusSq, flipped);
+    let file = fileOf(focusAt);
+    let row = rowOf(focusAt);
     switch (event.key) {
       case 'ArrowLeft':
         file = Math.max(0, file - 1);
@@ -412,7 +430,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
         return;
     }
     event.preventDefault();
-    setFocusSq(squareAt(file, row));
+    setFocusSq(viewSq(squareAt(file, row), flipped));
   };
 
   /* ---------- render ---------- */
@@ -423,7 +441,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
   for (let row = 0; row < 8; row++) {
     const cells = [];
     for (let file = 0; file < 8; file++) {
-      const sq = squareAt(file, row);
+      const sq = viewSq(squareAt(file, row), flipped);
       const code = position.board[sq]!;
       const own = playable && code !== 0 && colorOfCode(code) === position.turn;
       const isTarget = targets.has(sq);
@@ -470,7 +488,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
       data-motion={motion}
       style={{ '--impact-delay': `${impactDelay}ms` } as CSSProperties}
     >
-      <BoardFrame />
+      <BoardFrame flipped={flipped} />
 
       <div
         ref={gridRef}
@@ -500,6 +518,7 @@ export function Board({ game, orientation, motion, interactive = true, playAs, h
             sq={sq}
             code={code}
             orientation={orientation}
+            flipped={flipped}
             mated={sq === matedSq}
             toppleDelay={sq === matedSq ? toppleDelay : 0}
           />

@@ -15,6 +15,8 @@ export interface Frame {
   /** Casilla por id (−1 = fuera del tablero). Se indexa con el id de la pieza. */
   readonly squareOf: Int16Array;
   readonly orientation: Orientation;
+  /** Vista de Azules: el tablero se ve girado 180° (ver `viewSq`). */
+  readonly flipped: boolean;
 }
 
 export function makeFrame(
@@ -23,13 +25,14 @@ export function makeFrame(
   board: Int8Array,
   ids: Int16Array,
   orientation: Orientation,
+  flipped = false,
 ): Frame {
   const squareOf = new Int16Array(64).fill(-1);
   for (let sq = 0; sq < 64; sq++) {
     const id = ids[sq]!;
     if (id >= 0) squareOf[id] = sq;
   }
-  return { gameId, revision, board, ids, squareOf, orientation };
+  return { gameId, revision, board, ids, squareOf, orientation, flipped };
 }
 
 /** Pieza soltada tras arrastrar: desplazamiento (px) respecto al centro de su casilla de destino. */

@@ -22,8 +22,11 @@ for (let row = 0; row < 8; row++) {
   }
 }
 
-/** Marco, casillas, esquinas, coordenadas y logo: todo estático, un solo SVG. */
-export function BoardFrame() {
+/**
+ * Marco, casillas, esquinas, coordenadas y logo: todo estático, un solo SVG. En la vista de Azules
+ * solo cambian las coordenadas (H…A de izquierda a derecha y 1…8 de arriba abajo).
+ */
+export function BoardFrame({ flipped = false }: { readonly flipped?: boolean }) {
   return (
     <svg
       className="board-frame"
@@ -69,12 +72,12 @@ export function BoardFrame() {
       <g className="bf-coords">
         {Array.from({ length: 8 }, (_, row) => (
           <text key={`r${row}`} x={38.5} y={GRID.y + (row + 0.5) * CELL} dy="0.35em">
-            {8 - row}
+            {flipped ? row + 1 : 8 - row}
           </text>
         ))}
-        {FILE_LABELS.map((label, file) => (
-          <text key={label} x={GRID.x + (file + 0.5) * CELL} y={1212} dy="0.35em">
-            {label}
+        {FILE_LABELS.map((_, file) => (
+          <text key={file} x={GRID.x + (file + 0.5) * CELL} y={1212} dy="0.35em">
+            {FILE_LABELS[flipped ? 7 - file : file]}
           </text>
         ))}
       </g>

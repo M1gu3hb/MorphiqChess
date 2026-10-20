@@ -10,7 +10,7 @@ import {
   buildTrail,
   type PieceParts,
 } from './dom';
-import { chebyshev, fileOf, pieceZ, placeAt, rowOf } from './geometry';
+import { chebyshev, fileOf, pieceZ, placeAt, rowOf, viewSq } from './geometry';
 import {
   DROP_SETTLE_MS,
   EASE_MOVE,
@@ -82,6 +82,8 @@ export class Director {
   private sentinel: Animation | null = null;
   private endMs = 0;
   private cellPx = 0;
+  /** Vista de Azules: todo lo que se dibuja usa la casilla de pantalla (ver `viewSq`). */
+  private flipped = false;
 
   constructor(
     private readonly targets: DirectorTargets,
@@ -101,11 +103,17 @@ export class Director {
   update({ frame, transition, motion, drop = null }: DirectorUpdate): void {
     const previous = this.prev;
     this.prev = frame;
+    this.flipped = frame.flipped;
     this.cancelAll();
     this.cellPx = layoutWidth(this.targets.pieces) / 8;
 
-    // Primer dibujo o partida nueva.
-    if (previous === null || previous.gameId !== frame.gameId || transition.type === 'reset') {
+    // Primer dibujo, partida nueva o el tablero se giró: no hay desplazamientos que animar.
+    if (
+      previous === null ||
+      previous.gameId !== frame.gameId ||
+      previous.flipped !== frame.flipped ||
+      transition.type === 'reset'
+    ) {
       this.clearDrop(drop);
       if (motion === 'full') this.entrance(frame);
       this.armCleanup();
@@ -154,7 +162,8 @@ export class Director {
       const sq = frame.squareOf[id];
       const parts = partsOf(piece);
       if (sq === undefined || sq < 0 || !parts) continue;
-      const delay = (fileOf(sq) + rowOf(sq)) * 24;
+      const at = this.screen(sq);
+      const delay = (fileOf(at) + rowOf(at)) * 24;
       const timing = { duration: 520, delay, easing: EASE_OUT, fill: 'backwards' as const };
       this.run(
         parts.lift,
@@ -209,13 +218,13 @@ export class Director {
     const visualTo = forward ? move.to : move.from;
     const moverId = next.ids[visualTo] ?? -1;
     const dropped = forward && drop !== null && drop.id === moverId;
-    const distance = Math.hypot(
-      fileOf(visualTo) - fileOf(visualFrom),
-      rowOf(visualTo) - rowOf(visualFrom),
-    );
+    // Rumbo de la jugada tal como se ve en pantalla (con el tablero girado, al revés).
+    const fromAt = this.screen(visualFrom);
+    const toAt = this.screen(visualTo);
+    const distance = Math.hypot(fileOf(toAt) - fileOf(fromAt), rowOf(toAt) - rowOf(fromAt));
     const D = dropped ? DROP_SETTLE_MS : glideMs(distance);
     const elements = this.pieceElements();
-    const attack = Math.atan2(rowOf(visualTo) - rowOf(visualFrom), fileOf(visualTo) - fileOf(visualFrom));
+    const attack = Math.atan2(rowOf(toAt) - rowOf(fromAt), fileOf(toAt) - fileOf(fromAt));
     if (!dropped) this.clearDrop(drop);
 
     // 1) Piezas que cambian de casilla (la que mueve y, en el enroque, la torre).
@@ -391,8 +400,9 @@ export class Director {
 
     // Destello rojo sobre el tablero, centrado en el rey.
     const { flash, board } = this.targets;
-    const x = ((fileOf(king) + 0.5) / 8) * 100;
-    const y = ((rowOf(king) + 0.5) / 8) * 100;
+    const kingAt = this.screen(king);
+    const x = ((fileOf(kingAt) + 0.5) / 8) * 100;
+    const y = ((rowOf(kingAt) + 0.5) / 8) * 100;
     flash.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(255 77 106 / 0.6), rgb(255 77 106 / 0) 62%)`;
     this.run(flash, [{ opacity: 0 }, { opacity: 1, offset: 0.16 }, { opacity: 0 }], {
       duration: 900,
@@ -423,8 +433,8 @@ export class Director {
     this.run(
       el,
       [
-        { transform: placeAt(from), zIndex: 60 },
-        { transform: placeAt(to), zIndex: 60 },
+        { transform: placeAt(this.screen(from)), zIndex: 60 },
+        { transform: placeAt(this.screen(to)), zIndex: 60 },
       ],
       { duration, delay, easing: EASE_MOVE, fill: 'backwards' },
     );
@@ -469,11 +479,13 @@ export class Director {
   /** Estela luminosa entre la casilla de origen y la de destino. */
   private trail(from: number, to: number, ms: number): void {
     const node = buildTrail();
-    const df = fileOf(to) - fileOf(from);
-    const dr = rowOf(to) - rowOf(from);
+    const fromAt = this.screen(from);
+    const toAt = this.screen(to);
+    const df = fileOf(toAt) - fileOf(fromAt);
+    const dr = rowOf(toAt) - rowOf(fromAt);
     const rotate = `rotate(${Math.atan2(dr, df)}rad)`;
-    node.style.left = `${(fileOf(from) + 0.5) * 12.5}%`;
-    node.style.top = `${(rowOf(from) + 0.5) * 12.5}%`;
+    node.style.left = `${(fileOf(fromAt) + 0.5) * 12.5}%`;
+    node.style.top = `${(rowOf(fromAt) + 0.5) * 12.5}%`;
     node.style.width = `${Math.hypot(df, dr) * 12.5}%`;
     this.targets.fx.append(node);
     this.temporary.push(node);
@@ -543,7 +555,7 @@ export class Director {
   /* ------------------------------------------------------------------ */
 
   private ring(sq: number, color: string, delay: number, options: { to?: number; ms?: number } = {}): void {
-    const anchor = buildAnchor(sq);
+    const anchor = buildAnchor(this.screen(sq));
     const ring = buildRing(color);
     anchor.append(ring);
     this.targets.fx.append(anchor);
@@ -559,7 +571,7 @@ export class Director {
   }
 
   private glow(sq: number, color: string, delay: number, ms: number, to = 1.8): void {
-    const anchor = buildAnchor(sq);
+    const anchor = buildAnchor(this.screen(sq));
     const glow = buildGlow(color);
     anchor.append(glow);
     this.targets.fx.append(anchor);
@@ -581,7 +593,7 @@ export class Director {
     colors: readonly string[],
     options: { angle: number; spread: number; reach: number; delay: number; ms?: number },
   ): void {
-    const anchor = buildAnchor(sq);
+    const anchor = buildAnchor(this.screen(sq));
     this.targets.fx.append(anchor);
     this.temporary.push(anchor);
     const cell = this.cellPx;
@@ -621,8 +633,14 @@ export class Director {
   /* Infraestructura                                                      */
   /* ------------------------------------------------------------------ */
 
+  /** Casilla del motor → casilla de pantalla (idéntica salvo en la vista de Azules). */
+  private screen(sq: number): number {
+    return viewSq(sq, this.flipped);
+  }
+
   private ghost(color: Color, type: PieceType, sq: number, orientation: Orientation): PieceParts {
-    const parts = buildPiece(this.options.pieceSrc(color, type), sq, orientation, pieceZ(sq, orientation));
+    const at = this.screen(sq);
+    const parts = buildPiece(this.options.pieceSrc(color, type), at, orientation, pieceZ(at, orientation));
     this.targets.pieces.append(parts.root);
     this.temporary.push(parts.root);
     return parts;

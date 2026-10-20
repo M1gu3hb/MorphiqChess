@@ -2,13 +2,15 @@ import { memo, type CSSProperties } from 'react';
 import type { Orientation } from '../../anim/timing';
 import { colorOfCode, typeOfCode } from '../../engine';
 import { PIECE_SRC } from '../pieceArt';
-import { fileOf, pieceZ, rowOf } from './geometry';
+import { fileOf, pieceZ, rowOf, viewSq } from './geometry';
 
 interface PieceViewProps {
   readonly id: number;
   readonly sq: number;
   readonly code: number;
   readonly orientation: Orientation;
+  /** Vista de Azules: la pieza se dibuja en la casilla opuesta de la pantalla. */
+  readonly flipped: boolean;
   /** Rey en jaque mate: queda tumbado. */
   readonly mated: boolean;
   /** Retraso (ms) para que el rey caiga después de la jugada que da mate. */
@@ -25,11 +27,20 @@ interface PieceViewProps {
  *       .piece-face           giro de 180° sobre el eje de la pieza
  *         img.piece-img       la imagen
  */
-export const PieceView = memo(function PieceView({ id, sq, code, orientation, mated, toppleDelay }: PieceViewProps) {
+export const PieceView = memo(function PieceView({
+  id,
+  sq,
+  code,
+  orientation,
+  flipped,
+  mated,
+  toppleDelay,
+}: PieceViewProps) {
+  const at = viewSq(sq, flipped);
   const style = {
-    '--f': fileOf(sq),
-    '--r': rowOf(sq),
-    '--z': pieceZ(sq, orientation),
+    '--f': fileOf(at),
+    '--r': rowOf(at),
+    '--z': pieceZ(at, orientation),
     '--a': `${orientation}deg`,
     '--topple-delay': `${toppleDelay}ms`,
   } as CSSProperties;
