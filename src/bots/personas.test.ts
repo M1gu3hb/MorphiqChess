@@ -37,8 +37,8 @@ describe('los doce rivales', () => {
         if (strength.kind === 'sampler') {
           expect(before.kind).toBe('sampler');
           if (before.kind === 'sampler') {
+            // La temperatura no se compara: solo pesa junto con la profundidad (ver docs/practica/calibracion.md).
             expect(strength.depth).toBeGreaterThanOrEqual(before.depth);
-            expect(strength.temperature).toBeLessThan(before.temperature);
             expect(strength.blunder).toBeLessThan(before.blunder);
           }
         } else if (strength.kind === 'elo' && before.kind === 'elo') {

@@ -37,7 +37,7 @@ export const PERSONAS: readonly Persona[] = [
     name: 'Peón Aprendiz',
     elo: 400,
     tagline: 'Acaba de aprender cómo se mueven las piezas.',
-    strength: { kind: 'sampler', depth: 1, lines: 8, temperature: 320, blunder: 0.5 },
+    strength: { kind: 'sampler', depth: 1, lines: 8, temperature: 320, blunder: 0.38 },
   },
   {
     id: 'peon-azul',
@@ -46,7 +46,7 @@ export const PERSONAS: readonly Persona[] = [
     name: 'Peón Valiente',
     elo: 600,
     tagline: 'Avanza sin miedo y deja piezas sin proteger.',
-    strength: { kind: 'sampler', depth: 1, lines: 8, temperature: 220, blunder: 0.32 },
+    strength: { kind: 'sampler', depth: 1, lines: 8, temperature: 215, blunder: 0.27 },
   },
   {
     id: 'caballo-blanco',
@@ -55,7 +55,7 @@ export const PERSONAS: readonly Persona[] = [
     name: 'Caballo Saltarín',
     elo: 800,
     tagline: 'Salta de un lado a otro, pero no siempre ve el peligro.',
-    strength: { kind: 'sampler', depth: 2, lines: 6, temperature: 170, blunder: 0.2 },
+    strength: { kind: 'sampler', depth: 1, lines: 7, temperature: 170, blunder: 0.18 },
   },
   {
     id: 'caballo-azul',
@@ -64,7 +64,7 @@ export const PERSONAS: readonly Persona[] = [
     name: 'Caballo Astuto',
     elo: 1000,
     tagline: 'Ya ve las amenazas más sencillas.',
-    strength: { kind: 'sampler', depth: 2, lines: 5, temperature: 120, blunder: 0.1 },
+    strength: { kind: 'sampler', depth: 2, lines: 5, temperature: 200, blunder: 0.15 },
   },
   {
     id: 'alfil-blanco',
@@ -73,7 +73,7 @@ export const PERSONAS: readonly Persona[] = [
     name: 'Alfil Curioso',
     elo: 1200,
     tagline: 'Entiende lo básico y mueve con intención.',
-    strength: { kind: 'sampler', depth: 3, lines: 4, temperature: 90, blunder: 0.05 },
+    strength: { kind: 'sampler', depth: 3, lines: 5, temperature: 150, blunder: 0.1 },
   },
   {
     id: 'alfil-azul',
