@@ -126,49 +126,72 @@ export function Dialogs({ kind, onClose, game, store, settings, settingsStore, o
         </div>
       </Dialog>
 
-      <Dialog open={kind === 'settings'} title={es.dialogs.settings.title} onClose={() => onClose('settings')}>
-        <div className="dialog__stack">
+      <SettingsDialog
+        open={kind === 'settings'}
+        onClose={() => onClose('settings')}
+        settings={settings}
+        settingsStore={settingsStore}
+      />
+    </>
+  );
+}
+
+interface SettingsDialogProps {
+  readonly open: boolean;
+  readonly onClose: () => void;
+  readonly settings: Settings;
+  readonly settingsStore: SettingsStore;
+  /** Contra un rival las piezas no giran, así que ese ajuste no aplica. */
+  readonly rotation?: boolean;
+}
+
+/** Ajustes de la persona y atajos de teclado: los mismos en la partida de dos y contra un rival. */
+export function SettingsDialog({ open, onClose, settings, settingsStore, rotation = true }: SettingsDialogProps) {
+  return (
+    <Dialog open={open} title={es.dialogs.settings.title} onClose={onClose}>
+      <div className="dialog__stack">
+        {rotation && (
           <Switch
             checked={settings.rotatePieces}
             onChange={(rotatePieces) => settingsStore.update({ rotatePieces })}
             label={es.dialogs.settings.rotate}
             help={es.dialogs.settings.rotateHelp}
           />
+        )}
+        <Switch
+          checked={settings.motion === 'full'}
+          onChange={(full) => settingsStore.update({ motion: full ? 'full' : 'reduced' })}
+          label={es.dialogs.settings.motion}
+          help={es.dialogs.settings.motionHelp}
+        />
+        {fullscreenSupported() ? (
           <Switch
-            checked={settings.motion === 'full'}
-            onChange={(full) => settingsStore.update({ motion: full ? 'full' : 'reduced' })}
-            label={es.dialogs.settings.motion}
-            help={es.dialogs.settings.motionHelp}
+            checked={settings.autoFullscreen}
+            onChange={(autoFullscreen) => settingsStore.update({ autoFullscreen })}
+            label={es.dialogs.settings.autoFullscreen}
+            help={es.dialogs.settings.autoFullscreenHelp}
           />
-          {fullscreenSupported() ? (
-            <Switch
-              checked={settings.autoFullscreen}
-              onChange={(autoFullscreen) => settingsStore.update({ autoFullscreen })}
-              label={es.dialogs.settings.autoFullscreen}
-              help={es.dialogs.settings.autoFullscreenHelp}
-            />
-          ) : (
-            isIPhone() && <p className="dialog__note">{es.dialogs.settings.iphoneTip}</p>
-          )}
-        </div>
-        <h3 className="dialog__subtitle">{es.shortcuts.title}</h3>
-        <dl className="shortcuts">
-          {es.shortcuts.items.map(([keys, text]) => (
-            <div key={keys} className="shortcuts__row">
-              <dt>
-                <kbd>{keys}</kbd>
-              </dt>
-              <dd>{text}</dd>
-            </div>
-          ))}
-        </dl>
-        <div className="dialog__actions">
-          <button type="button" className="btn btn--primary" onClick={() => onClose('settings')}>
-            {es.dialogs.settings.close}
-          </button>
-        </div>
-      </Dialog>
-    </>
+        ) : (
+          isIPhone() && <p className="dialog__note">{es.dialogs.settings.iphoneTip}</p>
+        )}
+      </div>
+      <h3 className="dialog__subtitle">{es.shortcuts.title}</h3>
+      <dl className="shortcuts">
+        {es.shortcuts.items.map(([keys, text]) => (
+          <div key={keys} className="shortcuts__row">
+            <dt>
+              <kbd>{keys}</kbd>
+            </dt>
+            <dd>{text}</dd>
+          </div>
+        ))}
+      </dl>
+      <div className="dialog__actions">
+        <button type="button" className="btn btn--primary" onClick={onClose}>
+          {es.dialogs.settings.close}
+        </button>
+      </div>
+    </Dialog>
   );
 }
 

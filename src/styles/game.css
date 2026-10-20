@@ -136,6 +136,28 @@ html:has(.game-screen) {
   text-transform: uppercase;
 }
 
+.strip__who {
+  display: grid;
+  flex: 0 1 auto;
+  min-width: 0;
+  line-height: 1.15;
+}
+
+.strip__who .strip__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strip__detail {
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .strip__captured {
   display: flex;
   flex: 1 1 auto;
@@ -449,11 +471,11 @@ html:has(.game-screen) {
     width: min(100%, 220px);
   }
 
-  .strip[data-flip] {
+  .strip[data-top] {
     align-self: start;
   }
 
-  .strip:not([data-flip]) {
+  .strip:not([data-top]) {
     align-self: end;
   }
 

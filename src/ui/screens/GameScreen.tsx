@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
+import { useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import type { GameStore, SettingsStore } from '../../game';
 import { orientationAt } from '../../game';
 import { es } from '../../i18n/es';
@@ -11,6 +11,7 @@ import { PlayerStrip } from '../stage/PlayerStrip';
 import { useAnnouncement } from '../useAnnouncement';
 import { useFullscreen } from '../useFullscreen';
 import { useHistoryShortcuts } from '../useHistoryShortcuts';
+import { useResultDialog } from '../useResultDialog';
 import { useWakeLock } from '../useWakeLock';
 
 interface GameScreenProps {
@@ -18,9 +19,6 @@ interface GameScreenProps {
   readonly settingsStore: SettingsStore;
   readonly onHome: () => void;
 }
-
-/** Pausa antes de mostrar el resultado, para que se vea primero la animación del final. */
-const RESULT_DELAY_MS = { checkmate: 2300, other: 1100 } as const;
 
 /**
  * Pantalla de juego: solo el tablero, una franja pegada a la orilla de cada jugador y un cajón
@@ -33,7 +31,7 @@ export function GameScreen({ store, settingsStore, onHome }: GameScreenProps) {
   const [dialog, setDialog] = useState<DialogKind>(null);
   const [railOpen, setRailOpen] = useState(false);
   const [hint, setHint] = useState(() => !hintSeen('rail'));
-  const [resultOpen, setResultOpen] = useState(false);
+  const [resultOpen, setResultOpen] = useResultDialog(game);
   const stageRef = useRef<HTMLElement>(null);
   const announcement = useAnnouncement(game);
   useHistoryShortcuts(store);
@@ -42,21 +40,6 @@ export function GameScreen({ store, settingsStore, onHome }: GameScreenProps) {
   const hasMoves = game.plies.length > 0;
   const over = game.outcome !== null;
   const orientation = orientationAt(game, settings.rotatePieces);
-
-  // El resultado solo aparece cuando la partida termina aquí mismo (una jugada, rendición o tablas),
-  // no al abrir una partida que ya había terminado ni al revisar jugadas.
-  const t = game.transition;
-  const endedNow = over && ((t.type === 'forward' && t.source === 'play') || (t.type === 'none' && t.ended === true));
-  const resultDelay = game.outcome?.type === 'checkmate' ? RESULT_DELAY_MS.checkmate : RESULT_DELAY_MS.other;
-  useEffect(() => {
-    if (!over) {
-      setResultOpen(false);
-      return;
-    }
-    if (!endedNow) return;
-    const timer = window.setTimeout(() => setResultOpen(true), resultDelay);
-    return () => window.clearTimeout(timer);
-  }, [game.gameId, game.revision, over, endedNow, resultDelay]);
 
   const changeRail = (next: boolean) => {
     setRailOpen(next);

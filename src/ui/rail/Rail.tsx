@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, type RefObject } from 'react';
+import { useEffect, useId, useRef, type ReactNode, type RefObject } from 'react';
 import type { GameSnapshot, GameStore } from '../../game';
 import { isAtEnd } from '../../game';
 import { es } from '../../i18n/es';
@@ -19,13 +19,32 @@ interface RailProps {
   readonly onMenu: () => void;
   /** Primera vez: el asa «asoma» una vez para que se sepa que está ahí. */
   readonly hint: boolean;
+  /** Otro modo de deshacer (contra un rival se deshacen la jugada propia y la de él). Por omisión, la última jugada. */
+  readonly onUndo?: () => void;
+  /** Con `onUndo`, quien decide si se puede deshacer. */
+  readonly undoDisabled?: boolean;
+  /** Herramientas extra, antes del botón de deshacer (la pista en el modo Práctica). */
+  readonly tools?: ReactNode;
 }
 
 /**
  * Cajón lateral con las herramientas. Está en el borde derecho —el lado que queda entre las dos
  * personas sentadas frente a frente— y se abre con un toque al asa o arrastrándola hacia dentro.
  */
-export function Rail({ open, onOpenChange, stageRef, game, store, reduced, fullscreen, onMenu, hint }: RailProps) {
+export function Rail({
+  open,
+  onOpenChange,
+  stageRef,
+  game,
+  store,
+  reduced,
+  fullscreen,
+  onMenu,
+  hint,
+  onUndo,
+  undoDisabled,
+  tools,
+}: RailProps) {
   const railRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const gripRef = useRef<HTMLButtonElement>(null);
@@ -134,11 +153,12 @@ export function Rail({ open, onOpenChange, stageRef, game, store, reduced, fulls
           <span className="rail__sep" aria-hidden="true" />
 
           <div className="rail__tools">
+            {tools}
             <button
               type="button"
               className="rail__btn"
-              onClick={() => store.undo()}
-              disabled={total === 0 || !atEnd}
+              onClick={onUndo ?? (() => store.undo())}
+              disabled={onUndo ? (undoDisabled ?? false) : total === 0 || !atEnd}
               aria-label={es.game.actions.undo}
               title={es.game.actions.undo}
             >
