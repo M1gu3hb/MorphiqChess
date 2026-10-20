@@ -229,6 +229,24 @@ export function undo(game: GameSnapshot): GameSnapshot {
   });
 }
 
+/**
+ * Deshace varias jugadas de una vez (la del rival y la propia, por ejemplo). Con más de una, la posición
+ * cambia en más de un paso: las piezas se deslizan todas juntas en vez de animar una sola jugada.
+ */
+export function undoPlies(game: GameSnapshot, count: number): GameSnapshot {
+  const n = Number.isFinite(count) ? Math.min(Math.max(0, Math.trunc(count)), game.plies.length) : 0;
+  if (n <= 1) return n === 1 ? undo(game) : game;
+  const wasAtEnd = isAtEnd(game);
+  const plies = game.plies.slice(0, game.plies.length - n);
+  return next(game, {
+    plies,
+    keys: game.keys.slice(0, game.keys.length - n),
+    cursor: Math.min(game.cursor, plies.length),
+    manualOutcome: null,
+    transition: wasAtEnd ? { type: 'jump' } : { type: 'none' },
+  });
+}
+
 /** «Retomar desde aquí»: descarta las jugadas posteriores al cursor. */
 export function truncateAtCursor(game: GameSnapshot): GameSnapshot {
   if (isAtEnd(game)) return game;

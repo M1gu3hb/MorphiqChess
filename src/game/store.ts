@@ -10,10 +10,12 @@ import {
   serializeGame,
   truncateAtCursor,
   undo,
+  undoPlies,
 } from './game';
 import type { GameSnapshot } from './types';
 
-const STORAGE_KEY = 'morphiqchess:game:v1';
+/** Dónde se guarda la partida de dos jugadores; la de cada modo lleva su propia clave. */
+export const GAME_STORAGE_KEY = 'morphiqchess:game:v1';
 
 /** localStorage puede fallar o no existir (modo privado, bloqueo de datos): siempre con try/catch. */
 function safeStorage(): Storage | null {
@@ -30,7 +32,11 @@ export class GameStore {
   private readonly listeners = new Set<() => void>();
   private readonly storage: Storage | null;
 
-  constructor(initial: GameSnapshot = createGame(), storage: Storage | null = safeStorage()) {
+  constructor(
+    initial: GameSnapshot = createGame(),
+    storage: Storage | null = safeStorage(),
+    private readonly storageKey: string = GAME_STORAGE_KEY,
+  ) {
     this.snapshot = initial;
     this.storage = storage;
   }
@@ -55,8 +61,8 @@ export class GameStore {
     if (!this.storage) return;
     try {
       const game = this.snapshot;
-      if (game.plies.length === 0 && !game.manualOutcome) this.storage.removeItem(STORAGE_KEY);
-      else this.storage.setItem(STORAGE_KEY, JSON.stringify(serializeGame(game)));
+      if (game.plies.length === 0 && !game.manualOutcome) this.storage.removeItem(this.storageKey);
+      else this.storage.setItem(this.storageKey, JSON.stringify(serializeGame(game)));
     } catch {
       /* sin espacio o bloqueado: la partida sigue funcionando sin guardado */
     }
@@ -66,7 +72,7 @@ export class GameStore {
   hasSavedGame(): boolean {
     if (!this.storage) return false;
     try {
-      return deserializeGame(JSON.parse(this.storage.getItem(STORAGE_KEY) ?? 'null')) !== null;
+      return deserializeGame(JSON.parse(this.storage.getItem(this.storageKey) ?? 'null')) !== null;
     } catch {
       return false;
     }
@@ -76,7 +82,7 @@ export class GameStore {
   loadSaved(): boolean {
     if (!this.storage) return false;
     try {
-      const saved = deserializeGame(JSON.parse(this.storage.getItem(STORAGE_KEY) ?? 'null'));
+      const saved = deserializeGame(JSON.parse(this.storage.getItem(this.storageKey) ?? 'null'));
       if (!saved) return false;
       this.commit(saved);
       return true;
@@ -115,6 +121,11 @@ export class GameStore {
 
   undo(): void {
     this.commit(undo(this.snapshot));
+  }
+
+  /** Deshace varias jugadas de una vez, con un solo cambio de estado. */
+  undoPlies(count: number): void {
+    this.commit(undoPlies(this.snapshot, count));
   }
 
   resumeFromCursor(): void {

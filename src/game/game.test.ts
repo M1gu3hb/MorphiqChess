@@ -17,8 +17,9 @@ import {
   serializeGame,
   truncateAtCursor,
   undo,
+  undoPlies,
 } from './game';
-import { GameStore } from './store';
+import { GAME_STORAGE_KEY, GameStore } from './store';
 import type { GameSnapshot } from './types';
 
 const sq = (name: string): number => {
@@ -183,6 +184,80 @@ describe('deshacer', () => {
   });
 });
 
+describe('deshacer varias jugadas', () => {
+  it('quita varias de una vez y deja la partida lista para seguir', () => {
+    const game = play(createGame(), 'e4', 'e5', 'Nf3', 'Nc6');
+    const undone = undoPlies(game, 2);
+    expect(undone.plies).toHaveLength(2);
+    expect(undone.keys).toHaveLength(3);
+    expect(undone.cursor).toBe(2);
+    expect(positionAt(undone).turn).toBe('w');
+    expect(canPlay(undone)).toBe(true);
+    expect(undone.revision).toBe(game.revision + 1);
+    expect(undone.gameId).toBe(game.gameId);
+  });
+
+  it('el resultado es el mismo que deshacer una por una', () => {
+    const game = play(createGame(), 'e4', 'e5', 'Nf3', 'Nc6', 'Bb5');
+    const stepwise = undo(undo(undo(game)));
+    const atOnce = undoPlies(game, 3);
+    expect(serializeGame(atOnce)).toEqual(serializeGame(stepwise));
+    expect(atOnce.keys).toEqual(stepwise.keys);
+  });
+
+  it('con más de una jugada la transición es un salto; con una, un retroceso normal', () => {
+    const game = play(createGame(), 'e4', 'e5', 'Nf3');
+    expect(undoPlies(game, 2).transition).toEqual({ type: 'jump' });
+    expect(undoPlies(game, 1).transition).toMatchObject({ type: 'backward', source: 'undo' });
+  });
+
+  it('las piezas conservan sus ids al volver atrás', () => {
+    const game = play(createGame(), 'e4', 'e5', 'Nf3', 'Nc6');
+    const original = idsAt(createGame());
+    const undone = undoPlies(game, 3);
+    // Queda solo 1.e4: el peón de e2 está en e4, y el de e7 y el caballo de g1 volvieron a su casilla.
+    expect(idsAt(undone)[sq('e4')]).toBe(original[sq('e2')]);
+    expect(idsAt(undone)[sq('e2')]).toBe(-1);
+    expect(idsAt(undone)[sq('e7')]).toBe(original[sq('e7')]);
+    expect(idsAt(undone)[sq('g1')]).toBe(original[sq('g1')]);
+    expect(idsAt(undone)[sq('b8')]).toBe(original[sq('b8')]);
+  });
+
+  it('no pasa de las jugadas que hay, y con cero o con algo raro no cambia nada', () => {
+    const game = play(createGame(), 'e4', 'e5');
+    const empty = undoPlies(game, 99);
+    expect(empty.plies).toHaveLength(0);
+    expect(empty.cursor).toBe(0);
+    expect(undoPlies(game, 0)).toBe(game);
+    expect(undoPlies(game, -3)).toBe(game);
+    expect(undoPlies(game, Number.NaN)).toBe(game);
+    expect(undoPlies(game, Number.POSITIVE_INFINITY)).toBe(game);
+    const fresh = createGame();
+    expect(undoPlies(fresh, 2)).toBe(fresh);
+  });
+
+  it('reabre una partida terminada por mate o por rendición', () => {
+    const mate = play(createGame(), 'f3', 'e5', 'g4', 'Qh4#');
+    expect(mate.outcome).not.toBeNull();
+    const reopened = undoPlies(mate, 2);
+    expect(reopened.outcome).toBeNull();
+    expect(reopened.plies).toHaveLength(2);
+    expect(canPlay(reopened)).toBe(true);
+
+    const resigned = resign(play(createGame(), 'e4', 'e5'), 'w');
+    expect(resigned.outcome).toMatchObject({ type: 'resignation' });
+    expect(undoPlies(resigned, 2).outcome).toBeNull();
+  });
+
+  it('si se estaba revisando una jugada anterior, el cursor no se pasa del final', () => {
+    const game = goTo(play(createGame(), 'e4', 'e5', 'Nf3', 'Nc6'), 1);
+    const undone = undoPlies(game, 2);
+    expect(undone.plies).toHaveLength(2);
+    expect(undone.cursor).toBe(1);
+    expect(undone.transition).toEqual({ type: 'none' });
+  });
+});
+
 describe('finales manuales y tablas', () => {
   it('rendirse da la victoria al rival y bloquea el juego', () => {
     const game = resign(play(createGame(), 'e4'), 'b');
@@ -309,5 +384,52 @@ describe('GameStore', () => {
     store.play(sanToMove(positionAt(store.getSnapshot()), 'e4')!);
     expect(store.hasSavedGame()).toBe(false);
     expect(store.getSnapshot().plies).toHaveLength(1);
+  });
+});
+
+describe('GameStore con su propia clave', () => {
+  it('cada modo guarda su partida por separado', () => {
+    const storage = new MemoryStorage();
+    const duel = new GameStore(createGame(), storage);
+    const practice = new GameStore(createGame(), storage, 'morphiqchess:bots:game:v1');
+    duel.play(sanToMove(positionAt(duel.getSnapshot()), 'e4')!);
+    expect(duel.hasSavedGame()).toBe(true);
+    expect(practice.hasSavedGame()).toBe(false);
+
+    practice.play(sanToMove(positionAt(practice.getSnapshot()), 'd4')!);
+    practice.play(sanToMove(positionAt(practice.getSnapshot()), 'd5')!);
+    expect(storage.length).toBe(2);
+
+    const reopenedDuel = new GameStore(createGame(), storage);
+    const reopenedPractice = new GameStore(createGame(), storage, 'morphiqchess:bots:game:v1');
+    expect(reopenedDuel.loadSaved()).toBe(true);
+    expect(reopenedPractice.loadSaved()).toBe(true);
+    expect(reopenedDuel.getSnapshot().plies).toHaveLength(1);
+    expect(reopenedPractice.getSnapshot().plies).toHaveLength(2);
+  });
+
+  it('borrar una partida nueva solo borra la suya', () => {
+    const storage = new MemoryStorage();
+    const duel = new GameStore(createGame(), storage);
+    const practice = new GameStore(createGame(), storage, GAME_STORAGE_KEY + ':otra');
+    duel.play(sanToMove(positionAt(duel.getSnapshot()), 'e4')!);
+    practice.play(sanToMove(positionAt(practice.getSnapshot()), 'd4')!);
+    practice.newGame();
+    expect(storage.length).toBe(1);
+    expect(duel.hasSavedGame()).toBe(true);
+  });
+
+  it('deshace varias jugadas con un solo aviso y las guarda', () => {
+    const storage = new MemoryStorage();
+    const store = new GameStore(createGame(), storage);
+    for (const san of ['e4', 'e5', 'Nf3']) store.play(sanToMove(positionAt(store.getSnapshot()), san)!);
+    let notified = 0;
+    store.subscribe(() => notified++);
+    store.undoPlies(2);
+    expect(notified).toBe(1);
+    expect(store.getSnapshot().plies).toHaveLength(1);
+    const reopened = new GameStore(createGame(), storage);
+    reopened.loadSaved();
+    expect(reopened.getSnapshot().plies).toHaveLength(1);
   });
 });
