@@ -27,6 +27,18 @@ Un proyecto de Astral Morphiq Systems.
 - La partida se guarda sola en el dispositivo y se puede continuar al volver.
 - Juego con ratón (clic o arrastre), con el dedo y solo con teclado.
 - Español (notación R, D, T, A, C) y diseño para móvil, tableta y escritorio, en vertical y horizontal.
+- **Entrenamiento de aperturas** (botón «Entrenamiento» en Inicio): 19 temas (8 aperturas, 7 defensas y
+  4 de fundamentos) y 18 lecciones en español, 68 pasos en total.
+  - **Aprender:** clase paso a paso con un profesor que «escribe» el texto en globos, botón «Siguiente»,
+    jugadas en el tablero con pista progresiva (casilla de origen, destino y, al final, la jugada) y
+    avance guardado.
+  - **Practicar** (Italiana, Ruy López y Gambito Viena, con blancas): el bot juega el otro bando y tú
+    respondes con la jugada de la apertura, en 127 variantes. Si fallas, la posición vuelve pronto;
+    si aciertas, tarda más (repetición espaciada).
+  - **Dominio:** porcentaje por apertura (100 % = dominada y al día), con contadores de nuevas, por repasar,
+    en curso y dominadas. Todo se guarda en el dispositivo.
+  - El contenido sale de dos proyectos MIT (KarpaChess y FreeChessTrainer); los avisos de licencia están
+    en [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) y dentro de la app, en «Entrenamiento → Créditos».
 
 ## Desarrollo
 
@@ -46,6 +58,7 @@ npm run verify       # tipos + pruebas + compilación (lo mismo que corre la int
 | `npm run typecheck`  | Solo revisa los tipos (TypeScript estricto)                |
 | `npm test`           | Pruebas unitarias y de integración (Vitest)                |
 | `npm run test:watch` | Pruebas en modo observador                                 |
+| `npm run training:convert` | Vuelve a generar los datos de entrenamiento desde los repos originales (ver `tools/training/README.md`) |
 
 ## Estructura
 
@@ -54,11 +67,14 @@ src/
   engine/   Reglas del ajedrez en TypeScript puro (sin DOM): jugadas legales, SAN, FEN, resultados.
   game/     Estado de la partida: historial, ids estables de pieza, deshacer, guardado, ajustes.
   anim/     Director de animaciones (Web Animations API) y su temporización.
-  ui/       Componentes de React: tablero, franjas de jugador, cajón lateral, pantallas y diálogos.
+  training/ Lógica del entrenamiento (sin DOM): datos de aperturas, grafo de posiciones, repetición
+            espaciada, dominio, práctica y lecciones.
+  ui/       Componentes de React: tablero, franjas de jugador, cajón lateral, pantallas y diálogos;
+            `ui/training/` es el modo entrenamiento (se descarga aparte, solo al abrirlo).
   styles/   CSS por área, con los colores y medidas de la marca en tokens.css.
   i18n/     Todos los textos de la interfaz (es.ts).
   assets/   Logo y piezas de Morphiq (WebP).
-tools/      Utilidades de compilación (metadatos del sitio).
+tools/      Utilidades de compilación (metadatos del sitio) y el conversor de datos de entrenamiento.
 public/     Íconos, manifiesto, imagen para compartir y página 404.
 ```
 
@@ -87,3 +103,7 @@ basta con volver a desplegar.
 
 El logo, el tablero y las piezas son de Morphiq. Todos los derechos reservados; no se concede licencia
 de uso, copia ni distribución del código ni de los diseños sin autorización.
+
+Las lecciones y variantes del modo Entrenamiento **no** son de Morphiq: vienen de KarpaChess (© 2026
+Mourad Ghafiri) y de FreeChessTrainer (© 2025 FreeChessTrainer), ambos con licencia MIT. Esa licencia
+se conserva completa en [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).

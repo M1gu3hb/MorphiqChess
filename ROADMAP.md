@@ -1,14 +1,22 @@
 # Hoja de ruta
 
+## Hecho
+
+- **Modo entrenamiento** (octubre de 2026): 19 temas con 18 lecciones en español, práctica con bot en 127
+  variantes (Italiana, Ruy López y Gambito Viena, con blancas) y dominio en porcentaje por apertura con
+  repetición espaciada. Contenido de KarpaChess y FreeChessTrainer (MIT); ver `THIRD_PARTY_NOTICES.md`.
+
 Lo que sigue, en el orden en que más valor da. Nada de esto está hecho todavía.
 
 ## Siguiente
 
 1. **Dominio propio.** Conectar el dominio de Morphiq en Vercel; el canonical, el sitemap y la imagen
    para compartir se actualizan solos en el siguiente despliegue (ver `SITE_URL` en el README).
-2. **Modo entrenamiento.** Aprender y practicar aperturas (Italiana, Siciliana y Londres, con todas sus
-   variantes y gambitos) con porcentaje de dominio por apertura. Está investigado y documentado en la
-   rama `modo-entrenamiento` (carpeta `docs/entrenamiento/`); aún no se implementa.
+2. **Más práctica en el entrenamiento.** Hoy solo se practican tres aperturas, todas con blancas. Falta
+   Practicar para la Siciliana, el Sistema Londres y el resto (y para jugar con azules), con las variantes
+   que hoy no existen: la base CC0 de Lichess, ya validada con el motor (3 865 líneas, ver
+   `docs/entrenamiento/`), sirve de esqueleto. Después: lecciones con todas las ramas (las actuales son
+   cortas y lineales) y estadísticas por sesión.
 3. **Sonido.** Efectos para mover, capturar, jaque y jaque mate, con interruptor en Ajustes y apagado
    por defecto si el dispositivo pide movimiento reducido.
 4. **Relojes.** Ritmos de juego (blitz, rápido, clásico) con incremento.
@@ -26,6 +34,9 @@ Lo que sigue, en el orden en que más valor da. Nada de esto está hecho todaví
 
 ## Deuda conocida
 
+- El modo entrenamiento (menú, lecciones, práctica) se probó en Chromium con táctil emulado y en varios
+  tamaños; falta un teléfono real. Si falla la descarga de esa sección, «Recargar» es el único reintento
+  (React guarda el rechazo de una carga perezosa hasta recargar la página).
 - El cajón lateral y la pantalla completa se probaron en Chromium con táctil emulado (tamaños de
   teléfono, tableta y escritorio). Falta probarlos en dispositivos reales: iOS Safari y Android Chrome
   (en Android, el gesto de «atrás» por el borde puede competir con el asa; el asa ya extiende su zona

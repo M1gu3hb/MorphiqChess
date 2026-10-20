@@ -5,7 +5,8 @@ reemplazar sin tocar las de arriba.
 
 ```
 ui  →  anim  →  game  →  engine
- ↑                          (TypeScript puro, sin DOM ni React)
+ │                ↑         ↑      (TypeScript puro, sin DOM ni React)
+ └──→ training ───┴─────────┘
  └── i18n, styles, assets
 ```
 
@@ -69,7 +70,43 @@ Estructura de cada pieza en el DOM:
 - Movimiento reducido: solo fundidos cortos, sin giros ni efectos grandes.
 - Todos los tiempos están en `timing.ts`.
 
-## 4. `ui`: la interfaz
+## 4. `training`: aprender y practicar aperturas
+
+Lógica pura (sin DOM ni React) sobre `engine` y `game`. La interfaz vive en `ui/training/` y se
+descarga aparte (`import()` en `App.tsx`, dentro de un `ErrorBoundary` y un `Suspense`): quien solo
+quiere jugar una partida no baja lecciones, variantes ni estilos del entrenamiento, y si esa descarga
+falla (sin conexión, o la app se actualizó) aparece una pantalla con «Recargar» e «Inicio» en lugar de
+una pantalla en blanco.
+
+- **Datos** (`src/training/data/`): `catalog.json` (19 temas: resumen, bando, lecciones y variantes),
+  `lessons/*.json` (una lección por tema, con pasos para leer y para jugar) y `lines/*.json` (las
+  variantes de los temas con práctica). Cada tema se carga por separado con `import()`; el menú solo
+  necesita el catálogo. Los generó `tools/training` (`npm run training:convert`) a partir de los
+  repositorios originales (MIT, ver `THIRD_PARTY_NOTICES.md`) comprobando cada jugada con el motor;
+  `data.test.ts` las vuelve a comprobar en cada ejecución de las pruebas.
+- **Marcado** (`markup.ts`): el texto de las lecciones (`**negrita**`, `*cursiva*`, listas, citas y
+  `{{Nf3}}` para jugadas) se interpreta a bloques de datos, nunca HTML en crudo, y se «escribe» letra a letra.
+- **Grafo** (`graph.ts`): las variantes de una apertura se funden en un grafo de posiciones. La clave
+  de una posición son las piezas, el turno y los enroques, no el camino: dos órdenes de jugadas que
+  llegan a lo mismo (una transposición) comparten progreso. Una **tarjeta** es una posición donde le
+  toca mover a la persona; `acceptedMoves` da todas las jugadas buenas, no solo una.
+- **Progreso** (`progress.ts`): repetición espaciada por cajas (Leitner 0 a 5; vuelve a tocar a los 0,
+  1, 3, 7, 14 y 30 días). El **dominio** es la suma de las cajas entre el máximo posible; una tarjeta
+  vencida cuenta una caja menos, así que el dominio «se oxida» si no se repasa, y 100 % significa todas
+  en la caja 5 y al día. Se guarda en `morphiqchess:training:v1` y se valida al leer: un guardado dañado
+  nunca entra, y las tarjetas que ya no existen en la apertura se descartan.
+- **Práctica** (`practice.ts`): `pickDrill` elige la posición que más falta (nueva, fallada o vencida), y
+  solo si las anteriores de su camino ya están aprendidas; `planSetup` la prepara animando solo las
+  últimas jugadas; el bot contesta con una de las variantes posibles (`replyChoices`); la pista sube de
+  nivel (casilla de origen, destino y, al final, juega la jugada, que cuenta como fallo). Fallar una
+  tarjeta se anota una sola vez por intento.
+- **Lecciones** (`lesson.ts`): la posición dentro de la lección (paso y globo), avance, retroceso y barra de avance.
+- **Resumen** (`overview.ts`): estadísticas y dominio del menú y de cada apertura.
+
+**Pruebas:** unitarias para cada módulo (incluida la simulación de intentos y repasos) y una de datos que
+reproduce cada lección y cada variante con el motor.
+
+## 5. `ui`: la interfaz
 
 - **Tablero:** un marco SVG con tu diseño medido a escala (el tablero es un contenedor CSS, así `--cell`
   es una casilla en cualquier tamaño), una rejilla HTML transparente con `role="grid"` que recibe los
@@ -96,17 +133,21 @@ Estructura de cada pieza en el DOM:
 - **Menú:** un diálogo con la lista de jugadas y las acciones (tablas, rendirse, nueva partida, ajustes,
   inicio). El resultado de la partida aparece solo cuando termina aquí mismo y tras la animación del final.
 - **Diálogos:** el elemento nativo `<dialog>` (foco atrapado, Esc, foco de vuelta a quien lo abrió).
-- **Navegación:** `#/partida` con `history.pushState`; no necesita reescrituras en el servidor.
+- **Navegación:** rutas en el hash con `history.pushState` (`#/partida`, `#/entrenamiento`,
+  `#/entrenamiento/<apertura>`, `…/aprender/<lección>` y `…/practicar[/inicio]`), así no hace falta
+  reescribir nada en el servidor. `ui/route.ts` las interpreta (una dirección inválida lleva a Inicio).
+  Cada entrada del historial guarda de dónde venía: «Volver» retrocede de verdad en el historial y, si
+  la pantalla se abrió directo, reemplaza la actual en vez de apilar entradas.
 - **Accesibilidad:** cada casilla tiene su etiqueta, una región `aria-live` anuncia cada jugada y el
   foco pasa al título al cambiar de pantalla.
 - **Textos:** todos en `src/i18n/es.ts`; agregar un idioma es crear un archivo con la misma forma.
 
-## 5. Estilos
+## 6. Estilos
 
 CSS por área en `src/styles/`. Los colores, radios y duraciones de la marca viven en `tokens.css`:
 cambiar la marca es cambiar ese archivo. Sin gradientes ni efectos de cristal.
 
-## 6. Compilación y despliegue
+## 7. Compilación y despliegue
 
 - Vite + React + TypeScript estricto. `npm run build` revisa los tipos y compila.
 - `tools/site-meta.ts` agrega canonical, Open Graph con imagen absoluta, `robots.txt` y `sitemap.xml`
@@ -125,3 +166,6 @@ cambiar la marca es cambiar ese archivo. Sin gradientes ni efectos de cristal.
 | Partida en línea                | Reemplazar `GameStore` por uno que sincronice jugadas (el resto solo lee `GameSnapshot`) |
 | Relojes                         | Estado aparte en `game/` y mostrarlos en las franjas de `ui/stage/PlayerStrip.tsx`       |
 | Exportar o importar partidas    | PGN a partir de `Ply.san` y `serializeGame`                                              |
+| Una lección nueva               | Un `lessons/<id>.json` declarado en `tools/training/courses.ts`; `data.test.ts` la valida con el motor |
+| Practicar otra apertura         | Sumar sus variantes (mismo formato que `data/lines/*.json`) y declararlas en `tools/training/courses.ts` |
+| Practicar con azules            | El grafo ya trae `userSide`; faltan variantes de ese bando y revisar hacia quién miran las piezas en `PracticeScreen` |

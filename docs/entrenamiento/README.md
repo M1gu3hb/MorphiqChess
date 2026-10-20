@@ -1,6 +1,6 @@
 # Modo entrenamiento — investigación y plan
 
-> **Estado:** documentado, **no implementado**. Estos documentos viven solo en la rama `modo-entrenamiento`: ni `main` ni la app publicada incluyen estos archivos ni código del modo entrenamiento (no se mezcló nada).
+> **Estado:** el modo Entrenamiento **ya está implementado**, por otro camino que el de esta investigación: en lugar de escribir las lecciones a mano, se integraron dos proyectos con licencia MIT que encontró el dueño del proyecto (KarpaChess y FreeChessTrainer). Lo que hay, sus límites y cómo ampliarlo están en [ARCHITECTURE.md](../../ARCHITECTURE.md) (sección 4) y en [tools/training/README.md](../../tools/training/README.md). Lo que sigue en este documento es la investigación y el plan originales; la base CC0 de Lichess y las fichas (Italiana, Siciliana, Londres) siguen sirviendo para sumar la práctica de más aperturas.
 > **Fecha de la investigación:** 19 de octubre de 2026.
 
 ## Resumen (lo que hay que saber en un minuto)
