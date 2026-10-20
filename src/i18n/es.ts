@@ -363,8 +363,13 @@ export const es = {
     },
     credits: {
       title: 'Motor de los rivales',
-      body: 'Los rivales juegan con Stockfish, un programa libre de ajedrez (licencia GPL-3.0). Se ejecuta en tu dispositivo, dentro de la página, sin enviar tus partidas a ningún servidor.',
-      source: 'Código fuente y licencia en el archivo THIRD_PARTY_NOTICES.md del repositorio.',
+      body: 'Los rivales juegan con Stockfish (Stockfish.js 19), un programa libre de ajedrez con licencia GPL-3.0. Se ejecuta en tu dispositivo, dentro de la página, y no envía tus partidas a ningún servidor.',
+      links: [
+        { label: 'Licencia GPL-3.0 (texto completo)', href: '/engine/Copying.txt' },
+        { label: 'Código fuente del motor (Stockfish.js 19.0.1)', href: 'https://github.com/nmrugg/stockfish.js/tree/v19.0.1' },
+        { label: 'Archivos del motor y cómo se compilaron', href: '/engine/README.txt' },
+        { label: 'Avisos de terceros de MorphiqChess', href: 'https://github.com/M1gu3hb/MorphiqChess/blob/main/THIRD_PARTY_NOTICES.md' },
+      ],
     },
     a11y: {
       failed: 'El rival no pudo cargar.',

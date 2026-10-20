@@ -133,7 +133,15 @@ export function BotsMenu({ store, gameStore, back, onStart, onResume }: Props) {
 
       <Dialog open={creditsOpen} title={t.credits.title} onClose={() => setCreditsOpen(false)}>
         <p className="dialog__text">{t.credits.body}</p>
-        <p className="dialog__note">{t.credits.source}</p>
+        <ul className="bots-links">
+          {t.credits.links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className="dialog__actions">
           <button type="button" className="btn btn--primary" onClick={() => setCreditsOpen(false)}>
             {t.result.close}
