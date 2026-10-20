@@ -1,7 +1,7 @@
 {
   "name": "MorphiqChess",
   "short_name": "MorphiqChess",
-  "description": "Ajedrez para dos jugadores en un mismo dispositivo.",
+  "description": "Ajedrez para jugar de a dos, aprender aperturas y practicar contra doce rivales.",
   "lang": "es",
   "start_url": "/",
   "scope": "/",

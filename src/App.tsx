@@ -13,7 +13,7 @@ const TrainingApp = lazy(() => import('./ui/training/TrainingApp'));
 const PracticeApp = lazy(() => import('./ui/practice/PracticeApp'));
 
 const TITLES = {
-  home: 'MorphiqChess · Ajedrez para 2 jugadores',
+  home: 'MorphiqChess · Juega, aprende y practica ajedrez',
   game: 'Partida · MorphiqChess',
   training: 'Entrenamiento · MorphiqChess',
   practice: 'Práctica · MorphiqChess',

@@ -2,7 +2,7 @@
   "name": "morphiqchess",
   "private": true,
   "version": "0.1.0",
-  "description": "MorphiqChess: ajedrez para dos jugadores con el tablero y las piezas de Morphiq.",
+  "description": "MorphiqChess: ajedrez con el tablero y las piezas de Morphiq. Dos jugadores en un dispositivo, entrenamiento de aperturas y práctica contra doce rivales.",
   "type": "module",
   "engines": {
     "node": "22.x"
