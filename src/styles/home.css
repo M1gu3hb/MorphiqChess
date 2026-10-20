@@ -40,10 +40,31 @@
   font-size: 1.08rem;
 }
 
+/*
+ * Los modos de juego, con el mismo ancho: uno debajo de otro en el teléfono y, donde hay sitio, en dos
+ * columnas con el principal (continuar o nueva partida) a lo ancho. Sin botones sueltos a medio renglón.
+ */
 .home__cta {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-3);
+  width: min(100%, 440px);
+}
+
+.home__cta .btn {
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .home__cta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 520px);
+  }
+
+  .home__cta > .btn--primary,
+  .home__cta > .btn:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+  }
 }
 
 .home__features {
