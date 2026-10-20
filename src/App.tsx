@@ -1,63 +1,101 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { GameStore, SettingsStore } from './game';
-import { Home } from './ui/screens/Home';
+import { ErrorBoundary } from './ui/ErrorBoundary';
+import { isTrainingRoute, parseRoute, routeHash, sameRoute, type Navigation, type Route } from './ui/route';
 import { GameScreen } from './ui/screens/GameScreen';
+import { Home } from './ui/screens/Home';
+import { Loading, LoadError } from './ui/screens/LoadError';
 import { enterFullscreen, exitFullscreen } from './ui/useFullscreen';
 
-type Screen = 'home' | 'game';
+/* El entrenamiento (lecciones, variantes y sus estilos) se descarga solo cuando se abre. */
+const TrainingApp = lazy(() => import('./ui/training/TrainingApp'));
 
-const GAME_HASH = '#/partida';
-const screenFromHash = (): Screen => (window.location.hash === GAME_HASH ? 'game' : 'home');
-
-const TITLES: Record<Screen, string> = {
+const TITLES = {
   home: 'MorphiqChess · Ajedrez para 2 jugadores',
   game: 'Partida · MorphiqChess',
+  training: 'Entrenamiento · MorphiqChess',
+} as const;
+
+const titleOf = (route: Route): string => (isTrainingRoute(route) ? TITLES.training : TITLES[route.name]);
+
+const routeFromLocation = (): Route => parseRoute(window.location.hash);
+
+/** De dónde vino la pantalla actual, guardado en la entrada del historial: sirve para que «Volver» sea de verdad volver. */
+const previousHash = (): string | undefined => {
+  const state: unknown = window.history.state;
+  if (typeof state === 'object' && state !== null && 'prev' in state && typeof state.prev === 'string') return state.prev;
+  return undefined;
 };
 
 export function App() {
   const [store] = useState(() => {
     const created = new GameStore();
     // Si se abre directo la partida y hay una guardada, se retoma.
-    if (screenFromHash() === 'game' && created.hasSavedGame()) created.loadSaved();
+    if (routeFromLocation().name === 'game' && created.hasSavedGame()) created.loadSaved();
     return created;
   });
   const [settingsStore] = useState(() => new SettingsStore());
-  const [screen, setScreen] = useState<Screen>(screenFromHash);
+  const [route, setRoute] = useState<Route>(routeFromLocation);
   const firstRender = useRef(true);
+  const screen = isTrainingRoute(route) ? 'training' : route.name;
 
   useEffect(() => {
-    const onPop = () => setScreen(screenFromHash());
+    const onPop = () => setRoute(routeFromLocation());
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
   useEffect(() => {
-    document.title = TITLES[screen];
+    document.title = titleOf(route);
     // Fuera de la partida (botón «Inicio», atrás del navegador) se vuelve a la ventana normal.
-    if (screen === 'home') void exitFullscreen();
+    if (screen !== 'game') void exitFullscreen();
     // Al cambiar de pantalla, el foco pasa al título: quien usa lector de pantalla sabe dónde está.
+    // (Las pantallas del entrenamiento lo hacen solas al terminar de cargar.)
     if (firstRender.current) {
       firstRender.current = false;
       return;
     }
     document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true });
-  }, [screen]);
+  }, [route]);
+
+  /** Ir a otra pantalla. Con `replace` no se agrega una entrada nueva al historial. */
+  const go = (next: Route, replace = false) => {
+    if (sameRoute(next, route)) return;
+    const url = `${window.location.pathname}${window.location.search}${routeHash(next)}`;
+    if (replace) window.history.replaceState(window.history.state, '', url);
+    else window.history.pushState({ prev: routeHash(route) }, '', url);
+    setRoute(next);
+    window.scrollTo(0, 0);
+  };
+
+  /**
+   * Volver a `target`. Si es de donde se vino, se retrocede en el historial (como el botón atrás del
+   * navegador); si no —la pantalla se abrió directo, o se llegó por otro camino— se reemplaza la actual.
+   */
+  const back = (target: Route) => {
+    if (previousHash() === routeHash(target)) window.history.back();
+    else go(target, true);
+  };
 
   /** El navegador solo concede pantalla completa dentro del toque, así que se pide antes de cambiar de pantalla. */
   const startGame = () => {
     if (settingsStore.getSnapshot().autoFullscreen) void enterFullscreen();
-    go('game');
+    go({ name: 'game' });
   };
 
-  const go = (next: Screen) => {
-    const base = `${window.location.pathname}${window.location.search}`;
-    window.history.pushState(null, '', next === 'game' ? `${base}${GAME_HASH}` : base);
-    setScreen(next);
-    window.scrollTo(0, 0);
-  };
+  const navigation: Navigation = { go: (next) => go(next), back };
 
-  if (screen === 'game') {
-    return <GameScreen store={store} settingsStore={settingsStore} onHome={() => go('home')} />;
+  if (route.name === 'game') {
+    return <GameScreen store={store} settingsStore={settingsStore} onHome={() => back({ name: 'home' })} />;
+  }
+  if (isTrainingRoute(route)) {
+    return (
+      <ErrorBoundary fallback={<LoadError onHome={() => back({ name: 'home' })} />}>
+        <Suspense fallback={<Loading />}>
+          <TrainingApp route={route} settingsStore={settingsStore} {...navigation} />
+        </Suspense>
+      </ErrorBoundary>
+    );
   }
   return (
     <Home
@@ -71,6 +109,7 @@ export function App() {
         store.loadSaved();
         startGame();
       }}
+      onTraining={() => go({ name: 'training' })}
     />
   );
 }

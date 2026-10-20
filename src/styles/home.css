@@ -93,3 +93,36 @@
     justify-self: end;
   }
 }
+
+/* ---------- aviso cuando no llegó una sección de la app (vive aquí porque es del código principal) ---------- */
+
+.load-error {
+  align-items: center;
+  justify-content: center;
+}
+
+.load-error__main {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  max-width: 420px;
+  padding: var(--space-6) var(--gutter);
+  text-align: center;
+}
+
+.load-error__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  outline: none;
+}
+
+.load-error__text {
+  color: var(--text-muted);
+}
+
+.load-error__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
