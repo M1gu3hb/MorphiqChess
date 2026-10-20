@@ -1,9 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { isTrainingRoute, parseRoute, routeHash, sameRoute, type Route } from './route';
+import { isBotsRoute, isTrainingRoute, parseRoute, routeHash, sameRoute, type Route } from './route';
 
 const ROUTES: [string, Route][] = [
   ['', { name: 'home' }],
   ['#/partida', { name: 'game' }],
+  ['#/practica', { name: 'bots' }],
+  ['#/practica/caballo-azul/blancas', { name: 'bot', bot: 'caballo-azul', side: 'w' }],
+  ['#/practica/rey-azul/azules', { name: 'bot', bot: 'rey-azul', side: 'b' }],
   ['#/entrenamiento', { name: 'training' }],
   ['#/entrenamiento/italian-game', { name: 'course', course: 'italian-game' }],
   [
@@ -39,8 +42,23 @@ describe('direcciones', () => {
     '#/entrenamiento/italian-game/practicar/inicio/mas',
     '#/entrenamiento/-italian',
     '#/entrenamiento/ital--ian',
+    '#/practica/',
+    '#/practica/Caballo/blancas',
+    '#/practica/caballo-azul',
+    '#/practica/caballo-azul/negras',
+    '#/practica/caballo-azul/blancas/mas',
+    '#/practica/../partida/blancas',
+    '#/practica/-x/blancas',
   ])('una dirección rara (%s) lleva al inicio', (hash) => {
     expect(parseRoute(hash)).toEqual({ name: 'home' });
+  });
+
+  it('distingue las pantallas de práctica y las de entrenamiento', () => {
+    expect(isBotsRoute(parseRoute('#/practica'))).toBe(true);
+    expect(isBotsRoute(parseRoute('#/practica/dama-azul/azules'))).toBe(true);
+    expect(isBotsRoute(parseRoute('#/entrenamiento'))).toBe(false);
+    expect(isBotsRoute(parseRoute('#/partida'))).toBe(false);
+    expect(isTrainingRoute(parseRoute('#/practica'))).toBe(false);
   });
 
   it('distingue las pantallas de entrenamiento y compara direcciones', () => {

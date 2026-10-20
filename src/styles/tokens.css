@@ -13,6 +13,13 @@
   --danger: #ff4d6a;
   --success: #3ddc97;
 
+  /* Niveles del modo Práctica (RGB sin comas, para usarlos con transparencia: rgb(var(--tier) / 0.3)) */
+  --tier-beginner: 61 220 151;
+  --tier-intermediate: 46 230 255;
+  --tier-advanced: 143 184 255;
+  --tier-expert: 255 193 90;
+  --tier-master: 255 122 147;
+
   /* Superficies */
   --bg: #050a14;
   --bg-raised: #0a1426;

@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { GameStore, SettingsStore } from './game';
 import { ErrorBoundary } from './ui/ErrorBoundary';
-import { isTrainingRoute, parseRoute, routeHash, sameRoute, type Navigation, type Route } from './ui/route';
+import { isBotsRoute, isTrainingRoute, parseRoute, routeHash, sameRoute, type Navigation, type Route } from './ui/route';
 import { GameScreen } from './ui/screens/GameScreen';
 import { Home } from './ui/screens/Home';
 import { Loading, LoadError } from './ui/screens/LoadError';
@@ -9,14 +9,21 @@ import { enterFullscreen, exitFullscreen } from './ui/useFullscreen';
 
 /* El entrenamiento (lecciones, variantes y sus estilos) se descarga solo cuando se abre. */
 const TrainingApp = lazy(() => import('./ui/training/TrainingApp'));
+/* Lo mismo con la práctica contra rivales (sus pantallas y estilos; el motor de ajedrez se pide aparte, al jugar). */
+const PracticeApp = lazy(() => import('./ui/practice/PracticeApp'));
 
 const TITLES = {
   home: 'MorphiqChess · Ajedrez para 2 jugadores',
   game: 'Partida · MorphiqChess',
   training: 'Entrenamiento · MorphiqChess',
+  practice: 'Práctica · MorphiqChess',
 } as const;
 
-const titleOf = (route: Route): string => (isTrainingRoute(route) ? TITLES.training : TITLES[route.name]);
+const titleOf = (route: Route): string =>
+  isTrainingRoute(route) ? TITLES.training : isBotsRoute(route) ? TITLES.practice : TITLES[route.name];
+
+/** Las pantallas de juego (de dos jugadores o contra un rival) ocupan toda la pantalla. */
+const isImmersive = (route: Route): boolean => route.name === 'game' || route.name === 'bot';
 
 const routeFromLocation = (): Route => parseRoute(window.location.hash);
 
@@ -37,7 +44,6 @@ export function App() {
   const [settingsStore] = useState(() => new SettingsStore());
   const [route, setRoute] = useState<Route>(routeFromLocation);
   const firstRender = useRef(true);
-  const screen = isTrainingRoute(route) ? 'training' : route.name;
 
   useEffect(() => {
     const onPop = () => setRoute(routeFromLocation());
@@ -48,7 +54,7 @@ export function App() {
   useEffect(() => {
     document.title = titleOf(route);
     // Fuera de la partida (botón «Inicio», atrás del navegador) se vuelve a la ventana normal.
-    if (screen !== 'game') void exitFullscreen();
+    if (!isImmersive(route)) void exitFullscreen();
     // Al cambiar de pantalla, el foco pasa al título: quien usa lector de pantalla sabe dónde está.
     // (Las pantallas del entrenamiento lo hacen solas al terminar de cargar.)
     if (firstRender.current) {
@@ -97,6 +103,15 @@ export function App() {
       </ErrorBoundary>
     );
   }
+  if (isBotsRoute(route)) {
+    return (
+      <ErrorBoundary fallback={<LoadError onHome={() => back({ name: 'home' })} />}>
+        <Suspense fallback={<Loading />}>
+          <PracticeApp route={route} settingsStore={settingsStore} {...navigation} />
+        </Suspense>
+      </ErrorBoundary>
+    );
+  }
   return (
     <Home
       store={store}
@@ -110,6 +125,7 @@ export function App() {
         startGame();
       }}
       onTraining={() => go({ name: 'training' })}
+      onPractice={() => go({ name: 'bots' })}
     />
   );
 }

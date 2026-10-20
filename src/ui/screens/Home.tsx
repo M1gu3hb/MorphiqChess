@@ -14,11 +14,12 @@ interface HomeProps {
   readonly onNew: () => void;
   readonly onContinue: () => void;
   readonly onTraining: () => void;
+  readonly onPractice: () => void;
 }
 
 const DEMO_TURN_MS = 3600;
 
-export function Home({ store, settingsStore, onNew, onContinue, onTraining }: HomeProps) {
+export function Home({ store, settingsStore, onNew, onContinue, onTraining, onPractice }: HomeProps) {
   const settings = useSettings(settingsStore);
   const canContinue = useMemo(() => store.hasSavedGame(), [store]);
   const [demo] = useState(() => createGame());
@@ -65,6 +66,10 @@ export function Home({ store, settingsStore, onNew, onContinue, onTraining }: Ho
             <button type="button" className="btn btn--xl" onClick={onTraining}>
               <Icon name="book" />
               {es.home.training}
+            </button>
+            <button type="button" className="btn btn--xl" onClick={onPractice}>
+              <Icon name="target" />
+              {es.home.practice}
             </button>
           </div>
           <ul className="home__features">
