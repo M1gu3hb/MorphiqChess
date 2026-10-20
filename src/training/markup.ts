@@ -122,6 +122,9 @@ const runText = (run: Run, display: MoveText): string => (run.move ? display(run
 const runsText = (runs: readonly Run[], display: MoveText): string =>
   runs.map((run) => runText(run, display)).join('');
 
+/** Texto plano de una línea con formato (títulos y resúmenes), con las jugadas ya traducidas. */
+export const inlineToText = (source: string, display: MoveText): string => runsText(parseInline(source), display);
+
 /** Texto plano de los bloques (para lectores de pantalla). */
 export function blocksToText(blocks: readonly Block[], display: MoveText): string {
   return blocks

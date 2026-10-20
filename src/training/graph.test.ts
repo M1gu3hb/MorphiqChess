@@ -45,6 +45,16 @@ describe('buildGraph', () => {
     expect(ends.sort()).toEqual([0, 1, 2]);
   });
 
+  it('anota qué líneas siguen siendo posibles en cada posición', () => {
+    expect(graph.nodes.get(graph.root)!.through).toEqual([0, 1, 2]);
+    const afterE4E5 = [...graph.nodes.values()].find((node) => node.next.size === 1 && node.through.length === 2);
+    expect(afterE4E5?.through).toEqual([0, 1]);
+    const fork = graph.nodes.get(graph.cards[2]!)!;
+    expect(fork.through).toEqual([0, 1]);
+    const leaf = [...fork.next.values()].map((key) => graph.nodes.get(key)!.through);
+    expect(leaf).toEqual([[0], [1]]);
+  });
+
   it('une las transposiciones', () => {
     const transposed = buildGraph([{ moves: 'e4 e5 Nf3 Nc6' }, { moves: 'Nf3 Nc6 e4 e5' }], 'w');
     const finals = [...transposed.nodes.values()].filter((node) => node.ends.length > 0);

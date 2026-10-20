@@ -22,6 +22,8 @@ export interface GraphNode {
   readonly next: ReadonlyMap<string, string>;
   /** Índices de las líneas que terminan exactamente aquí. */
   readonly ends: readonly number[];
+  /** Índices de todas las líneas que pasan por esta posición (las que aún son posibles al llegar aquí). */
+  readonly through: readonly number[];
 }
 
 export interface OpeningGraph {
@@ -37,6 +39,7 @@ interface MutableNode {
   turn: Color;
   next: Map<string, string>;
   ends: number[];
+  through: number[];
 }
 
 /** Separa «e4 e5 Nf3» en jugadas. */
@@ -56,7 +59,7 @@ export function buildGraph(
     const key = positionKey(position);
     let node = nodes.get(key);
     if (!node) {
-      node = { key, turn: position.turn, next: new Map(), ends: [] };
+      node = { key, turn: position.turn, next: new Map(), ends: [], through: [] };
       nodes.set(key, node);
     }
     return node;
@@ -64,14 +67,24 @@ export function buildGraph(
 
   const root = nodeFor(start).key;
   lines.forEach((line, index) => {
+    // Una línea pasa una sola vez por cada posición, aunque la repita.
+    const visited = new Set<string>();
+    const visit = (node: MutableNode) => {
+      if (visited.has(node.key)) return;
+      visited.add(node.key);
+      node.through.push(index);
+    };
     let position = start;
+    visit(nodeFor(position));
     for (const token of splitMoves(line.moves)) {
       const move = sanToMove(position, token);
       if (!move) throw new Error(`Jugada ilegal «${token}» en la línea ${index + 1} (${line.name ?? line.moves})`);
       const san = normalizeSan(moveToSan(position, move));
       const from = nodeFor(position);
       const after = applyMove(position, move);
-      from.next.set(san, nodeFor(after).key);
+      const to = nodeFor(after);
+      from.next.set(san, to.key);
+      visit(to);
       position = after;
     }
     nodeFor(position).ends.push(index);

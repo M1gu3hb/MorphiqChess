@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { localizeSan } from '../engine';
-import { blocksLength, blocksToText, parseInline, parseMarkup, revealBlocks } from './markup';
+import { blocksLength, blocksToText, inlineToText, parseInline, parseMarkup, revealBlocks } from './markup';
 
 const es = (san: string) => localizeSan(san, 'es');
 
@@ -25,6 +25,13 @@ describe('parseInline', () => {
   it('no interpreta HTML: llega como texto', () => {
     const [run] = parseInline('<script>alert(1)</script>');
     expect(run).toMatchObject({ text: '<script>alert(1)</script>', move: false });
+  });
+});
+
+describe('inlineToText', () => {
+  it('quita el formato y traduce las jugadas', () => {
+    expect(inlineToText('La Clavada {{Bb4}} y **{{Nf3}}**', es)).toBe('La Clavada Ab4 y Cf3');
+    expect(inlineToText('Sin formato', es)).toBe('Sin formato');
   });
 });
 
