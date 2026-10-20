@@ -34,11 +34,26 @@ function textsOf(lesson: Lesson): [string, string][] {
 const withoutMoves = (text: string): string => text.replace(/\{\{[^}]*\}\}/g, '');
 
 describe('datos de entrenamiento', () => {
-  it('trae las 18 lecciones y las 127 variantes', () => {
+  it('trae las 18 lecciones y las variantes de las 15 aperturas que se pueden practicar', () => {
     expect(lessons.size).toBe(18);
-    expect(lineFiles.size).toBe(3);
-    expect([...lineFiles.values()].reduce((sum, file) => sum + file.lines.length, 0)).toBe(127);
+    expect(lineFiles.size).toBe(15);
     expect(catalog.courses).toHaveLength(19);
+    const total = (source: string) =>
+      [...lineFiles.values()].filter((file) => file.source === source).reduce((sum, file) => sum + file.lines.length, 0);
+    expect(total('FreeChessTrainer')).toBe(127);
+    expect(total('Lichess')).toBe(1492);
+  });
+
+  it('se puede practicar todo lo que no son fundamentos, con el bando de cada apertura', () => {
+    for (const course of catalog.courses) {
+      if (course.group === 'fundamentos') {
+        expect(course.lines, course.id).toBeNull();
+        continue;
+      }
+      expect(course.lines, course.id).not.toBeNull();
+      expect(lineFiles.get(course.lines!.id)?.side, course.id).toBe(course.side);
+      expect(course.side, course.id).toBe(course.group === 'defensas' ? 'b' : 'w');
+    }
   });
 
   it('cada lección está en una sola apertura y cada apertura apunta a datos que existen', () => {
@@ -71,9 +86,13 @@ describe('datos de entrenamiento', () => {
     expect(courseById('no-existe')).toBeUndefined();
   });
 
-  it('el catálogo declara los créditos de las dos fuentes con su licencia', () => {
-    expect(catalog.credits.map((credit) => credit.name)).toEqual(['KarpaChess', 'FreeChessTrainer Opening Dataset']);
-    expect(catalog.credits.every((credit) => credit.license === 'MIT' && credit.url.startsWith('https://github.com/'))).toBe(true);
+  it('el catálogo declara los créditos de las tres fuentes con su licencia', () => {
+    expect(catalog.credits.map((credit) => [credit.name, credit.license])).toEqual([
+      ['KarpaChess', 'MIT'],
+      ['FreeChessTrainer Opening Dataset', 'MIT'],
+      ['Lichess chess-openings', 'CC0'],
+    ]);
+    expect(catalog.credits.every((credit) => credit.url.startsWith('https://github.com/') && credit.use.length > 10)).toBe(true);
   });
 });
 
@@ -129,7 +148,7 @@ describe('variantes', () => {
       });
 
       it('traen nombre en español, nombre original y código ECO', () => {
-        const english = /\b(Variation|Gambit|Defen[cs]e|Attack|System|Trap|Line|Counterattack|Hybrid|Declined|Accepted|Deferred|Delayed|Classical|Closed|Open|Modern|Main|Exchange|Double|Norwegian|Center|Holding|Sacrifice|Bishop|Knight|King|March|Castling|with)\b/;
+        const english = /\b(Variations?|Gambit|Countergambit|Defen[cs]e|Attack|System|Trap|Lines?|Counterattack|Hybrid|Formation|Opening|Game|Declined|Accepted|Deferred|Delayed|Classical|Closed|Open|Modern|Main|Exchange|Double|Norwegian|Center|Central|Holding|Sacrifice|Bishop|Knight|Queen|King|March|Castling|Retreat|Extension|Accelerated|Advance|Symmetrical|Reversed|Poisoned|Quiet|Sharp|Standard|Traditional|Orthodox|Flexible|Early|Endgame|with)\b/;
         for (const line of file.lines) {
           expect(line.eco, line.nameEn).toMatch(/^[A-E]\d\d$/);
           expect(line.name, line.nameEn).not.toMatch(english);

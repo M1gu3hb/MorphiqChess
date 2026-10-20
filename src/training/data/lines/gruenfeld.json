@@ -1,0 +1,325 @@
+{
+  "id": "gruenfeld",
+  "source": "Lichess",
+  "side": "b",
+  "lines": [
+    {
+      "name": "Defensa Grünfeld",
+      "nameEn": "Grünfeld Defense",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5"
+    },
+    {
+      "name": "Gambito Gibbon",
+      "nameEn": "Grünfeld Defense: Gibbon Gambit",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 g4"
+    },
+    {
+      "name": "Variante Lundin",
+      "nameEn": "Grünfeld Defense: Lundin Variation",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bg5 Ne4 Nxe4 dxe4 Qd2 c5"
+    },
+    {
+      "name": "Variante Lutikov",
+      "nameEn": "Grünfeld Defense: Lutikov Variation",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 f3"
+    },
+    {
+      "name": "Variante Lutikov, Ataque Murrey",
+      "nameEn": "Grünfeld Defense: Lutikov Variation, Murrey Attack",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 f3 c5 cxd5 Nxd5 Na4"
+    },
+    {
+      "name": "Variante Stockholm",
+      "nameEn": "Grünfeld Defense: Stockholm Variation",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bg5"
+    },
+    {
+      "name": "Gambito Zaitsev",
+      "nameEn": "Grünfeld Defense: Zaitsev Gambit",
+      "eco": "D80",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 h4"
+    },
+    {
+      "name": "Variante rusa, Variante acelerada",
+      "nameEn": "Grünfeld Defense: Russian Variation, Accelerated Variation",
+      "eco": "D81",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Qb3"
+    },
+    {
+      "name": "Ataque Brinckmann",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack",
+      "eco": "D82",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4"
+    },
+    {
+      "name": "Ataque Brinckmann, Gambito Grünfeld",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit",
+      "eco": "D83",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4 Bg7 e3 O-O"
+    },
+    {
+      "name": "Ataque Brinckmann, Gambito Grünfeld, Variante Botvinnik",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit, Botvinnik Variation",
+      "eco": "D83",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4 Bg7 e3 O-O Rc1 c5 dxc5 Be6"
+    },
+    {
+      "name": "Ataque Brinckmann, Gambito Grünfeld, Variante Capablanca",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit, Capablanca Variation",
+      "eco": "D83",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4 Bg7 e3 O-O Rc1"
+    },
+    {
+      "name": "Ataque Brinckmann, Gambito Reshevsky",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack, Reshevsky Gambit",
+      "eco": "D83",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4 Bg7 Rc1 O-O e3 c5 dxc5 Qa5"
+    },
+    {
+      "name": "Ataque Brinckmann, Gambito Grünfeld aceptado",
+      "nameEn": "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted",
+      "eco": "D84",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Bf4 Bg7 e3 O-O cxd5 Nxd5 Nxd5 Qxd5 Bxc7"
+    },
+    {
+      "name": "Variante del cambio",
+      "nameEn": "Grünfeld Defense: Exchange Variation",
+      "eco": "D85",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5"
+    },
+    {
+      "name": "Variante del cambio, Variante moderna del cambio",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+      "eco": "D85",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Nf3"
+    },
+    {
+      "name": "Variante del cambio, Variante moderna del cambio",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+      "eco": "D85",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Nf3 c5"
+    },
+    {
+      "name": "Variante del cambio, Variante moderna del cambio, Línea de la captura del peón",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation, Pawn Grab Line",
+      "eco": "D85",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Nf3 c5 Rb1 O-O Be2 Nc6 d5 Bxc3"
+    },
+    {
+      "name": "Variante del cambio, Ataque Nadanian",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Nadanian Attack",
+      "eco": "D85",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 Na4"
+    },
+    {
+      "name": "Variante del cambio, Variante clásica",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Classical Variation",
+      "eco": "D86",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4"
+    },
+    {
+      "name": "Variante del cambio, Variante Larsen",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Larsen Variation",
+      "eco": "D86",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 O-O Ne2 Qd7"
+    },
+    {
+      "name": "Variante del cambio, Variante Larsen",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Larsen Variation",
+      "eco": "D86",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 O-O Ne2 Qd7 O-O b6"
+    },
+    {
+      "name": "Variante del cambio, Variante Simagin's Improved",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Simagin's Improved Variation",
+      "eco": "D86",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 O-O Ne2 Nc6"
+    },
+    {
+      "name": "Variante del cambio, Variante Simagin's Lesser",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Simagin's Lesser Variation",
+      "eco": "D86",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 O-O Ne2 b6"
+    },
+    {
+      "name": "Variante del cambio, Variante Seville",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Seville Variation",
+      "eco": "D87",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 O-O O-O Bg4 f3 Na5 Bxf7"
+    },
+    {
+      "name": "Variante del cambio, Variante Spassky",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+      "eco": "D87",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O"
+    },
+    {
+      "name": "Variante del cambio, Variante Spassky",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+      "eco": "D88",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 O-O O-O cxd4 cxd4"
+    },
+    {
+      "name": "Variante del cambio, Variante Sokolsky",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Sokolsky Variation",
+      "eco": "D89",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O O-O Nc6 Be3 Bg4 f3 Na5 Bd3 cxd4 cxd4 Be6 d5"
+    },
+    {
+      "name": "Variante del cambio, Variante Spassky",
+      "nameEn": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+      "eco": "D89",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 O-O O-O Bg4 f3 Na5 Bd3 cxd4 cxd4 Be6"
+    },
+    {
+      "name": "Variante Flohr",
+      "nameEn": "Grünfeld Defense: Flohr Variation",
+      "eco": "D90",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qa4"
+    },
+    {
+      "name": "Variante de los Tres Caballos",
+      "nameEn": "Grünfeld Defense: Three Knights Variation",
+      "eco": "D90",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3"
+    },
+    {
+      "name": "Variante de los Tres Caballos",
+      "nameEn": "Grünfeld Defense: Three Knights Variation",
+      "eco": "D90",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Sistema Petrosian",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Petrosian System",
+      "eco": "D91",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Bg5"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Ataque húngaro",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Hungarian Attack",
+      "eco": "D92",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Bf4"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Variante húngara",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Hungarian Variation",
+      "eco": "D93",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Bf4 O-O e3"
+    },
+    {
+      "name": "Variante Makogonov",
+      "nameEn": "Grünfeld Defense: Makogonov Variation",
+      "eco": "D94",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3 O-O b4"
+    },
+    {
+      "name": "Variante Opocensky",
+      "nameEn": "Grünfeld Defense: Opocensky Variation",
+      "eco": "D94",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3 O-O Bd2"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Variante Burille",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Burille Variation",
+      "eco": "D94",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Variante Paris",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Paris Variation",
+      "eco": "D94",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3 O-O Bd3"
+    },
+    {
+      "name": "Variante Botvinnik",
+      "nameEn": "Grünfeld Defense: Botvinnik Variation",
+      "eco": "D95",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3 O-O Qb3 e6"
+    },
+    {
+      "name": "Variante Pachman",
+      "nameEn": "Grünfeld Defense: Pachman Variation",
+      "eco": "D95",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 e3 Bg7 Qb3 dxc4 Bxc4 O-O Nf3 Nbd7 Ng5"
+    },
+    {
+      "name": "Variante de los Tres Caballos, Variante Vienna",
+      "nameEn": "Grünfeld Defense: Three Knights Variation, Vienna Variation",
+      "eco": "D95",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 e3 O-O Qb3"
+    },
+    {
+      "name": "Variante rusa",
+      "nameEn": "Grünfeld Defense: Russian Variation",
+      "eco": "D96",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3"
+    },
+    {
+      "name": "Variante rusa",
+      "nameEn": "Grünfeld Defense: Russian Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4"
+    },
+    {
+      "name": "Variante rusa, Variante Byrne",
+      "nameEn": "Grünfeld Defense: Russian Variation, Byrne Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Nc6"
+    },
+    {
+      "name": "Variante rusa, Variante húngara",
+      "nameEn": "Grünfeld Defense: Russian Variation, Hungarian Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 a6"
+    },
+    {
+      "name": "Variante rusa, Variante Levenfish",
+      "nameEn": "Grünfeld Defense: Russian Variation, Levenfish Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 b6"
+    },
+    {
+      "name": "Variante rusa, Variante Prins",
+      "nameEn": "Grünfeld Defense: Russian Variation, Prins Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Na6"
+    },
+    {
+      "name": "Variante rusa, Variante Szabo",
+      "nameEn": "Grünfeld Defense: Russian Variation, Szabo Variation",
+      "eco": "D97",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 c6"
+    },
+    {
+      "name": "Variante rusa, Variante Keres",
+      "nameEn": "Grünfeld Defense: Russian Variation, Keres Variation",
+      "eco": "D98",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Bg4 Be3 Nfd7 Be2 Nb6 Qd3 Nc6 O-O-O"
+    },
+    {
+      "name": "Variante rusa, Variante Smyslov",
+      "nameEn": "Grünfeld Defense: Russian Variation, Smyslov Variation",
+      "eco": "D98",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Bg4"
+    },
+    {
+      "name": "Variante rusa, Variante Smyslov",
+      "nameEn": "Grünfeld Defense: Russian Variation, Smyslov Variation",
+      "eco": "D99",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Bg4 Be3 Nfd7 Qb3"
+    },
+    {
+      "name": "Variante rusa, Variante Yugoslava",
+      "nameEn": "Grünfeld Defense: Russian Variation, Yugoslav Variation",
+      "eco": "D99",
+      "moves": "d4 Nf6 c4 g6 Nc3 d5 Nf3 Bg7 Qb3 dxc4 Qxc4 O-O e4 Bg4 Be3 Nfd7 Qb3 c5"
+    }
+  ]
+}

@@ -1,0 +1,2047 @@
+{
+  "id": "sicilian",
+  "source": "Lichess",
+  "side": "b",
+  "lines": [
+    {
+      "name": "Defensa Siciliana",
+      "nameEn": "Sicilian Defense",
+      "eco": "B20",
+      "moves": "e4 c5"
+    },
+    {
+      "name": "Ataque Amazon",
+      "nameEn": "Sicilian Defense: Amazon Attack",
+      "eco": "B20",
+      "moves": "e4 c5 Qg4"
+    },
+    {
+      "name": "Formación de la gran pinza",
+      "nameEn": "Sicilian Defense: Big Clamp Formation",
+      "eco": "B20",
+      "moves": "e4 c5 d3 Nc6 c3 d6 f4"
+    },
+    {
+      "name": "Ataque Bowdler",
+      "nameEn": "Sicilian Defense: Bowdler Attack",
+      "eco": "B20",
+      "moves": "e4 c5 Bc4"
+    },
+    {
+      "name": "Variante Brick",
+      "nameEn": "Sicilian Defense: Brick Variation",
+      "eco": "B20",
+      "moves": "e4 c5 Nh3"
+    },
+    {
+      "name": "Ataque Czerniak",
+      "nameEn": "Sicilian Defense: Czerniak Attack",
+      "eco": "B20",
+      "moves": "e4 c5 b3"
+    },
+    {
+      "name": "Ataque Czerniak, Variante del fianchetto de dama",
+      "nameEn": "Sicilian Defense: Czerniak Attack, Queen Fianchetto Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b3 b6"
+    },
+    {
+      "name": "Ataque Euwe, Gambito Prins",
+      "nameEn": "Sicilian Defense: Euwe Attack, Prins Gambit",
+      "eco": "B20",
+      "moves": "e4 c5 b3 d5 Bb2"
+    },
+    {
+      "name": "Variante Gloria",
+      "nameEn": "Sicilian Defense: Gloria Variation",
+      "eco": "B20",
+      "moves": "e4 c5 c4 d6 Nc3 Nc6 g3 h5"
+    },
+    {
+      "name": "Variante Grob",
+      "nameEn": "Sicilian Defense: Grob Variation",
+      "eco": "B20",
+      "moves": "e4 c5 g4"
+    },
+    {
+      "name": "Variante Keres",
+      "nameEn": "Sicilian Defense: Keres Variation",
+      "eco": "B20",
+      "moves": "e4 c5 Ne2"
+    },
+    {
+      "name": "Apertura del Rey David",
+      "nameEn": "Sicilian Defense: King David's Opening",
+      "eco": "B20",
+      "moves": "e4 c5 Ke2"
+    },
+    {
+      "name": "Variante Kronberger",
+      "nameEn": "Sicilian Defense: Kronberger Variation",
+      "eco": "B20",
+      "moves": "e4 c5 Na3"
+    },
+    {
+      "name": "Variante Kronberger, Gambito Nemeth",
+      "nameEn": "Sicilian Defense: Kronberger Variation, Nemeth Gambit",
+      "eco": "B20",
+      "moves": "e4 c5 Na3 Nc6 d4 cxd4 Bc4"
+    },
+    {
+      "name": "Ataque Lasker-Dunne",
+      "nameEn": "Sicilian Defense: Lasker-Dunne Attack",
+      "eco": "B20",
+      "moves": "e4 c5 g3"
+    },
+    {
+      "name": "Variante Mengarini",
+      "nameEn": "Sicilian Defense: Mengarini Variation",
+      "eco": "B20",
+      "moves": "e4 c5 a3"
+    },
+    {
+      "name": "Ataque Myers, con a4",
+      "nameEn": "Sicilian Defense: Myers Attack, with a4",
+      "eco": "B20",
+      "moves": "e4 c5 a4"
+    },
+    {
+      "name": "Ataque Myers, con h4",
+      "nameEn": "Sicilian Defense: Myers Attack, with h4",
+      "eco": "B20",
+      "moves": "e4 c5 h4"
+    },
+    {
+      "name": "Variante Staunton-Cochrane",
+      "nameEn": "Sicilian Defense: Staunton-Cochrane Variation",
+      "eco": "B20",
+      "moves": "e4 c5 c4"
+    },
+    {
+      "name": "Gambito del ala",
+      "nameEn": "Sicilian Defense: Wing Gambit",
+      "eco": "B20",
+      "moves": "e4 c5 b4"
+    },
+    {
+      "name": "Gambito del ala, Variante Abrahams",
+      "nameEn": "Sicilian Defense: Wing Gambit, Abrahams Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 Bb2"
+    },
+    {
+      "name": "Gambito del ala, Variante Carlsbad",
+      "nameEn": "Sicilian Defense: Wing Gambit, Carlsbad Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 a3 bxa3"
+    },
+    {
+      "name": "Gambito del ala, Variante Marienbad",
+      "nameEn": "Sicilian Defense: Wing Gambit, Marienbad Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 a3 d5 exd5 Qxd5 Bb2"
+    },
+    {
+      "name": "Gambito del ala, Variante Marshall",
+      "nameEn": "Sicilian Defense: Wing Gambit, Marshall Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 a3"
+    },
+    {
+      "name": "Gambito del ala, Gambito Nanu",
+      "nameEn": "Sicilian Defense: Wing Gambit, Nanu Gambit",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 a3 d5 exd5 Qxd5 Nf3 e5 c4 Qe6 Bd3"
+    },
+    {
+      "name": "Gambito del ala, Defensa rumana",
+      "nameEn": "Sicilian Defense: Wing Gambit, Romanian Defense",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 a3 d5 exd5 Qxd5 Nf3 e5 Bb2 Nc6 c4 Qe6"
+    },
+    {
+      "name": "Gambito del ala, Variante Santasiere",
+      "nameEn": "Sicilian Defense: Wing Gambit, Santasiere Variation",
+      "eco": "B20",
+      "moves": "e4 c5 b4 cxb4 c4"
+    },
+    {
+      "name": "Gambito Coles siciliano",
+      "nameEn": "Sicilian Defense: Coles Sicilian Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 Qxd4 Nc6 Qd1 Nf6 Bc4"
+    },
+    {
+      "name": "Gambito Halasz",
+      "nameEn": "Sicilian Defense: Halasz Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 f4"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4 Nc6 Nf3 e6"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4 Nc6 Nf3 e6 d3"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4 Nc6 Nf3 g6 Bb5 Bg7"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4 Nc6 Nf3 g6 Bb5 Bg7 c3 Nf6"
+    },
+    {
+      "name": "Ataque McDonnell",
+      "nameEn": "Sicilian Defense: McDonnell Attack",
+      "eco": "B21",
+      "moves": "e4 c5 f4 Nc6 Nf3 g6 Bb5 Bg7 Bxc6 bxc6 O-O d6 d3 Nf6"
+    },
+    {
+      "name": "Ataque McDonnell, Gambito Tal",
+      "nameEn": "Sicilian Defense: McDonnell Attack, Tal Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 f4 d5 exd5 Nf6"
+    },
+    {
+      "name": "Ataque McDonnell, Variante Toilet",
+      "nameEn": "Sicilian Defense: McDonnell Attack, Toilet Variation",
+      "eco": "B21",
+      "moves": "e4 c5 f4 d5 Nc3"
+    },
+    {
+      "name": "Gambito Morphy",
+      "nameEn": "Sicilian Defense: Morphy Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 Nf3"
+    },
+    {
+      "name": "Gambito Morphy, Gambito Andreaschek",
+      "nameEn": "Sicilian Defense: Morphy Gambit, Andreaschek Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 Nf3 e5 c3"
+    },
+    {
+      "name": "Gambito Smith-Morra",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4"
+    },
+    {
+      "name": "Gambito Smith-Morra",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa Chicago",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Chicago Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 d6 Nf3 e6 Bc4 Nf6 O-O a6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación clásica",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Classical Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 d6 Bc4 a6 O-O Nf6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Variante danesa",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Danish Variation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nf3"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa del fianchetto",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 g6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa del fianchetto",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 g6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa del fianchetto",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 d6 Bc4 g6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa del fianchetto",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 d6 Nf3 g6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa Finegold",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Finegold Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 e6 Nf3 d6 Bc4 a6 O-O Be7 Qe2 Nf6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación Kan",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Kan Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 e6 Nf3 a6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa Larsen",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Larsen Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 Qc7 Qe2 a6 O-O Bd6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa Morphy",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Morphy Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 Bc5"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa Morphy diferida",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Morphy Defense Deferred",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 a6 O-O b5 Bb3 Bc5"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación Paulsen",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 a6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Defensa de la clavada",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Pin Defense",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 Bb4"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación Scheveningen",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 d6 Bc4 e6"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Variante siberiana",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 Qc7"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Variante siberiana, Trampa siberiana",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bc4 Qc7 Qe2 Nf6 O-O Ng4"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación Sozin",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Sozin Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Bc4 e6 Nf3 d6 O-O a6 Qe2 b5"
+    },
+    {
+      "name": "Gambito Smith-Morra aceptado, Formación Taimanov",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Accepted, Taimanov Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 e6 Bc4 a6 Nf3 Ne7"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Formación Alapin",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Alapin Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 Nf6"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Formación del centro",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Center Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 e5"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Variante Dubois",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Dubois Variation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 d3 c4"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Variante Push",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 d3"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Formación escandinava",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Scandinavian Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 d5"
+    },
+    {
+      "name": "Gambito Smith-Morra rehusado, Formación del ala",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Declined, Wing Formation",
+      "eco": "B21",
+      "moves": "e4 c5 d4 cxd4 c3 Qa5"
+    },
+    {
+      "name": "Variante Alapin",
+      "nameEn": "Sicilian Defense: Alapin Variation",
+      "eco": "B22",
+      "moves": "e4 c5 c3"
+    },
+    {
+      "name": "Variante Alapin, Gambito Anti-Alapin",
+      "nameEn": "Sicilian Defense: Alapin Variation, Anti-Alapin Gambit",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Nf6"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5 d4 g6 Nf3"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5 d4 Nc6 Nf3"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen, Cambio central",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense, Central Exchange",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5 d4 cxd4 cxd4 Nc6 Nf3 Bg4"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen, Ataque Milner-Barry",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense, Milner-Barry Attack",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5 d4 Nc6 Nf3 cxd4 cxd4 e5 Nc3 Bb4 Be2"
+    },
+    {
+      "name": "Variante Alapin, Defensa Barmen, Línea moderna",
+      "nameEn": "Sicilian Defense: Alapin Variation, Barmen Defense, Modern Line",
+      "eco": "B22",
+      "moves": "e4 c5 c3 d5 exd5 Qxd5 d4 Nf6 Nf3 Bg4"
+    },
+    {
+      "name": "Variante Alapin, Smith-Morra rehusado",
+      "nameEn": "Sicilian Defense: Alapin Variation, Smith-Morra Declined",
+      "eco": "B22",
+      "moves": "e4 c5 c3 Nf6 e5 Nd5 d4 cxd4"
+    },
+    {
+      "name": "Variante Alapin, Ataque Stoltz",
+      "nameEn": "Sicilian Defense: Alapin Variation, Stoltz Attack",
+      "eco": "B22",
+      "moves": "e4 c5 c3 Nf6 e5 Nd5 Nf3 Nc6 Bc4 Nb6 Bb3"
+    },
+    {
+      "name": "Variante Alapin, Ataque Stoltz, Línea Ivanchuk",
+      "nameEn": "Sicilian Defense: Alapin Variation, Stoltz Attack, Ivanchuk Line",
+      "eco": "B22",
+      "moves": "e4 c5 c3 Nf6 e5 Nd5 Nf3 Nc6 Bc4 Nb6 Bb3 c4 Bc2 Qc7 Qe2 g5"
+    },
+    {
+      "name": "Variante Alapin retrasada",
+      "nameEn": "Sicilian Defense: Delayed Alapin Variation",
+      "eco": "B22",
+      "moves": "e4 c5 Nf3 e6 c3 d5 exd5 Qxd5 d4 Nf6"
+    },
+    {
+      "name": "Variante Alapin retrasada",
+      "nameEn": "Sicilian Defense: Delayed Alapin Variation",
+      "eco": "B22",
+      "moves": "e4 c5 Nf3 e6 c3 d5 exd5 exd5 Bb5 Nc6 O-O Bd6 d4"
+    },
+    {
+      "name": "Variante Heidenfeld",
+      "nameEn": "Sicilian Defense: Heidenfeld Variation",
+      "eco": "B22",
+      "moves": "e4 c5 c3 Nf6 e5 Nd5 Nf3 Nc6 Na3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6 g3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6 f4 Nc6 Nf3 d5"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6 f4 Nc6 Nf3 d5 Bb5"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6 Nge2 a6 g3"
+    },
+    {
+      "name": "Variante cerrada, Variante Carlsen",
+      "nameEn": "Sicilian Defense: Closed, Carlsen Variation",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 d6 d4 cxd4 Qxd4 Nc6 Qd2"
+    },
+    {
+      "name": "Variante cerrada, Variante Chameleon",
+      "nameEn": "Sicilian Defense: Closed, Chameleon Variation",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6 Nge2"
+    },
+    {
+      "name": "Variante cerrada, Ataque Grob",
+      "nameEn": "Sicilian Defense: Closed, Grob Attack",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6 g4"
+    },
+    {
+      "name": "Variante cerrada, Defensa Korchnoi",
+      "nameEn": "Sicilian Defense: Closed, Korchnoi Defense",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 e6 g3 d5"
+    },
+    {
+      "name": "Variante cerrada, Ataque Portland",
+      "nameEn": "Sicilian Defense: Closed, Portland Attack",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6 d3 g6 g4"
+    },
+    {
+      "name": "Variante cerrada, Variante tradicional",
+      "nameEn": "Sicilian Defense: Closed, Traditional",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6"
+    },
+    {
+      "name": "Ataque Grand Prix",
+      "nameEn": "Sicilian Defense: Grand Prix Attack",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6 f4"
+    },
+    {
+      "name": "Ataque Grand Prix, Variante Schofman",
+      "nameEn": "Sicilian Defense: Grand Prix Attack, Schofman Variation",
+      "eco": "B23",
+      "moves": "e4 c5 Nc3 Nc6 f4 g6 Nf3 Bg7 Bc4 e6 f5"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B24",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B24",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7"
+    },
+    {
+      "name": "Variante cerrada, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Closed, Fianchetto Variation",
+      "eco": "B24",
+      "moves": "e4 c5 Nc3 Nc6 g3"
+    },
+    {
+      "name": "Variante cerrada, Variante Smyslov",
+      "nameEn": "Sicilian Defense: Closed, Smyslov Variation",
+      "eco": "B24",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 e6 Be3 Nd4 Nce2"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B25",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B25",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 f4"
+    },
+    {
+      "name": "Variante cerrada, Defensa Botvinnik, Variante Edge",
+      "nameEn": "Sicilian Defense: Closed, Botvinnik Defense, Edge Variation",
+      "eco": "B25",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 f4 e5 Nh3 Nge7"
+    },
+    {
+      "name": "Variante cerrada, Defensa Botvinnik, con Cge2",
+      "nameEn": "Sicilian Defense: Closed, Botvinnik Defense, with Nge2",
+      "eco": "B25",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 Nge2 e5"
+    },
+    {
+      "name": "Variante cerrada, Defensa Botvinnik, con f4",
+      "nameEn": "Sicilian Defense: Closed, Botvinnik Defense, with f4",
+      "eco": "B25",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 f4 e5"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Sicilian Defense: Closed",
+      "eco": "B26",
+      "moves": "e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 Be3"
+    },
+    {
+      "name": "Defensa Siciliana",
+      "nameEn": "Sicilian Defense",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3"
+    },
+    {
+      "name": "Extensión Acton",
+      "nameEn": "Sicilian Defense: Acton Extension",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6 c4 Bh6"
+    },
+    {
+      "name": "Gambito Brussels",
+      "nameEn": "Sicilian Defense: Brussels Gambit",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 f5"
+    },
+    {
+      "name": "Variante Bücker",
+      "nameEn": "Sicilian Defense: Bücker Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 h6"
+    },
+    {
+      "name": "Gambito Doble-Holandés",
+      "nameEn": "Sicilian Defense: Double-Dutch Gambit",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 f5 exf5 Nh6"
+    },
+    {
+      "name": "Variante Frederico",
+      "nameEn": "Sicilian Defense: Frederico Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6 d4 f5"
+    },
+    {
+      "name": "Dragón hiperacelerado",
+      "nameEn": "Sicilian Defense: Hyperaccelerated Dragon",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6"
+    },
+    {
+      "name": "Dragón hiperacelerado",
+      "nameEn": "Sicilian Defense: Hyperaccelerated Dragon",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6 d4"
+    },
+    {
+      "name": "Pterodáctilo hiperacelerado",
+      "nameEn": "Sicilian Defense: Hyperaccelerated Pterodactyl",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6 d4 Bg7"
+    },
+    {
+      "name": "Pterodáctilo hiperacelerado, Variante del cambio",
+      "nameEn": "Sicilian Defense: Hyperaccelerated Pterodactyl, Exchange Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 g6 d4 Bg7 dxc5 Qa5 Nc3 Bxc3 bxc3 Qxc3"
+    },
+    {
+      "name": "Variante Jalalabad",
+      "nameEn": "Sicilian Defense: Jalalabad Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 e5"
+    },
+    {
+      "name": "Variante Katalimov",
+      "nameEn": "Sicilian Defense: Katalimov Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 b6"
+    },
+    {
+      "name": "Variante Mongoose",
+      "nameEn": "Sicilian Defense: Mongoose Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 Qa5"
+    },
+    {
+      "name": "Gambito polaco",
+      "nameEn": "Sicilian Defense: Polish Gambit",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 b5"
+    },
+    {
+      "name": "Variante Quinteros",
+      "nameEn": "Sicilian Defense: Quinteros Variation",
+      "eco": "B27",
+      "moves": "e4 c5 Nf3 Qc7"
+    },
+    {
+      "name": "Variante O'Kelly",
+      "nameEn": "Sicilian Defense: O'Kelly Variation",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Aronin",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Aronin System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 Be2"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Kieseritzky",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Kieseritzky System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 b3"
+    },
+    {
+      "name": "Variante O'Kelly, Cerrojo Maróczy",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Maróczy Bind",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c4"
+    },
+    {
+      "name": "Variante O'Kelly, Cerrojo Maróczy, Línea Paulsen",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Paulsen Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c4 e6"
+    },
+    {
+      "name": "Variante O'Kelly, Cerrojo Maróczy, Línea Robatsch",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Robatsch Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c4 d6"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema normal",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Normal System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d4"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema normal, Gambito Cortlever",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Normal System, Cortlever Gambit",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d4 cxd4 Bc4"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema normal, Línea Smith-Morra",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Normal System, Smith-Morra Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d4 cxd4 c3"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema normal, Línea Taimanov",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Normal System, Taimanov Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d4 cxd4 Nxd4 e5"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema normal, Línea Zagorovsky",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Normal System, Zagorovsky Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d4 cxd4 Qxd4"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema tranquilo",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Quiet System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 d3"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Réti",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Réti System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 g3"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Venice",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Venice System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c3"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Venice, Línea Barcza",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Venice System, Barcza Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c3 Nf6"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Venice, Línea del gambito",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Venice System, Gambit Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c3 d5 exd5 Nf6"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Venice, Línea Ljubojevic",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Venice System, Ljubojevic Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c3 b5"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Venice, Línea Steiner",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Venice System, Steiner Line",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 c3 d6"
+    },
+    {
+      "name": "Variante O'Kelly, Gambito del ala",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Wing Gambit",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 b4"
+    },
+    {
+      "name": "Variante O'Kelly, Sistema Yerevan",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Yerevan System",
+      "eco": "B28",
+      "moves": "e4 c5 Nf3 a6 Nc3"
+    },
+    {
+      "name": "Variante Nimzowitsch",
+      "nameEn": "Sicilian Defense: Nimzowitsch Variation",
+      "eco": "B29",
+      "moves": "e4 c5 Nf3 Nf6"
+    },
+    {
+      "name": "Variante Nimzowitsch, Variante del avance",
+      "nameEn": "Sicilian Defense: Nimzowitsch Variation, Advance Variation",
+      "eco": "B29",
+      "moves": "e4 c5 Nf3 Nf6 e5"
+    },
+    {
+      "name": "Variante Nimzowitsch, Variante cerrada",
+      "nameEn": "Sicilian Defense: Nimzowitsch Variation, Closed Variation",
+      "eco": "B29",
+      "moves": "e4 c5 Nf3 Nf6 Nc3"
+    },
+    {
+      "name": "Variante Nimzowitsch, Variante del cambio",
+      "nameEn": "Sicilian Defense: Nimzowitsch Variation, Exchange Variation",
+      "eco": "B29",
+      "moves": "e4 c5 Nf3 Nf6 e5 Nd5 Nc3 Nxc3"
+    },
+    {
+      "name": "Variante Nimzowitsch, Línea principal",
+      "nameEn": "Sicilian Defense: Nimzowitsch Variation, Main Line",
+      "eco": "B29",
+      "moves": "e4 c5 Nf3 Nf6 e5 Nd5 Nc3 e6 Nxd5 exd5 d4 Nc6"
+    },
+    {
+      "name": "Variante cerrada, Variante Anti-Sveshnikov",
+      "nameEn": "Sicilian Defense: Closed, Anti-Sveshnikov Variation",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Nc3 e5"
+    },
+    {
+      "name": "Variante cerrada, Variante Anti-Sveshnikov, Línea Kharlov-Kramnik",
+      "nameEn": "Sicilian Defense: Closed, Anti-Sveshnikov Variation, Kharlov-Kramnik Line",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Nc3 e5 Bc4 Be7 d3 d6 Nd2 Bg5"
+    },
+    {
+      "name": "Variante cerrada, Variante Anti-Sveshnikov, con Cf6",
+      "nameEn": "Sicilian Defense: Closed, Anti-Sveshnikov Variation, with Nf6",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Nc3 e5 Bc4 Be7 d3 Nf6"
+    },
+    {
+      "name": "Variante cerrada, Variante Anti-Sveshnikov, con d6",
+      "nameEn": "Sicilian Defense: Closed, Anti-Sveshnikov Variation, with d6",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Nc3 e5 Bc4 Be7 d3 d6"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Bb5"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Defensa de la retirada Brooklyn",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Brooklyn Retreat Defense",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 Nb8"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Gambito San Francisco",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, San Francisco Gambit",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 Na5 b4"
+    },
+    {
+      "name": "Siciliana antigua",
+      "nameEn": "Sicilian Defense: Old Sicilian",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6"
+    },
+    {
+      "name": "Gambito Portsmouth",
+      "nameEn": "Sicilian Defense: Portsmouth Gambit",
+      "eco": "B30",
+      "moves": "e4 c5 Nf3 Nc6 b4"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+      "eco": "B31",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 g6"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Variante del fianchetto, Gambito Gufeld",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation, Gufeld Gambit",
+      "eco": "B31",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7 c3 e5 d4"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Variante del fianchetto, Gambito Lutikov",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation, Lutikov Gambit",
+      "eco": "B31",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7 c3 Nf6 d4"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Variante del fianchetto, Ataque Totsky",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation, Totsky Attack",
+      "eco": "B31",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7 c3 Nf6 Qa4"
+    },
+    {
+      "name": "Ataque Nyezhmetdinov-Rossolimo, Variante Gurgenidze",
+      "nameEn": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Gurgenidze Variation",
+      "eco": "B31",
+      "moves": "e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7 Re1 e5 b4"
+    },
+    {
+      "name": "Dragón acelerado",
+      "nameEn": "Sicilian Defense: Accelerated Dragon",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6"
+    },
+    {
+      "name": "Variante Flohr",
+      "nameEn": "Sicilian Defense: Flohr Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Qc7"
+    },
+    {
+      "name": "Variante Franco-Siciliana",
+      "nameEn": "Sicilian Defense: Franco-Sicilian Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 e6"
+    },
+    {
+      "name": "Variante Godiva",
+      "nameEn": "Sicilian Defense: Godiva Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Qb6"
+    },
+    {
+      "name": "Variante Kalashnikov",
+      "nameEn": "Sicilian Defense: Kalashnikov Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e5 Nb5 d6"
+    },
+    {
+      "name": "Variante Löwenthal",
+      "nameEn": "Sicilian Defense: Löwenthal Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e5"
+    },
+    {
+      "name": "Variante Nimzo-American",
+      "nameEn": "Sicilian Defense: Nimzo-American Variation",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 d5"
+    },
+    {
+      "name": "Variante O'Kelly, Cerrojo Maróczy, Línea Geller",
+      "nameEn": "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Geller Line",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 a6 c4 e5"
+    },
+    {
+      "name": "Variante abierta",
+      "nameEn": "Sicilian Defense: Open",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4"
+    },
+    {
+      "name": "Variante abierta",
+      "nameEn": "Sicilian Defense: Open",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4"
+    },
+    {
+      "name": "Variante abierta",
+      "nameEn": "Sicilian Defense: Open",
+      "eco": "B32",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4"
+    },
+    {
+      "name": "Variante Lasker-Pelikan",
+      "nameEn": "Sicilian Defense: Lasker-Pelikan Variation",
+      "eco": "B33",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5"
+    },
+    {
+      "name": "Variante Lasker-Pelikan, Variante del cambio",
+      "nameEn": "Sicilian Defense: Lasker-Pelikan Variation, Exchange Variation",
+      "eco": "B33",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Nxc6"
+    },
+    {
+      "name": "Variante Lasker-Pelikan, Variante de la retirada",
+      "nameEn": "Sicilian Defense: Lasker-Pelikan Variation, Retreat Variation",
+      "eco": "B33",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Nf3"
+    },
+    {
+      "name": "Variante Lasker-Pelikan, Variante Schlechter",
+      "nameEn": "Sicilian Defense: Lasker-Pelikan Variation, Schlechter Variation",
+      "eco": "B33",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Nb3"
+    },
+    {
+      "name": "Variante abierta",
+      "nameEn": "Sicilian Defense: Open",
+      "eco": "B33",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6"
+    },
+    {
+      "name": "Dragón acelerado, Variante del cambio",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Exchange Variation",
+      "eco": "B34",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nxc6"
+    },
+    {
+      "name": "Dragón acelerado, Variante moderna",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Modern Variation",
+      "eco": "B34",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3"
+    },
+    {
+      "name": "Dragón acelerado, Variante Ac4 moderna",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
+      "eco": "B35",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Be3 Nf6 Bc4"
+    },
+    {
+      "name": "Variante del Dragón, Variante Ac4 moderna",
+      "nameEn": "Sicilian Defense: Dragon Variation, Modern Bc4 Variation",
+      "eco": "B35",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 Nc3 Bg7 Be3 Nf6 Bc4 d6"
+    },
+    {
+      "name": "Dragón acelerado, Cerrojo Maróczy",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+      "eco": "B36",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4"
+    },
+    {
+      "name": "Dragón acelerado, Cerrojo Maróczy, Variante Gurgenidze",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Maróczy Bind, Gurgenidze Variation",
+      "eco": "B36",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Nf6 Nc3 Nxd4 Qxd4 d6"
+    },
+    {
+      "name": "Dragón acelerado, Cerrojo Maróczy",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+      "eco": "B37",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7"
+    },
+    {
+      "name": "Dragón acelerado, Variante Simagin",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Simagin Variation",
+      "eco": "B37",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7 Nc2 d6 Be2 Nh6"
+    },
+    {
+      "name": "Dragón acelerado, Cerrojo Maróczy",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+      "eco": "B38",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7 Be3"
+    },
+    {
+      "name": "Dragón acelerado, Cerrojo Maróczy, Variante Breyer",
+      "nameEn": "Sicilian Defense: Accelerated Dragon, Maróczy Bind, Breyer Variation",
+      "eco": "B39",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7 Be3 Nf6 Nc3 Ng4"
+    },
+    {
+      "name": "Variante Alapin, Variante Sherzer",
+      "nameEn": "Sicilian Defense: Alapin Variation, Sherzer Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 c3 Nf6 e5 Nd5 d4 Nc6"
+    },
+    {
+      "name": "Variante Alapin retrasada, con e6",
+      "nameEn": "Sicilian Defense: Delayed Alapin Variation, with e6",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 c3"
+    },
+    {
+      "name": "Variante Drazic",
+      "nameEn": "Sicilian Defense: Drazic Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 a6"
+    },
+    {
+      "name": "Variante francesa",
+      "nameEn": "Sicilian Defense: French Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6"
+    },
+    {
+      "name": "Variante francesa, Variante normal",
+      "nameEn": "Sicilian Defense: French Variation, Normal",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6"
+    },
+    {
+      "name": "Variante francesa, Variante abierta",
+      "nameEn": "Sicilian Defense: French Variation, Open",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4"
+    },
+    {
+      "name": "Variante francesa, Ataque Westerinen",
+      "nameEn": "Sicilian Defense: French Variation, Westerinen Attack",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 b3"
+    },
+    {
+      "name": "Variante Gaw-Paw",
+      "nameEn": "Sicilian Defense: Gaw-Paw Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 Qb6"
+    },
+    {
+      "name": "Variante Kan, Ataque del ala, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Kan Variation, Wing Attack, Fianchetto Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 Nc3 a6 g3 b5 d4 cxd4 Nxd4"
+    },
+    {
+      "name": "Variante Kramnik",
+      "nameEn": "Sicilian Defense: Kramnik Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 c4"
+    },
+    {
+      "name": "Variante Kveinis",
+      "nameEn": "Sicilian Defense: Kveinis Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Qb6"
+    },
+    {
+      "name": "Contraataque Marshall",
+      "nameEn": "Sicilian Defense: Marshall Counterattack",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 d5"
+    },
+    {
+      "name": "Defensa Paulsen-Basman",
+      "nameEn": "Sicilian Defense: Paulsen-Basman Defense",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Bc5"
+    },
+    {
+      "name": "Variante de la clavada",
+      "nameEn": "Sicilian Defense: Pin Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 Bb4"
+    },
+    {
+      "name": "Variante de la clavada, Variante Jaffe",
+      "nameEn": "Sicilian Defense: Pin Variation, Jaffe Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 Bb4 Bd3 e5"
+    },
+    {
+      "name": "Variante de la clavada, Variante Koch",
+      "nameEn": "Sicilian Defense: Pin Variation, Koch Variation",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 Bb4 e5"
+    },
+    {
+      "name": "Gambito Smith-Morra diferido",
+      "nameEn": "Sicilian Defense: Smith-Morra Gambit Deferred",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 c3"
+    },
+    {
+      "name": "Gambito del ala diferido",
+      "nameEn": "Sicilian Defense: Wing Gambit Deferred",
+      "eco": "B40",
+      "moves": "e4 c5 Nf3 e6 b4"
+    },
+    {
+      "name": "Variante Kan",
+      "nameEn": "Sicilian Defense: Kan Variation",
+      "eco": "B41",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6"
+    },
+    {
+      "name": "Variante Kan, Cerrojo Maróczy, Variante Bronstein",
+      "nameEn": "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation",
+      "eco": "B41",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 c4 Nf6 Nc3 Bb4 Bd3 Nc6"
+    },
+    {
+      "name": "Variante Kan, Cerrojo Maróczy, Variante Bronstein",
+      "nameEn": "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation",
+      "eco": "B41",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 c4 Nf6 Nc3 Bb4 Bd3 Nc6 Bc2"
+    },
+    {
+      "name": "Variante Kan, Cerrojo Maróczy, Variante Erizo",
+      "nameEn": "Sicilian Defense: Kan Variation, Maróczy Bind, Hedgehog Variation",
+      "eco": "B41",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 c4 g6"
+    },
+    {
+      "name": "Variante Kan, Cerrojo Maróczy, Variante Réti",
+      "nameEn": "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation",
+      "eco": "B41",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 c4"
+    },
+    {
+      "name": "Variante Kan, Variante Gipslis",
+      "nameEn": "Sicilian Defense: Kan Variation, Gipslis Variation",
+      "eco": "B42",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Bd3 Nf6 O-O d6 c4 g6"
+    },
+    {
+      "name": "Variante Kan, Variante moderna",
+      "nameEn": "Sicilian Defense: Kan Variation, Modern Variation",
+      "eco": "B42",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Bd3"
+    },
+    {
+      "name": "Variante Kan, Variante Polugaevsky",
+      "nameEn": "Sicilian Defense: Kan Variation, Polugaevsky Variation",
+      "eco": "B42",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Bd3 Bc5"
+    },
+    {
+      "name": "Variante Kan, Variante del queso suizo",
+      "nameEn": "Sicilian Defense: Kan Variation, Swiss Cheese Variation",
+      "eco": "B42",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Bd3 g6"
+    },
+    {
+      "name": "Variante Kan, Variante del caballo",
+      "nameEn": "Sicilian Defense: Kan Variation, Knight Variation",
+      "eco": "B43",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3"
+    },
+    {
+      "name": "Variante Kan, Variante del caballo",
+      "nameEn": "Sicilian Defense: Kan Variation, Knight Variation",
+      "eco": "B43",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3 b5 g3 Bb7 Bg2"
+    },
+    {
+      "name": "Variante Kan, Ataque del ala",
+      "nameEn": "Sicilian Defense: Kan Variation, Wing Attack",
+      "eco": "B43",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3 b5"
+    },
+    {
+      "name": "Variante Kan, Ataque del ala, El sueño de Christiansen",
+      "nameEn": "Sicilian Defense: Kan Variation, Wing Attack, Christiansen's Dream",
+      "eco": "B43",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3 b5 Bd3 Qb6 Be3 Bc5 Qg4"
+    },
+    {
+      "name": "Variante Kan, Ataque del ala, Ataque Spraggett",
+      "nameEn": "Sicilian Defense: Kan Variation, Wing Attack, Spraggett Attack",
+      "eco": "B43",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 a6 Nc3 b5 Bd3 Qb6 Nf3"
+    },
+    {
+      "name": "Variante Taimanov",
+      "nameEn": "Sicilian Defense: Taimanov Variation",
+      "eco": "B44",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6"
+    },
+    {
+      "name": "Variante Taimanov, Variante Szén",
+      "nameEn": "Sicilian Defense: Taimanov Variation, Szén Variation",
+      "eco": "B44",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nb5"
+    },
+    {
+      "name": "Variante de los Cuatro Caballos",
+      "nameEn": "Sicilian Defense: Four Knights Variation",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Nf6"
+    },
+    {
+      "name": "Variante de los Cuatro Caballos, Ataque americano",
+      "nameEn": "Sicilian Defense: Four Knights Variation, American Attack",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Nf6 Ndb5 Bb4 Nd6"
+    },
+    {
+      "name": "Variante de los Cuatro Caballos, Variante Cobra",
+      "nameEn": "Sicilian Defense: Four Knights Variation, Cobra Variation",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Nf6 Ndb5 Bc5"
+    },
+    {
+      "name": "Variante de los Cuatro Caballos, Variante del cambio",
+      "nameEn": "Sicilian Defense: Four Knights Variation, Exchange Variation",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Nf6 Nxc6"
+    },
+    {
+      "name": "Variante de los Cuatro Caballos, Transferencia Sveshnikov",
+      "nameEn": "Sicilian Defense: Four Knights Variation, Sveshnikov Transfer",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Nf6 Ndb5 d6"
+    },
+    {
+      "name": "Variante Taimanov",
+      "nameEn": "Sicilian Defense: Taimanov Variation",
+      "eco": "B45",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3"
+    },
+    {
+      "name": "Variante Taimanov",
+      "nameEn": "Sicilian Defense: Taimanov Variation",
+      "eco": "B46",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 a6"
+    },
+    {
+      "name": "Variante Taimanov, Variante Bastrikov",
+      "nameEn": "Sicilian Defense: Taimanov Variation, Bastrikov Variation",
+      "eco": "B47",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Qc7"
+    },
+    {
+      "name": "Variante Taimanov, Variante Bastrikov, Gambito Ponomariov",
+      "nameEn": "Sicilian Defense: Taimanov Variation, Bastrikov Variation, Ponomariov Gambit",
+      "eco": "B47",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Qc7 Ndb5 Qb8 Be3 a6 Bb6"
+    },
+    {
+      "name": "Variante Taimanov, Variante Bastrikov, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Taimanov Variation, Bastrikov Variation, English Attack",
+      "eco": "B48",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Qc7 Be3"
+    },
+    {
+      "name": "Variante Taimanov, Variante Bastrikov",
+      "nameEn": "Sicilian Defense: Taimanov Variation, Bastrikov Variation",
+      "eco": "B49",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Qc7 Be3 a6 Be2"
+    },
+    {
+      "name": "Defensa Siciliana",
+      "nameEn": "Sicilian Defense",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 d4"
+    },
+    {
+      "name": "Defensa Siciliana",
+      "nameEn": "Sicilian Defense",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4"
+    },
+    {
+      "name": "Variante Alapin retrasada, Gambito Basman-Palatnik",
+      "nameEn": "Sicilian Defense: Delayed Alapin Variation, Basman-Palatnik Gambit",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 c3 Nf6 Be2 Nc6 d4 cxd4 cxd4 Nxe4"
+    },
+    {
+      "name": "Variante Alapin retrasada, con d6",
+      "nameEn": "Sicilian Defense: Delayed Alapin Variation, with d6",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 c3"
+    },
+    {
+      "name": "Sistema Kopec",
+      "nameEn": "Sicilian Defense: Kopec System",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 Bd3"
+    },
+    {
+      "name": "Gambito Kotov",
+      "nameEn": "Sicilian Defense: Kotov Gambit",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 g3 b5"
+    },
+    {
+      "name": "Variantes modernas",
+      "nameEn": "Sicilian Defense: Modern Variations",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6"
+    },
+    {
+      "name": "Variantes modernas, Orden de jugadas anti-Dxd4",
+      "nameEn": "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 d4 Nf6"
+    },
+    {
+      "name": "Variantes modernas, Orden de jugadas anti-Dxd4 aceptado",
+      "nameEn": "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order Accepted",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 d4 Nf6 dxc5 Nxe4"
+    },
+    {
+      "name": "Variantes modernas, Tartakower",
+      "nameEn": "Sicilian Defense: Modern Variations, Tartakower",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 c3"
+    },
+    {
+      "name": "Gambito del ala, Variante diferida",
+      "nameEn": "Sicilian Defense: Wing Gambit, Deferred Variation",
+      "eco": "B50",
+      "moves": "e4 c5 Nf3 d6 b4"
+    },
+    {
+      "name": "Variante Moscow",
+      "nameEn": "Sicilian Defense: Moscow Variation",
+      "eco": "B51",
+      "moves": "e4 c5 Nf3 d6 Bb5"
+    },
+    {
+      "name": "Variante Moscow, Gambito Dorfman",
+      "nameEn": "Sicilian Defense: Moscow Variation, Dorfman Gambit",
+      "eco": "B51",
+      "moves": "e4 c5 Nf3 d6 Bb5 Nc6 O-O Bd7 Qe2 g6 e5"
+    },
+    {
+      "name": "Variante Moscow, Gambito Haag",
+      "nameEn": "Sicilian Defense: Moscow Variation, Haag Gambit",
+      "eco": "B52",
+      "moves": "e4 c5 Nf3 d6 Bb5 Bd7 Bxd7 Qxd7 O-O Nc6 c3 Nf6 d4"
+    },
+    {
+      "name": "Variante Moscow, Línea principal",
+      "nameEn": "Sicilian Defense: Moscow Variation, Main Line",
+      "eco": "B52",
+      "moves": "e4 c5 Nf3 d6 Bb5 Bd7"
+    },
+    {
+      "name": "Variante Moscow, Variante Sokolsky",
+      "nameEn": "Sicilian Defense: Moscow Variation, Sokolsky Variation",
+      "eco": "B52",
+      "moves": "e4 c5 Nf3 d6 Bb5 Bd7 Bxd7 Qxd7 c4"
+    },
+    {
+      "name": "Variante Chekhover",
+      "nameEn": "Sicilian Defense: Chekhover Variation",
+      "eco": "B53",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Qxd4"
+    },
+    {
+      "name": "Variante Chekhover, Defensa Zaitsev",
+      "nameEn": "Sicilian Defense: Chekhover Variation, Zaitsev Defense",
+      "eco": "B53",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Qxd4 Nc6 Bb5 Qd7"
+    },
+    {
+      "name": "Variante del Dragón, Dragón acelerado",
+      "nameEn": "Sicilian Defense: Dragon Variation, Accelerated Dragon",
+      "eco": "B54",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 g6"
+    },
+    {
+      "name": "Variantes modernas, Gambito Ginsberg",
+      "nameEn": "Sicilian Defense: Modern Variations, Ginsberg Gambit",
+      "eco": "B54",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Bc4"
+    },
+    {
+      "name": "Variantes modernas, Línea principal",
+      "nameEn": "Sicilian Defense: Modern Variations, Main Line",
+      "eco": "B54",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6"
+    },
+    {
+      "name": "Variante Prins",
+      "nameEn": "Sicilian Defense: Prins Variation",
+      "eco": "B54",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 f3"
+    },
+    {
+      "name": "Variante Prins, Ataque Venice",
+      "nameEn": "Sicilian Defense: Prins Variation, Venice Attack",
+      "eco": "B55",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 f3 e5 Bb5"
+    },
+    {
+      "name": "Variante clásica",
+      "nameEn": "Sicilian Defense: Classical Variation",
+      "eco": "B56",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6"
+    },
+    {
+      "name": "Variante clásica, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Classical Variation, Fianchetto Variation",
+      "eco": "B56",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 g3"
+    },
+    {
+      "name": "Variante Kupreichik",
+      "nameEn": "Sicilian Defense: Kupreichik Variation",
+      "eco": "B56",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Bd7"
+    },
+    {
+      "name": "Variante Spielmann",
+      "nameEn": "Sicilian Defense: Spielmann Variation",
+      "eco": "B56",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Nde2"
+    },
+    {
+      "name": "Ataque Venice",
+      "nameEn": "Sicilian Defense: Venice Attack",
+      "eco": "B56",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Bb5"
+    },
+    {
+      "name": "Variante clásica, Variante Anti-Sozin",
+      "nameEn": "Sicilian Defense: Classical Variation, Anti-Sozin Variation",
+      "eco": "B57",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4 Qb6"
+    },
+    {
+      "name": "Variante clásica, Ataque Sozin",
+      "nameEn": "Sicilian Defense: Classical Variation, Sozin Attack",
+      "eco": "B57",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bc4"
+    },
+    {
+      "name": "Trampa Magnus Smith",
+      "nameEn": "Sicilian Defense: Magnus Smith Trap",
+      "eco": "B57",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4 g6 Nxc6 bxc6 e5"
+    },
+    {
+      "name": "Variante Boleslavsky",
+      "nameEn": "Sicilian Defense: Boleslavsky Variation",
+      "eco": "B58",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Be2 e5"
+    },
+    {
+      "name": "Variante Boleslavsky, Variante Louma",
+      "nameEn": "Sicilian Defense: Boleslavsky Variation, Louma Variation",
+      "eco": "B58",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Be2 e5 Nxc6"
+    },
+    {
+      "name": "Variante clásica",
+      "nameEn": "Sicilian Defense: Classical Variation",
+      "eco": "B58",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Be2"
+    },
+    {
+      "name": "Variante clásica, Transferencia del Dragón",
+      "nameEn": "Sicilian Defense: Classical Variation, Dragon Transfer",
+      "eco": "B58",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Be2 Nxd4 Qxd4 g6"
+    },
+    {
+      "name": "Variante Boleslavsky",
+      "nameEn": "Sicilian Defense: Boleslavsky Variation",
+      "eco": "B59",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Be2 e5 Nb3"
+    },
+    {
+      "name": "Variante Richter-Rauzer",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation",
+      "eco": "B60",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante del Dragón",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Dragon Variation",
+      "eco": "B60",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bg5 g6"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante moderna",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation",
+      "eco": "B60",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 Bd7"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante moderna",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation",
+      "eco": "B61",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bg5 Bd7 Qd2"
+    },
+    {
+      "name": "Variante Richter-Rauzer",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation",
+      "eco": "B62",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6"
+    },
+    {
+      "name": "Variante Richter-Rauzer",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation",
+      "eco": "B62",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd3"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante del cambio",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Exchange Variation",
+      "eco": "B62",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Nxc6"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante Podebrady",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Podebrady Variation",
+      "eco": "B62",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bg5 e6 Nb3"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante Vitolins",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Vitolins Variation",
+      "eco": "B62",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Bb5"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante clásica",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+      "eco": "B63",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 Be7"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante Ivanov",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Ivanov Variation",
+      "eco": "B63",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 Qb6"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante tradicional",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Traditional Variation",
+      "eco": "B63",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante neomoderna, Desviaciones tempranas",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Early Deviations",
+      "eco": "B66",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 a6"
+    },
+    {
+      "name": "Variante Richter-Rauzer, Variante neomoderna",
+      "nameEn": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation",
+      "eco": "B67",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bg5 e6 Qd2 a6 O-O-O Bd7"
+    },
+    {
+      "name": "Variante del Dragón",
+      "nameEn": "Sicilian Defense: Dragon Variation",
+      "eco": "B70",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "eco": "B70",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be2"
+    },
+    {
+      "name": "Variante del Dragón, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Dragon Variation, Fianchetto Variation",
+      "eco": "B70",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 g3"
+    },
+    {
+      "name": "Variante del Dragón, Variante Levenfish",
+      "nameEn": "Sicilian Defense: Dragon Variation, Levenfish Variation",
+      "eco": "B71",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 f4"
+    },
+    {
+      "name": "Variante del Dragón, Variante Levenfish, Línea principal",
+      "nameEn": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line",
+      "eco": "B71",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 f4 Nbd7"
+    },
+    {
+      "name": "Variante del Dragón",
+      "nameEn": "Sicilian Defense: Dragon Variation",
+      "eco": "B72",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "eco": "B72",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 Be2"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "eco": "B72",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 Be2 Nc6"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "eco": "B72",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 Be2 Nc6 Nb3"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica, Variante Amsterdam",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation, Amsterdam Variation",
+      "eco": "B72",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Be2 g6 Be3 Bg7 Qd2"
+    },
+    {
+      "name": "Variante del Dragón, Variante clásica",
+      "nameEn": "Sicilian Defense: Dragon Variation, Classical Variation",
+      "eco": "B73",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be2 Bg7 O-O Nc6 Be3"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo, Línea Belezky",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Belezky Line",
+      "eco": "B75",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 Nc6"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo, Desviaciones tempranas",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Early Deviations",
+      "eco": "B75",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo, Dragón húngaro",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Hungarian Dragon",
+      "eco": "B75",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Nc6 f3 h5"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+      "eco": "B76",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+      "eco": "B76",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo, Variante Panov",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation",
+      "eco": "B76",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 g4"
+    },
+    {
+      "name": "Variante del Dragón, Ataque Yugoslavo, Línea principal",
+      "nameEn": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+      "eco": "B77",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 f3 O-O Qd2 Nc6 Bc4"
+    },
+    {
+      "name": "Variante Scheveningen",
+      "nameEn": "Sicilian Defense: Scheveningen Variation",
+      "eco": "B80",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6"
+    },
+    {
+      "name": "Variante Scheveningen, Ataque Inglés, con Dd2",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, English Attack, with Qd2",
+      "eco": "B80",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 Qd2"
+    },
+    {
+      "name": "Variante Scheveningen, Variante del fianchetto",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Fianchetto Variation",
+      "eco": "B80",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 g3"
+    },
+    {
+      "name": "Variante Scheveningen, Variante Vitolins",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Vitolins Variation",
+      "eco": "B80",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bb5"
+    },
+    {
+      "name": "Variante Scheveningen, Ataque Keres",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Keres Attack",
+      "eco": "B81",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 g4"
+    },
+    {
+      "name": "Variante Scheveningen, Ataque Matanovic",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Matanovic Attack",
+      "eco": "B82",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 f4"
+    },
+    {
+      "name": "Variante Scheveningen, Variante Tal",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Tal Variation",
+      "eco": "B82",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 f4 Nc6 Be3 Be7 Qf3"
+    },
+    {
+      "name": "Variante Scheveningen, Variante clásica",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+      "eco": "B83",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Be2"
+    },
+    {
+      "name": "Variante Scheveningen, Variante moderna",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Modern Variation",
+      "eco": "B83",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 d6 Be2 Nf6"
+    },
+    {
+      "name": "Variante Najdorf, Variante Scheveningen",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Scheveningen Variation",
+      "eco": "B84",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2 e6 O-O Nbd7"
+    },
+    {
+      "name": "Variante Scheveningen, Variante clásica",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+      "eco": "B84",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2 e6"
+    },
+    {
+      "name": "Variante Scheveningen, Variante clásica",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+      "eco": "B84",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2 e6 O-O Qc7"
+    },
+    {
+      "name": "Ataque Sozin",
+      "nameEn": "Sicilian Defense: Sozin Attack",
+      "eco": "B86",
+      "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4"
+    },
+    {
+      "name": "Ataque Sozin, Variante del flanco",
+      "nameEn": "Sicilian Defense: Sozin Attack, Flank Variation",
+      "eco": "B87",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bc4 e6 Bb3 b5"
+    },
+    {
+      "name": "Ataque Sozin, Variante Leonhardt",
+      "nameEn": "Sicilian Defense: Sozin Attack, Leonhardt Variation",
+      "eco": "B88",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4 e6"
+    },
+    {
+      "name": "Ataque Sozin, Línea principal",
+      "nameEn": "Sicilian Defense: Sozin Attack, Main Line",
+      "eco": "B89",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4 e6 Be3"
+    },
+    {
+      "name": "Ataque Velimirovic",
+      "nameEn": "Sicilian Defense: Velimirovic Attack",
+      "eco": "B89",
+      "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bc4 e6 Be3 Be7 Qe2"
+    },
+    {
+      "name": "Variante Najdorf",
+      "nameEn": "Sicilian Defense: Najdorf Variation",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Adams",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Adams Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 h3"
+    },
+    {
+      "name": "Variante Najdorf, Gambito Dekker",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Dekker Gambit",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 g4"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 f3"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be7 f3"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be6 h3"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5 Nb3 Be7 h3"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Inglés, Anti-Inglesa",
+      "nameEn": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 Ng4"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Lipnitsky",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Lipnitsky Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bc4"
+    },
+    {
+      "name": "Variante Najdorf, Ataque Petronić",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Petronić Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Rg1"
+    },
+    {
+      "name": "Variante Najdorf, Variante Yates",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Yates Variation",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bd3"
+    },
+    {
+      "name": "Variante Scheveningen, Ataque Keres retrasado",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, Delayed Keres Attack",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 g4"
+    },
+    {
+      "name": "Variante Scheveningen, Ataque Inglés, con f3",
+      "nameEn": "Sicilian Defense: Scheveningen Variation, English Attack, with f3",
+      "eco": "B90",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e6 f3"
+    },
+    {
+      "name": "Variante Najdorf, Variante Zagreb",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Zagreb Variation",
+      "eco": "B91",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 g3"
+    },
+    {
+      "name": "Variante Najdorf, Variante Opocensky",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
+      "eco": "B92",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2"
+    },
+    {
+      "name": "Variante Najdorf, Variante Opocensky",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
+      "eco": "B92",
+      "moves": "e4 c5 Nf3 Nf6 Nc3 d6 d4 cxd4 Nxd4 a6 Be2 e5 Nb3 Be6 Be3"
+    },
+    {
+      "name": "Variante Najdorf, Variante Amsterdam",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Amsterdam Variation",
+      "eco": "B93",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 f4"
+    },
+    {
+      "name": "Variante Najdorf",
+      "nameEn": "Sicilian Defense: Najdorf Variation",
+      "eco": "B94",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5"
+    },
+    {
+      "name": "Variante Najdorf",
+      "nameEn": "Sicilian Defense: Najdorf Variation",
+      "eco": "B95",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6"
+    },
+    {
+      "name": "Variante Najdorf",
+      "nameEn": "Sicilian Defense: Najdorf Variation",
+      "eco": "B96",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4"
+    },
+    {
+      "name": "Variante Najdorf, Defensa neoclásica",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Neo-Classical Defense",
+      "eco": "B96",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Nc6"
+    },
+    {
+      "name": "Variante Najdorf, Variante Polugaevsky",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Polugaevsky Variation",
+      "eco": "B96",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 b5"
+    },
+    {
+      "name": "Variante Najdorf, Variante del peón envenenado",
+      "nameEn": "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation",
+      "eco": "B97",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Qb6"
+    },
+    {
+      "name": "Variante Najdorf",
+      "nameEn": "Sicilian Defense: Najdorf Variation",
+      "eco": "B98",
+      "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 f4 Be7"
+    }
+  ]
+}

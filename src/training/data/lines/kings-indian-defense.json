@@ -1,0 +1,721 @@
+{
+  "id": "kings-indian-defense",
+  "source": "Lichess",
+  "side": "b",
+  "lines": [
+    {
+      "name": "Variante del fianchetto",
+      "nameEn": "King's Indian Defense: Fianchetto Variation",
+      "eco": "E60",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3"
+    },
+    {
+      "name": "Variante del fianchetto, Fianchetto inmediato",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+      "eco": "E60",
+      "moves": "d4 Nf6 c4 g6 g3"
+    },
+    {
+      "name": "Variante normal, Variante del caballo de rey",
+      "nameEn": "King's Indian Defense: Normal Variation, King's Knight Variation",
+      "eco": "E60",
+      "moves": "d4 Nf6 Nf3 g6 c4"
+    },
+    {
+      "name": "Variante Santasiere",
+      "nameEn": "King's Indian Defense: Santasiere Variation",
+      "eco": "E60",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 b4"
+    },
+    {
+      "name": "Variante semiclásica, Variante Benoni",
+      "nameEn": "King's Indian Defense: Semi-Classical Variation, Benoni Variation",
+      "eco": "E60",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 O-O e3 d6 Be2 c6"
+    },
+    {
+      "name": "Variante semiclásica, Variante Hollywood",
+      "nameEn": "King's Indian Defense: Semi-Classical Variation, Hollywood Variation",
+      "eco": "E60",
+      "moves": "d4 Nf6 Nf3 g6 c4 Bg7 Nc3 O-O e3 d6 Be2 Nc6"
+    },
+    {
+      "name": "Defensa India de Rey",
+      "nameEn": "King's Indian Defense",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3"
+    },
+    {
+      "name": "Variante del fianchetto, Defensa Benjamin",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Benjamin Defense",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 g3 O-O Bg2 c6 O-O Qb6"
+    },
+    {
+      "name": "Variante semiclásica",
+      "nameEn": "King's Indian Defense: Semi-Classical Variation",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 O-O e3 d6 Be2"
+    },
+    {
+      "name": "Variante semiclásica, Variante del cambio",
+      "nameEn": "King's Indian Defense: Semi-Classical Variation, Exchange Variation",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 O-O e3 d6 Be2 Nbd7 O-O e5 dxe5 dxe5"
+    },
+    {
+      "name": "Variante semiclásica, Línea de la tormenta en el flanco de dama",
+      "nameEn": "King's Indian Defense: Semi-Classical Variation, Queenside Storm Line",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 O-O e3 d6 Be2 Nbd7 O-O e5 b4"
+    },
+    {
+      "name": "Variante Smyslov",
+      "nameEn": "King's Indian Defense: Smyslov Variation",
+      "eco": "E61",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 Bg5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Carlsbad",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Carlsbad Variation",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 g3 Bg7 Bg2 O-O Nc3 d6 Nf3 Nc6"
+    },
+    {
+      "name": "Variante del fianchetto, Fianchetto retrasado",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Delayed Fianchetto",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 g3"
+    },
+    {
+      "name": "Variante del fianchetto, Defensa Kavalek",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Kavalek Defense",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O c6 Nc3 Qa5"
+    },
+    {
+      "name": "Variante del fianchetto, Defensa Larsen",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Larsen Defense",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 g3 O-O Bg2 c6 O-O Bf5"
+    },
+    {
+      "name": "Variante del fianchetto, Simagin menor (Spassky)",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Lesser Simagin (Spassky)",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 g3 Bg7 Bg2 O-O Nc3 d6 Nf3 Nc6 O-O Bf5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Simagin",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Simagin Variation",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 g3 O-O Bg2 Nc6 O-O Bg4"
+    },
+    {
+      "name": "Variante del fianchetto, Sistema Uhlmann-Szabo",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Uhlmann-Szabo System",
+      "eco": "E62",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nc6 Nc3 e5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Panno",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Panno Variation",
+      "eco": "E63",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nc6 Nc3 a6"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Panno, Línea Blockade",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Panno Variation, Blockade Line",
+      "eco": "E63",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nc6 Nc3 a6 d5 Na5 Nd2 c5 Qc2 e5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Panno, Línea Donner",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Panno Variation, Donner Line",
+      "eco": "E63",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nc6 Nc3 a6 d5 Na5 Nd2 c5 Qc2 Rb8 b3 b5 Bb2 bxc4 bxc4 Bh6"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Panno, Línea Korchnoi",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Panno Variation, Korchnoi Line",
+      "eco": "E63",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nc6 Nc3 a6 h3 Rb8 Be3 b5 Nd2"
+    },
+    {
+      "name": "Variante del fianchetto, Ataque con doble fianchetto",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Double Fianchetto Attack",
+      "eco": "E64",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 d6 Bg2 O-O O-O Nbd7 Nc3 e5 b3"
+    },
+    {
+      "name": "Variante del fianchetto, Variante húngara",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Hungarian Variation",
+      "eco": "E64",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 d6 Bg2 O-O O-O Nbd7 Nc3 a6"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Pterodáctilo",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Pterodactyl Variation",
+      "eco": "E64",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 c5 Bg2 Qa5"
+    },
+    {
+      "name": "Variante del fianchetto, Sistema Yugoslavo",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Yugoslav System",
+      "eco": "E64",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 d6 Bg2 O-O O-O c5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Yugoslava, Línea rara",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Yugoslav Variation, Rare Line",
+      "eco": "E64",
+      "moves": "d4 Nf6 c4 g6 g3 Bg7 Bg2 O-O Nc3 d6 Nf3 c5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Yugoslava",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Yugoslav Variation",
+      "eco": "E65",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O c5 Nc3"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Yugoslava, Línea del cambio",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Yugoslav Variation, Exchange Line",
+      "eco": "E65",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O c5 Nc3 Nc6 dxc5 dxc5"
+    },
+    {
+      "name": "Variante del fianchetto, Variante Yugoslava, Línea del avance",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Yugoslav Variation, Advance Line",
+      "eco": "E66",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O c5 Nc3 Nc6 d5"
+    },
+    {
+      "name": "Variante del fianchetto, Fianchetto clásico",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Classical Fianchetto",
+      "eco": "E67",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nbd7 Nc3 e5"
+    },
+    {
+      "name": "Variante del fianchetto, Defensa Debrecen",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Debrecen Defense",
+      "eco": "E67",
+      "moves": "d4 Nf6 c4 g6 g3 Bg7 Bg2 O-O Nc3 d6 Nf3 Nbd7"
+    },
+    {
+      "name": "Variante del fianchetto, Variante clásica",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Classical Variation",
+      "eco": "E68",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nbd7 Nc3 e5 e4"
+    },
+    {
+      "name": "Variante del fianchetto, Variante larga",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Long Variation",
+      "eco": "E68",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 Nf3 d6 g3 O-O Bg2 Nbd7 O-O e5 e4 Re8 h3 exd4 Nxd4 Nc5 Re1 a5"
+    },
+    {
+      "name": "Variante del fianchetto, Línea clásica principal",
+      "nameEn": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
+      "eco": "E69",
+      "moves": "d4 Nf6 c4 g6 Nf3 Bg7 g3 O-O Bg2 d6 O-O Nbd7 Nc3 e5 e4 c6 h3"
+    },
+    {
+      "name": "Variante Averbakh acelerada",
+      "nameEn": "King's Indian Defense: Accelerated Averbakh Variation",
+      "eco": "E70",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Bg5"
+    },
+    {
+      "name": "Variante Kramer",
+      "nameEn": "King's Indian Defense: Kramer Variation",
+      "eco": "E70",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nge2"
+    },
+    {
+      "name": "Variante normal",
+      "nameEn": "King's Indian Defense: Normal Variation",
+      "eco": "E70",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4"
+    },
+    {
+      "name": "Variante normal",
+      "nameEn": "King's Indian Defense: Normal Variation",
+      "eco": "E70",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6"
+    },
+    {
+      "name": "Sistema Karpov",
+      "nameEn": "King's Indian Defense: Karpov System",
+      "eco": "E71",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 h3 O-O Be3"
+    },
+    {
+      "name": "Variante Makogonov",
+      "nameEn": "King's Indian Defense: Makogonov Variation",
+      "eco": "E71",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 h3"
+    },
+    {
+      "name": "Variante normal, Fianchetto diferido",
+      "nameEn": "King's Indian Defense: Normal Variation, Deferred Fianchetto",
+      "eco": "E72",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 g3"
+    },
+    {
+      "name": "Sistema Pomar",
+      "nameEn": "King's Indian Defense: Pomar System",
+      "eco": "E72",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 g3 O-O Bg2 e5 Nge2"
+    },
+    {
+      "name": "Variante Averbakh",
+      "nameEn": "King's Indian Defense: Averbakh Variation",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5"
+    },
+    {
+      "name": "Variante Averbakh, Defensa flexible",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Flexible Defense",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 h6"
+    },
+    {
+      "name": "Variante Averbakh, Defensa Geller",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Geller Defense",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 Nbd7"
+    },
+    {
+      "name": "Variante Averbakh, Defensa moderna",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Modern Defense",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 Na6"
+    },
+    {
+      "name": "Variante Averbakh, Defensa moderna, Línea Burgess",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Modern Defense, Burgess Line",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 Na6 Qd2 c6"
+    },
+    {
+      "name": "Variante Averbakh, Defensa Cc6",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Nc6 Defense",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 Nc6"
+    },
+    {
+      "name": "Variante Averbakh, Defensa española",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Spanish Defense",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 a6"
+    },
+    {
+      "name": "Variante normal, Desarrollo estándar",
+      "nameEn": "King's Indian Defense: Normal Variation, Standard Development",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2"
+    },
+    {
+      "name": "Sistema Semi-Averbakh",
+      "nameEn": "King's Indian Defense: Semi-Averbakh System",
+      "eco": "E73",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Be3"
+    },
+    {
+      "name": "Variante Averbakh, Defensa Benoni",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Benoni Defense",
+      "eco": "E74",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 c5"
+    },
+    {
+      "name": "Variante Averbakh, Defensa Benoni, Variante del avance",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Benoni Defense, Advance Variation",
+      "eco": "E74",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 c5 d5"
+    },
+    {
+      "name": "Variante Averbakh, Defensa Benoni, Variante del cambio",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Benoni Defense, Exchange Variation",
+      "eco": "E74",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 c5 dxc5"
+    },
+    {
+      "name": "Variante Averbakh, Línea principal",
+      "nameEn": "King's Indian Defense: Averbakh Variation, Main Line",
+      "eco": "E75",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O Bg5 c5 d5 e6"
+    },
+    {
+      "name": "Ataque de los cuatro peones",
+      "nameEn": "King's Indian Defense: Four Pawns Attack",
+      "eco": "E76",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Ataque dinámico",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Dynamic Attack",
+      "eco": "E76",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Nf3 c5 d5"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Defensa moderna",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Modern Defense",
+      "eco": "E76",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 Na6"
+    },
+    {
+      "name": "Ataque de los cuatro peones",
+      "nameEn": "King's Indian Defense: Four Pawns Attack",
+      "eco": "E77",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2 O-O f4"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Gambito Florentine",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Florentine Gambit",
+      "eco": "E77",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Nf3 c5 d5 e6 Be2 exd5 e5"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Ataque normal",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Normal Attack",
+      "eco": "E77",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Nf3 c5 d5 e6 Be2"
+    },
+    {
+      "name": "Ataque de los seis peones",
+      "nameEn": "King's Indian Defense: Six Pawns Attack",
+      "eco": "E77",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Be2 c5 d5 e6 dxe6 fxe6 g4 Nc6 h4"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Ataque fluido",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Fluid Attack",
+      "eco": "E78",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Nf3 c5 Be2"
+    },
+    {
+      "name": "Ataque de los cuatro peones, Variante del cambio",
+      "nameEn": "King's Indian Defense: Four Pawns Attack, Exchange Variation",
+      "eco": "E79",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 O-O Nf3 c5 Be2 cxd4 Nxd4 Nc6 Be3"
+    },
+    {
+      "name": "Variante Sämisch",
+      "nameEn": "King's Indian Defense: Sämisch Variation",
+      "eco": "E80",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3"
+    },
+    {
+      "name": "Ataque Steiner",
+      "nameEn": "King's Indian Defense: Steiner Attack",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Bg5"
+    },
+    {
+      "name": "Ataque Steiner",
+      "nameEn": "King's Indian Defense: Steiner Attack",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Bg5 c5 d5 h6 Bf4"
+    },
+    {
+      "name": "Ataque Steiner",
+      "nameEn": "King's Indian Defense: Steiner Attack",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Bg5 c5 d5 e6 Qd2 exd5 Nxd5"
+    },
+    {
+      "name": "Ataque Steiner",
+      "nameEn": "King's Indian Defense: Steiner Attack",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Bg5 c5 d5 e6 Qd2 h6 Bxh6"
+    },
+    {
+      "name": "Variante Sämisch, Variante Bobotsov-Korchnoi-Petrosian",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Bobotsov-Korchnoi-Petrosian Variation",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Nge2"
+    },
+    {
+      "name": "Variante Sämisch, Defensa Byrne",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Byrne Defense",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 c6 Bd3 a6"
+    },
+    {
+      "name": "Variante Sämisch, Defensa normal",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Normal Defense",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O"
+    },
+    {
+      "name": "Variante Sämisch, Gambito Sämisch",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Sämisch Gambit",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 c5"
+    },
+    {
+      "name": "Variante Sämisch, Gambito Sämisch aceptado",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Sämisch Gambit Accepted",
+      "eco": "E81",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 c5 dxc5 dxc5 Qxd8 Rxd8 Bxc5"
+    },
+    {
+      "name": "Variante Sämisch, Doble fianchetto",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Double Fianchetto",
+      "eco": "E82",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 b6"
+    },
+    {
+      "name": "Variante Sämisch, Formación Panno",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Panno Formation",
+      "eco": "E83",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 Nc6 Nge2 a6"
+    },
+    {
+      "name": "Variante Sämisch, Variante Ruban",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Ruban Variation",
+      "eco": "E83",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 Nc6 Nge2 Rb8"
+    },
+    {
+      "name": "Variante Sämisch, Defensa Yates",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Yates Defense",
+      "eco": "E83",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 Nc6"
+    },
+    {
+      "name": "Variante Sämisch, Línea Panno principal",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Panno Main Line",
+      "eco": "E84",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 Nc6 Nge2 a6 Qd2 Rb8"
+    },
+    {
+      "name": "Variante Sämisch, Variante ortodoxa",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Orthodox Variation",
+      "eco": "E85",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5"
+    },
+    {
+      "name": "Variante Sämisch",
+      "nameEn": "King's Indian Defense: Sämisch Variation",
+      "eco": "E86",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 Nge2 c6"
+    },
+    {
+      "name": "Variante Sämisch, Defensa Bronstein",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Bronstein Defense",
+      "eco": "E87",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5 Nh5 Qd2 Qh4 g3 Nxg3 Qf2 Nxf1 Qxh4 Nxe3 Ke2"
+    },
+    {
+      "name": "Variante Sämisch, Variante cerrada",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Closed Variation",
+      "eco": "E87",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5"
+    },
+    {
+      "name": "Variante Sämisch, Variante ortodoxa, Variante Bronstein",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Orthodox Variation, Bronstein Variation",
+      "eco": "E87",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5 Nh5 Qd2 Qh4 g3 Nxg3 Qf2 Nxf1 Qxh4 Nxe3 Ke2 Nxc4"
+    },
+    {
+      "name": "Variante Sämisch, Variante cerrada",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Closed Variation",
+      "eco": "E88",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5 c6"
+    },
+    {
+      "name": "Variante Sämisch, Variante cerrada, Línea principal",
+      "nameEn": "King's Indian Defense: Sämisch Variation, Closed Variation, Main Line",
+      "eco": "E89",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 Nge2 c6 d5 cxd5"
+    },
+    {
+      "name": "Variante Larsen",
+      "nameEn": "King's Indian Defense: Larsen Variation",
+      "eco": "E90",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be3"
+    },
+    {
+      "name": "Variante normal, Defensas raras",
+      "nameEn": "King's Indian Defense: Normal Variation, Rare Defenses",
+      "eco": "E90",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3"
+    },
+    {
+      "name": "Variante Zinnowitz",
+      "nameEn": "King's Indian Defense: Zinnowitz Variation",
+      "eco": "E90",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Bg5"
+    },
+    {
+      "name": "Variante Kazakh",
+      "nameEn": "King's Indian Defense: Kazakh Variation",
+      "eco": "E91",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Na6"
+    },
+    {
+      "name": "Variante ortodoxa",
+      "nameEn": "King's Indian Defense: Orthodox Variation",
+      "eco": "E91",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2"
+    },
+    {
+      "name": "Variante del cambio",
+      "nameEn": "King's Indian Defense: Exchange Variation",
+      "eco": "E92",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 dxe5"
+    },
+    {
+      "name": "Variante ortodoxa",
+      "nameEn": "King's Indian Defense: Orthodox Variation",
+      "eco": "E92",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema Gligoric-Taimanov",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Gligoric-Taimanov System",
+      "eco": "E92",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 Be3"
+    },
+    {
+      "name": "Variante Petrosian",
+      "nameEn": "King's Indian Defense: Petrosian Variation",
+      "eco": "E92",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5"
+    },
+    {
+      "name": "Variante Petrosian, Defensa Stein",
+      "nameEn": "King's Indian Defense: Petrosian Variation, Stein Defense",
+      "eco": "E92",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5 a5"
+    },
+    {
+      "name": "Variante Petrosian, Defensa Keres",
+      "nameEn": "King's Indian Defense: Petrosian Variation, Keres Defense",
+      "eco": "E93",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5 Nbd7 Bg5 h6 Bh4 g5 Bg3 Nh5 h4"
+    },
+    {
+      "name": "Variante Petrosian, Defensa normal",
+      "nameEn": "King's Indian Defense: Petrosian Variation, Normal Defense",
+      "eco": "E93",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5 Nbd7"
+    },
+    {
+      "name": "Variante ortodoxa",
+      "nameEn": "King's Indian Defense: Orthodox Variation",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa Donner",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Donner Defense",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O c6"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa Glek",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Glek Defense",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Na6"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa posicional",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Positional Defense",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 d6 Nc3 Nbd7 e4 e5 Nf3 g6 Be2 Bg7 O-O O-O"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa posicional, Línea cerrada",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Positional Defense, Closed Line",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Nbd7 O-O e5 d5"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa ucraniana",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Ukrainian Defense",
+      "eco": "E94",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O a5"
+    },
+    {
+      "name": "Variante ortodoxa",
+      "nameEn": "King's Indian Defense: Orthodox Variation",
+      "eco": "E95",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nbd7 Re1"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa posicional, Línea principal",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Positional Defense, Main Line",
+      "eco": "E96",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nbd7 Re1 c6 Bf1 a5"
+    },
+    {
+      "name": "Variante ortodoxa, Defensa Aronin-Taimanov",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6"
+    },
+    {
+      "name": "Variante ortodoxa, Ataque Bayonet",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4"
+    },
+    {
+      "name": "Variante ortodoxa, Ataque Bayonet, Línea Sokolov's",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Re1"
+    },
+    {
+      "name": "Variante ortodoxa, Ataque Bayonet, Línea Yepishin's",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Yepishin's Line",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Qc2"
+    },
+    {
+      "name": "Variante ortodoxa, Ataque Korchnoi",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Korchnoi Attack",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Bd2"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema moderno",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Modern System",
+      "eco": "E97",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Nd2"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema clásico",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Classical System",
+      "eco": "E98",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema clásico, Gambito Kozul",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit",
+      "eco": "E98",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 Be3 f5 f3 f4 Bf2 g5 Rc1 Ng6 c5"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema clásico, Línea neoclásica",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line",
+      "eco": "E98",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 Be3"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema clásico, Ataque Benko",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Classical System, Benko Attack",
+      "eco": "E99",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 f3 f5 g4"
+    },
+    {
+      "name": "Variante ortodoxa, Sistema clásico, Línea tradicional",
+      "nameEn": "King's Indian Defense: Orthodox Variation, Classical System, Traditional Line",
+      "eco": "E99",
+      "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 f3 f5"
+    }
+  ]
+}

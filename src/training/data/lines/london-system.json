@@ -1,0 +1,139 @@
+{
+  "id": "london-system",
+  "source": "Lichess",
+  "side": "w",
+  "lines": [
+    {
+      "name": "Defensa India, Sistema Londres acelerado",
+      "nameEn": "Indian Defense: Accelerated London System",
+      "eco": "A45",
+      "moves": "d4 Nf6 Bf4"
+    },
+    {
+      "name": "Defensa India, Sistema Londres",
+      "nameEn": "Indian Defense: London System",
+      "eco": "A46",
+      "moves": "d4 Nf6 Nf3 e6 Bf4"
+    },
+    {
+      "name": "Sistema Londres",
+      "nameEn": "London System",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4"
+    },
+    {
+      "name": "Sistema Londres",
+      "nameEn": "London System",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3"
+    },
+    {
+      "name": "Sistema Londres",
+      "nameEn": "London System",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 d6"
+    },
+    {
+      "name": "Sistema Londres, con Ad3",
+      "nameEn": "London System, with Bd3",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 d6 Bd3"
+    },
+    {
+      "name": "Sistema Londres, con Ae2",
+      "nameEn": "London System, with Be2",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 d6 Be2"
+    },
+    {
+      "name": "Sistema Londres, con Ae2",
+      "nameEn": "London System, with Be2",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 d6 Be2 O-O"
+    },
+    {
+      "name": "Sistema Londres, con Ae2",
+      "nameEn": "London System, with Be2",
+      "eco": "A48",
+      "moves": "d4 Nf6 Nf3 g6 Bf4 Bg7 e3 d6 h3 c5 Be2"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres acelerado",
+      "nameEn": "Queen's Pawn Game: Accelerated London System",
+      "eco": "D00",
+      "moves": "d4 d5 Bf4"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres acelerado, Contragambito Steinitz",
+      "nameEn": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit",
+      "eco": "D00",
+      "moves": "d4 d5 Bf4 c5"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres acelerado, Contragambito Steinitz aceptado",
+      "nameEn": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit Accepted",
+      "eco": "D00",
+      "moves": "d4 d5 Bf4 c5 dxc5"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres acelerado, Contragambito Steinitz, Contragambito Morris",
+      "nameEn": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit, Morris Countergambit",
+      "eco": "D00",
+      "moves": "d4 d5 Bf4 c5 e4"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres acelerado, Contragambito Steinitz, Contragambito Morris aceptado",
+      "nameEn": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit, Morris Countergambit Accepted",
+      "eco": "D00",
+      "moves": "d4 d5 Bf4 c5 e4 dxe4"
+    },
+    {
+      "name": "Sistema Londres, Variante del peón envenenado",
+      "nameEn": "London System: Poisoned Pawn Variation",
+      "eco": "D02",
+      "moves": "d4 Nf6 Nf3 d5 Bf4 c5 e3 Qb6 Nc3"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres",
+      "nameEn": "Queen's Pawn Game: London System",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 Nf6 Bf4"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres",
+      "nameEn": "Queen's Pawn Game: London System",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres",
+      "nameEn": "Queen's Pawn Game: London System",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Nbd2"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres",
+      "nameEn": "Queen's Pawn Game: London System",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Nbd2 e6 c3"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres, Variante Pterodáctilo",
+      "nameEn": "Queen's Pawn Game: London System, Pterodactyl Variation",
+      "eco": "D02",
+      "moves": "d4 g6 Nf3 Bg7 Bf4 c5 c3 cxd4 cxd4 Qa5"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres, con e6",
+      "nameEn": "Queen's Pawn Game: London System, with e6",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 e6 Bf4"
+    },
+    {
+      "name": "Juego de peón de dama, Sistema Londres, con e6",
+      "nameEn": "Queen's Pawn Game: London System, with e6",
+      "eco": "D02",
+      "moves": "d4 d5 Nf3 e6 Bf4 Nf6"
+    }
+  ]
+}

@@ -73,7 +73,11 @@
           "plays": 2
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "queens-gambit",
+        "count": 274,
+        "cards": 200
+      }
     },
     {
       "id": "english",
@@ -91,7 +95,11 @@
           "plays": 1
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "english",
+        "count": 170,
+        "cards": 142
+      }
     },
     {
       "id": "london-system",
@@ -109,7 +117,11 @@
           "plays": 2
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "london-system",
+        "count": 22,
+        "cards": 19
+      }
     },
     {
       "id": "kings-indian-attack",
@@ -127,7 +139,11 @@
           "plays": 2
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "kings-indian-attack",
+        "count": 25,
+        "cards": 25
+      }
     },
     {
       "id": "catalan",
@@ -145,7 +161,11 @@
           "plays": 0
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "catalan",
+        "count": 31,
+        "cards": 42
+      }
     },
     {
       "id": "sicilian",
@@ -163,7 +183,11 @@
           "plays": 3
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "sicilian",
+        "count": 340,
+        "cards": 200
+      }
     },
     {
       "id": "najdorf",
@@ -181,7 +205,11 @@
           "plays": 0
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "najdorf",
+        "count": 33,
+        "cards": 27
+      }
     },
     {
       "id": "caro-kann",
@@ -199,7 +227,11 @@
           "plays": 2
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "caro-kann",
+        "count": 110,
+        "cards": 81
+      }
     },
     {
       "id": "french",
@@ -217,7 +249,11 @@
           "plays": 2
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "french",
+        "count": 212,
+        "cards": 135
+      }
     },
     {
       "id": "kings-indian-defense",
@@ -235,7 +271,11 @@
           "plays": 0
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "kings-indian-defense",
+        "count": 119,
+        "cards": 96
+      }
     },
     {
       "id": "nimzo-indian",
@@ -253,7 +293,11 @@
           "plays": 0
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "nimzo-indian",
+        "count": 103,
+        "cards": 91
+      }
     },
     {
       "id": "gruenfeld",
@@ -271,7 +315,11 @@
           "plays": 0
         }
       ],
-      "lines": null
+      "lines": {
+        "id": "gruenfeld",
+        "count": 53,
+        "cards": 47
+      }
     },
     {
       "id": "opening-principles",
@@ -360,6 +408,13 @@
       "url": "https://github.com/freechesstrainer/freechess-trainer-openings",
       "license": "MIT",
       "use": "Las variantes para practicar la Apertura Italiana, la Ruy López y el Gambito Viena."
+    },
+    {
+      "name": "Lichess chess-openings",
+      "holder": "los colaboradores de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "license": "CC0",
+      "use": "Las variantes para practicar las otras doce aperturas y defensas, con blancas y con azules."
     }
   ]
 }

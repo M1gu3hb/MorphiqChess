@@ -1,0 +1,193 @@
+{
+  "id": "catalan",
+  "source": "Lichess",
+  "side": "w",
+  "lines": [
+    {
+      "name": "Apertura Catalana",
+      "nameEn": "Catalan Opening",
+      "eco": "E00",
+      "moves": "d4 Nf6 c4 e6 g3"
+    },
+    {
+      "name": "Apertura Catalana",
+      "nameEn": "Catalan Opening",
+      "eco": "E00",
+      "moves": "d4 Nf6 c4 e6 g3 d5"
+    },
+    {
+      "name": "Gambito húngaro",
+      "nameEn": "Catalan Opening: Hungarian Gambit",
+      "eco": "E00",
+      "moves": "d4 Nf6 c4 e6 g3 e5"
+    },
+    {
+      "name": "Defensa abierta",
+      "nameEn": "Catalan Opening: Open Defense",
+      "eco": "E01",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2"
+    },
+    {
+      "name": "Defensa Tarrasch",
+      "nameEn": "Catalan Opening: Tarrasch Defense",
+      "eco": "E01",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 c5 Nf3 Nc6"
+    },
+    {
+      "name": "Defensa abierta",
+      "nameEn": "Catalan Opening: Open Defense",
+      "eco": "E02",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4"
+    },
+    {
+      "name": "Defensa abierta",
+      "nameEn": "Catalan Opening: Open Defense",
+      "eco": "E03",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4 Qa4 Nbd7 Qxc4"
+    },
+    {
+      "name": "Defensa abierta, Variante Alekhine",
+      "nameEn": "Catalan Opening: Open Defense, Alekhine Variation",
+      "eco": "E03",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4 Qa4 Nbd7 Qxc4 a6 Qc2"
+    },
+    {
+      "name": "Defensa abierta",
+      "nameEn": "Catalan Opening: Open Defense",
+      "eco": "E04",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4 Nf3"
+    },
+    {
+      "name": "Defensa abierta",
+      "nameEn": "Catalan Opening: Open Defense",
+      "eco": "E04",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 c6 Bg2 dxc4"
+    },
+    {
+      "name": "Defensa abierta, Variante moderna aguda",
+      "nameEn": "Catalan Opening: Open Defense, Modern Sharp Variation",
+      "eco": "E04",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4 Nf3 Nc6 Qa4 Bb4"
+    },
+    {
+      "name": "Defensa abierta, Línea clásica",
+      "nameEn": "Catalan Opening: Open Defense, Classical Line",
+      "eco": "E05",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 dxc4 Nf3 Be7"
+    },
+    {
+      "name": "Defensa abierta, Línea clásica",
+      "nameEn": "Catalan Opening: Open Defense, Classical Line",
+      "eco": "E05",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Be7 Bg2 O-O O-O dxc4"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E06",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E06",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Bb4 Bd2 Be7 Bg2 O-O O-O c6 Bf4 b6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E06",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O c6 Qc2 b6 Nbd2 Bb7 e4 Na6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E07",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7"
+    },
+    {
+      "name": "Variante cerrada, Variante Botvinnik",
+      "nameEn": "Catalan Opening: Closed, Botvinnik Variation",
+      "eco": "E07",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Nc3 c6 Qd3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Qc2"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Qc2 c6 b3"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Qc2 c6 b3 b6"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O c6 Qc2 b6 Rd1 Nbd7 Bf4"
+    },
+    {
+      "name": "Variante cerrada",
+      "nameEn": "Catalan Opening: Closed",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Qc2 c6 Bf4 b6 Nbd2 Bb7 e4"
+    },
+    {
+      "name": "Variante cerrada, Gambito Spassky",
+      "nameEn": "Catalan Opening: Closed, Spassky Gambit",
+      "eco": "E08",
+      "moves": "d4 Nf6 c4 e6 g3 Be7 Bg2 d5 Nf3 O-O O-O Nbd7 Qc2 c6 b3 b6 Rd1 Bb7 Nc3 b5"
+    },
+    {
+      "name": "Variante cerrada, Variante Zagoryansky",
+      "nameEn": "Catalan Opening: Closed, Zagoryansky Variation",
+      "eco": "E08",
+      "moves": "d4 e6 c4 Nf6 Nf3 d5 g3 Be7 Bg2 O-O O-O Nbd7 Qc2 c6 Rd1 b6 a4"
+    },
+    {
+      "name": "Variante cerrada, Variante Rabinovich",
+      "nameEn": "Catalan Opening: Closed Variation, Rabinovich Variation",
+      "eco": "E09",
+      "moves": "d4 d5 c4 c6 Nf3 Nf6 Qc2 e6 Nbd2 Be7 g3 Nbd7 Bg2 O-O O-O b5"
+    },
+    {
+      "name": "Variante cerrada, Variante tradicional",
+      "nameEn": "Catalan Opening: Closed Variation, Traditional Variation",
+      "eco": "E09",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Be7 Bg2 O-O O-O Nbd7 Qc2 c6 Nbd2 b6"
+    },
+    {
+      "name": "Variante cerrada, Línea principal",
+      "nameEn": "Catalan Opening: Closed, Main Line",
+      "eco": "E09",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Be7 Bg2 O-O O-O Nbd7 Qc2 c6 Nbd2"
+    },
+    {
+      "name": "Variante cerrada, Línea principal",
+      "nameEn": "Catalan Opening: Closed, Main Line",
+      "eco": "E09",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Be7 Bg2 O-O O-O c6 Qc2 b6 Nbd2 Bb7 e4 Nbd7"
+    },
+    {
+      "name": "Variante cerrada, Línea principal",
+      "nameEn": "Catalan Opening: Closed, Main Line",
+      "eco": "E09",
+      "moves": "d4 Nf6 c4 e6 Nf3 d5 g3 Be7 Bg2 O-O O-O Nbd7 Qc2 c6 Bf4 b6 Nbd2 Bb7 e4 dxe4 Nxe4 Nxe4 Qxe4"
+    },
+    {
+      "name": "Variante cerrada, Variante Sokolsky",
+      "nameEn": "Catalan Opening: Closed, Sokolsky Variation",
+      "eco": "E09",
+      "moves": "d4 Nf6 c4 e6 g3 d5 Bg2 Be7 Nf3 O-O O-O Nbd7 Qc2 c6 Nbd2 b6 b3 a5 Bb2 Ba6"
+    }
+  ]
+}
