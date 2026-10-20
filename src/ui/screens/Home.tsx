@@ -6,7 +6,7 @@ import logo from '../../assets/brand/logo-morphiqchess.webp';
 import { Board } from '../board/Board';
 import { Dialog } from '../Dialog';
 import { useSettings } from '../hooks';
-import { Icon } from '../icons';
+import { Icon, type IconName } from '../icons';
 
 interface HomeProps {
   readonly store: GameStore;
@@ -18,6 +18,19 @@ interface HomeProps {
 }
 
 const DEMO_TURN_MS = 3600;
+
+/** Un modo de juego: su nombre y, debajo, una línea que dice de qué va. */
+function Mode({ icon, name, hint, primary = false, onClick }: { icon: IconName; name: string; hint: string; primary?: boolean; onClick: () => void }) {
+  return (
+    <button type="button" className={`btn btn--xl mode${primary ? ' btn--primary' : ''}`} onClick={onClick}>
+      <Icon name={icon} />
+      <span className="mode__text">
+        <span className="mode__name">{name}</span>
+        <span className="mode__hint">{hint}</span>
+      </span>
+    </button>
+  );
+}
 
 export function Home({ store, settingsStore, onNew, onContinue, onTraining, onPractice }: HomeProps) {
   const settings = useSettings(settingsStore);
@@ -49,28 +62,14 @@ export function Home({ store, settingsStore, onNew, onContinue, onTraining, onPr
             {canContinue ? (
               // Con una partida guardada, lo principal es seguir jugándola; empezar de cero pide confirmar.
               <>
-                <button type="button" className="btn btn--primary btn--xl" onClick={onContinue}>
-                  <Icon name="play" />
-                  {es.home.continueGame}
-                </button>
-                <button type="button" className="btn btn--xl" onClick={() => setConfirmNew(true)}>
-                  {es.home.newGame}
-                </button>
+                <Mode primary icon="play" name={es.home.continueGame} hint={es.home.continueHint} onClick={onContinue} />
+                <Mode icon="plus" name={es.home.newGame} hint={es.home.newGameHint} onClick={() => setConfirmNew(true)} />
               </>
             ) : (
-              <button type="button" className="btn btn--primary btn--xl" onClick={onNew}>
-                <Icon name="play" />
-                {es.home.newGame}
-              </button>
+              <Mode primary icon="play" name={es.home.newGame} hint={es.home.newGameHint} onClick={onNew} />
             )}
-            <button type="button" className="btn btn--xl" onClick={onTraining}>
-              <Icon name="book" />
-              {es.home.training}
-            </button>
-            <button type="button" className="btn btn--xl" onClick={onPractice}>
-              <Icon name="target" />
-              {es.home.practice}
-            </button>
+            <Mode icon="book" name={es.home.training} hint={es.home.trainingHint} onClick={onTraining} />
+            <Mode icon="target" name={es.home.practice} hint={es.home.practiceHint} onClick={onPractice} />
           </div>
           <ul className="home__features">
             {es.home.features.map((feature) => (

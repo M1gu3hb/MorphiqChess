@@ -7,7 +7,7 @@ import type { Ply } from '../game';
  */
 export const es = {
   appName: 'MorphiqChess',
-  tagline: 'Ajedrez para 2 jugadores',
+  tagline: 'Juega, aprende y practica ajedrez',
   sides: { w: 'Blancas', b: 'Azules' } satisfies Record<Color, string>,
   sidesOf: { w: 'las Blancas', b: 'las Azules' } satisfies Record<Color, string>,
   pieceNames: {
@@ -19,18 +19,21 @@ export const es = {
     k: 'rey',
   } satisfies Record<PieceType, string>,
   home: {
-    heading: 'Dos jugadores, un mismo tablero.',
-    lead: 'Juega con otra persona en el mismo dispositivo. En cada turno las piezas giran 180° para quedar derechas frente a quien juega.',
+    heading: 'Juega, aprende y practica.',
+    lead: 'Ajedrez con las piezas de Morphiq: juega de a dos en un mismo dispositivo, aprende aperturas con lecciones o practica contra doce rivales de menor a mayor Elo.',
     newGame: 'Nueva partida',
+    newGameHint: 'Dos jugadores; las piezas giran en cada turno',
     continueGame: 'Continuar partida',
-    practice: 'Práctica',
+    continueHint: 'Dos jugadores; sigue donde la dejaste',
     training: 'Entrenamiento',
+    trainingHint: 'Aprende y practica aperturas y defensas',
+    practice: 'Práctica',
+    practiceHint: 'Juega contra 12 rivales, de menor a mayor Elo',
     features: [
       'Animaciones de movimiento, captura, jaque y jaque mate',
       'Barra lateral para revisar cualquier jugada anterior',
       'Reglas completas: enroque, al paso, coronación y tablas',
-      'Práctica: juega contra 12 rivales, de menor a mayor Elo',
-      'Entrenamiento: lecciones y práctica de aperturas y defensas',
+      'Sin cuentas: tus partidas y tu avance se guardan en el dispositivo',
     ],
     footer: 'Un proyecto de Astral Morphiq Systems',
   },
