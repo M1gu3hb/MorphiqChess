@@ -10,6 +10,7 @@
  */
 import type { Color } from '../../src/engine';
 import type { Level, Lesson, LessonStep, Line, LinesFile } from '../../src/training/types';
+import { translateName } from './names';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -160,113 +161,8 @@ export function convertLesson(raw: unknown): Lesson {
 
 /* ---------- nombres de las variantes ---------- */
 
-type Gender = 'm' | 'f';
-const NOUNS: Readonly<Record<string, readonly [string, Gender]>> = {
-  Variation: ['Variante', 'f'],
-  Gambit: ['Gambito', 'm'],
-  Defense: ['Defensa', 'f'],
-  Attack: ['Ataque', 'm'],
-  System: ['Sistema', 'm'],
-  Trap: ['Trampa', 'f'],
-  Line: ['Línea', 'f'],
-  Counterattack: ['Contraataque', 'm'],
-  Hybrid: ['Híbrido', 'm'],
-};
-
-/** Adjetivos: masculino, femenino. Los que no cambian llevan el mismo texto dos veces. */
-const ADJECTIVES: Readonly<Record<string, readonly [string, string]>> = {
-  Classical: ['clásico', 'clásica'],
-  Closed: ['cerrado', 'cerrada'],
-  Open: ['abierto', 'abierta'],
-  Modern: ['moderno', 'moderna'],
-  Main: ['principal', 'principal'],
-  Normal: ['normal', 'normal'],
-  Old: ['antiguo', 'antigua'],
-  Original: ['original', 'original'],
-  Italian: ['italiano', 'italiana'],
-  Norwegian: ['noruego', 'noruega'],
-  Double: ['doble', 'doble'],
-  Exchange: ['del cambio', 'del cambio'],
-  Center: ['del centro', 'del centro'],
-  Declined: ['rehusado', 'rehusada'],
-  Accepted: ['aceptado', 'aceptada'],
-  Deferred: ['diferido', 'diferida'],
-  Delayed: ['retrasado', 'retrasada'],
-};
-
-/** Nombres propios que sí tienen forma en español. */
-const PROPER: Readonly<Record<string, string>> = {
-  Scotch: 'Escocés',
-  Basque: 'Vasco',
-  Yugoslav: 'Yugoslavo',
-  Berlin: 'Berlín',
-  Lopez: 'López',
-};
-
-/** Frases que no siguen la regla general. */
-const EXACT: Readonly<Record<string, string>> = {
-  'Two Knights Defense': 'Defensa de los Dos Caballos',
-  'Fried Liver Attack': 'Ataque del Hígado Frito',
-  "King's Bishop Variation": 'Variante del alfil de rey',
-  'Center Holding Variation': 'Variante del centro sostenido',
-  'Bishop Sacrifice Line': 'Línea del sacrificio de alfil',
-  'Knight Sacrifice Line': 'Línea del sacrificio de caballo',
-  'King March Line': 'Línea de la marcha del rey',
-  'Delayed Castling Line': 'Línea del enroque retrasado',
-  'Scotch Invitation Declined': 'Invitación escocesa rehusada',
-  'Wing Attack': 'Ataque del ala',
-  "Greco's Attack": 'Ataque de Greco',
-  'Smyslov-Breyer-Zaitsev Hybrid': 'Híbrido Smyslov-Breyer-Zaitsev',
-  Open: 'Variante abierta',
-  Closed: 'Variante cerrada',
-  Normal: 'Variante normal',
-};
-
-const OPENING_PREFIX = /^(?:Italian Game|Ruy Lopez|Vienna Gambit):\s*/;
-
-function translateSegment(segment: string): string {
-  const exact = EXACT[segment];
-  if (exact) return exact;
-
-  const withMatch = /^with\s+(.+)$/.exec(segment);
-  if (withMatch) return `con ${withMatch[1]}`;
-
-  // «Evans Gambit Declined», «Steinitz Defense Deferred»: el estado va al final.
-  const tail = /^(.+?)\s+(Declined|Accepted|Deferred)$/.exec(segment);
-  if (tail) {
-    const base = translateSegment(tail[1]!);
-    const noun = Object.values(NOUNS).find(([word]) => base.startsWith(word));
-    const [masculine, feminine] = ADJECTIVES[tail[2]!]!;
-    return `${base} ${noun?.[1] === 'f' ? feminine : masculine}`;
-  }
-
-  const phrase = /^(.*?)\s*(Variation|Gambit|Defense|Attack|System|Trap|Line|Counterattack|Hybrid)$/.exec(segment);
-  if (phrase) {
-    const [noun, gender] = NOUNS[phrase[2]!]!;
-    const names: string[] = [];
-    const adjectives: string[] = [];
-    for (const word of phrase[1]!.split(/\s+/).filter(Boolean)) {
-      const adjective = ADJECTIVES[word];
-      if (adjective) adjectives.push(gender === 'f' ? adjective[1] : adjective[0]);
-      else names.push(PROPER[word] ?? word);
-    }
-    return [noun, ...names, ...adjectives].join(' ');
-  }
-  return segment
-    .split(' ')
-    .map((word) => PROPER[word] ?? word)
-    .join(' ');
-}
-
-/** «Italian Game: Classical Variation, Albin Gambit» → «Variante clásica, Gambito Albin». */
-export function translateLineName(nameEn: string): string {
-  const rest = nameEn.replace(OPENING_PREFIX, '');
-  const name = rest
-    .split(/,\s*/)
-    .map(translateSegment)
-    .join(', ');
-  return `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
-}
+/** «Italian Game: Classical Variation, Albin Gambit» → «Variante clásica, Gambito Albin». Ver `names.ts`. */
+export const translateLineName = (nameEn: string): string => translateName(nameEn);
 
 /* ---------- variantes para practicar ---------- */
 
