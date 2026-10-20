@@ -140,6 +140,25 @@
   box-shadow: inset 0 0 0 calc(var(--cell) * 0.07) var(--accent);
 }
 
+/* Pista del entrenamiento: marco cian que late. No usa ::before ni ::after, que ya ocupan otras marcas. */
+.sq[data-hint] {
+  background: rgb(46 230 255 / 0.2);
+  box-shadow:
+    inset 0 0 0 calc(var(--cell) * 0.07) var(--accent),
+    inset 0 0 calc(var(--cell) * 0.3) rgb(46 230 255 / 0.55);
+  animation: hint-pulse 1.3s ease-in-out infinite;
+}
+
+@keyframes hint-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
 /* Rey en jaque */
 .sq[data-chk]::before {
   background: radial-gradient(
@@ -481,6 +500,10 @@
 .board[data-motion='reduced'] .sq[data-chk]::before {
   animation: none;
   opacity: 0.85;
+}
+
+.board[data-motion='reduced'] .sq[data-hint] {
+  animation: none;
 }
 
 .board[data-motion='reduced'] .piece[data-mated] .piece-img {

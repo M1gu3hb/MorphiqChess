@@ -17,6 +17,7 @@ import {
   kingSquare,
   squareName,
   typeOfCode,
+  type Color,
   type Move,
   type Outcome,
   type PromotionPiece,
@@ -45,7 +46,12 @@ export interface BoardProps {
   readonly motion: MotionMode;
   /** false = tablero decorativo (sin foco ni clics). */
   readonly interactive?: boolean;
-  readonly onMove?: (move: Move) => void;
+  /** Solo ese bando puede mover (entrenamiento); `null`, nadie; sin definir, quien tiene el turno. */
+  readonly playAs?: Color | null;
+  /** Casillas que se resaltan como pista. */
+  readonly hints?: readonly number[];
+  /** Devolver `false` rechaza la jugada: la pieza vuelve a su casilla y la partida no cambia. */
+  readonly onMove?: (move: Move) => boolean | void;
 }
 
 interface Tagged {
@@ -87,7 +93,7 @@ function endBannerKind(outcome: Outcome | null): BannerKind | null {
   return null;
 }
 
-export function Board({ game, orientation, motion, interactive = true, onMove }: BoardProps) {
+export function Board({ game, orientation, motion, interactive = true, playAs, hints, onMove }: BoardProps) {
   const uid = useId();
   const boardRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -107,7 +113,8 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
 
   const position = positionAt(game);
   const ids = idsAt(game);
-  const playable = interactive && canPlay(game);
+  const playable =
+    interactive && canPlay(game) && (playAs === undefined || (playAs !== null && position.turn === playAs));
   const legal = playable ? legalMovesOf(position) : NO_MOVES;
 
   const movesByFrom = useMemo(() => {
@@ -213,8 +220,12 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
       return false;
     }
     dropRef.current = hint;
+    if (onMove?.(first) === false) {
+      // Rechazada por quien usa el tablero: nada cambia y la pieza vuelve sola (ver `endDrag`).
+      dropRef.current = null;
+      return false;
+    }
     clearPending();
-    onMove?.(first);
     return true;
   };
 
@@ -440,6 +451,7 @@ export function Board({ game, orientation, motion, interactive = true, onMove }:
           data-cap={flag(captures.has(sq))}
           data-chk={flag(sq === checkSq)}
           data-hov={flag(sq === hoverSq)}
+          data-hint={flag(hints?.includes(sq) ?? false)}
           data-foc={flag(interactive && sq === focusSq)}
         />,
       );
