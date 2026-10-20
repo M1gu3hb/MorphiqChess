@@ -1,9 +1,9 @@
 /**
- * Genera `src/training/data` a partir de los repositorios de KarpaChess y FreeChessTrainer
- * (clonados aparte; ambos con licencia MIT). Valida todo con el motor de la app: un FEN mal escrito
- * o una jugada ilegal detienen la conversión con el lugar exacto.
+ * Genera `src/training/data` a partir de tres repositorios clonados aparte: KarpaChess y FreeChessTrainer
+ * (licencia MIT) y la base de nombres de aperturas de Lichess (dominio público, CC0). Valida todo con
+ * el motor de la app: un FEN mal escrito o una jugada ilegal detienen la conversión con el lugar exacto.
  *
- *   npm run training:convert -- --karpa <carpeta de KarpaChess> --fct <carpeta de freechess-trainer-openings>
+ *   npm run training:convert -- --karpa <KarpaChess> --fct <freechess-trainer-openings> --lichess <chess-openings>
  */
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -12,6 +12,7 @@ import { buildGraph } from '../../src/training/graph';
 import type { Catalog, CourseInfo, Lesson, LinesFile } from '../../src/training/types';
 import { convertLesson, convertLines } from './convert';
 import { COURSES, CREDITS } from './courses';
+import { convertLichess, parseOpeningsTsv, selectRows, type OpeningRow } from './lichess';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -56,15 +57,24 @@ function writeJson(path: string, value: unknown): void {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+/** Todas las filas de la base de Lichess (`a.tsv` … `e.tsv`), en el orden de la base. */
+function openingRows(lichess: string): OpeningRow[] {
+  return ['a', 'b', 'c', 'd', 'e'].flatMap((volume) => parseOpeningsTsv(readFileSync(join(lichess, `${volume}.tsv`), 'utf8')));
+}
+
 function main(): void {
   const karpaArg = option('karpa');
   const fctArg = option('fct');
-  if (!karpaArg || !fctArg) {
-    console.error('Uso: npm run training:convert -- --karpa <carpeta de KarpaChess> --fct <carpeta de freechess-trainer-openings> [--out <carpeta>]');
+  const lichessArg = option('lichess');
+  if (!karpaArg || !fctArg || !lichessArg) {
+    console.error(
+      'Uso: npm run training:convert -- --karpa <carpeta de KarpaChess> --fct <carpeta de freechess-trainer-openings> --lichess <carpeta de chess-openings> [--out <carpeta>]',
+    );
     process.exit(1);
   }
   const karpa = resolve(karpaArg);
   const fct = resolve(fctArg);
+  const lichess = resolve(lichessArg);
   const out = resolve(option('out') ?? 'src/training/data');
 
   // Lecciones
@@ -89,11 +99,19 @@ function main(): void {
   if (missing.length > 0) throw new Error(`Lecciones sin apertura asignada: ${missing.join(', ')}`);
 
   // Variantes
+  const rows = COURSES.some((spec) => spec.lichess) ? openingRows(lichess) : [];
   const lineFiles = new Map<string, LinesFile>();
   const courses: CourseInfo[] = COURSES.map((spec) => {
+    if (spec.lines && spec.lichess) throw new Error(`«${spec.id}» tiene variantes de dos fuentes`);
+    let file: LinesFile | null = null;
+    if (spec.lines) file = convertLines(readJson(join(fct, 'openings', `${spec.lines}.json`)), spec.side);
+    if (spec.lichess) {
+      const chosen = selectRows(rows, spec.lichess, spec.side);
+      if (chosen.length === 0) throw new Error(`«${spec.id}»: la base de Lichess no tiene ninguna línea que cumpla`);
+      file = convertLichess(spec.id, chosen, spec.lichess, spec.side);
+    }
     let linesInfo: CourseInfo['lines'] = null;
-    if (spec.lines) {
-      const file = convertLines(readJson(join(fct, 'openings', `${spec.lines}.json`)), spec.side);
+    if (file) {
       const graph = buildGraph(file.lines, file.side);
       lineFiles.set(file.id, file);
       linesInfo = { id: file.id, count: file.lines.length, cards: graph.cards.length };
