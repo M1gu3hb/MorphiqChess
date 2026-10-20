@@ -321,6 +321,7 @@ function PracticeRun({ course, data, mode, store, settingsStore, back }: RunProp
           <Board
             game={run.game}
             orientation={0}
+            flipped={side === 'b'}
             motion={settings.motion}
             interactive={!finished}
             playAs={asking ? side : null}

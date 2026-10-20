@@ -14,7 +14,7 @@ export function CreditsDialog({ open, onClose }: { readonly open: boolean; reado
               {credit.name}
             </a>
             <p className="credits__use">{credit.use}</p>
-            <p className="credits__license">{t.license(credit.holder)}</p>
+            <p className="credits__license">{t.license(credit.license, credit.holder)}</p>
           </li>
         ))}
       </ul>

@@ -176,8 +176,9 @@ export const es = {
     credits: {
       title: 'Créditos y licencias',
       intro:
-        'Las lecciones y las variantes del entrenamiento vienen de dos proyectos abiertos con licencia MIT. Gracias a sus autores.',
-      license: (holder: string) => `Licencia MIT · © ${holder}`,
+        'Las lecciones y las variantes del entrenamiento vienen de tres proyectos abiertos: dos con licencia MIT y una base de aperturas de dominio público. Gracias a sus autores.',
+      license: (license: string, holder: string) =>
+        license === 'CC0' ? `Dominio público (CC0 1.0) · ${holder}` : `Licencia ${license} · © ${holder}`,
       cite: 'FreeChessTrainer Opening Dataset, GitHub repository: https://github.com/freechesstrainer/freechess-trainer-openings',
       notices: 'El texto completo de las licencias está en el archivo THIRD_PARTY_NOTICES.md del repositorio.',
       close: 'Cerrar',
