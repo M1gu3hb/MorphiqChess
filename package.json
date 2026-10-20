@@ -15,7 +15,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "training:convert": "vite build --config tools/training/vite.config.ts && node node_modules/.cache/training-convert/run.js",
-    "verify": "npm run typecheck && npm run test && vite build"
+    "verify": "npm run typecheck && npm run test && vite build",
+    "bots:duel": "vite build --config tools/bots/vite.config.ts && node node_modules/.cache/bots-duel/duel.js"
   },
   "dependencies": {
     "@fontsource-variable/exo-2": "^5.3.0",
